@@ -40,7 +40,7 @@ try {
     <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
     <link rel="stylesheet" href="dinamic_filter/pagination.css">
     <script src="dinamic_filter/magic-grid.js"></script>
@@ -680,7 +680,7 @@ try {
 
                             <div class="listing__item contador">
                               <div class="properties properties--grid">
-                                <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="<?=( file_exists($dire.$row['dato2'].'_0.jpg') ? $dire.$row['dato2'].'_0.jpg' : $imgdefecto )?>" alt="" />
+                                <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262&p=50" alt="" />
                                     <figure class="item-photo__hover item-photo__hover--params">
                                       <span class="properties__more">View details</span>
                                     </figure></a>

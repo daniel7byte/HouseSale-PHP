@@ -680,7 +680,7 @@ becomes
 
                         <div class="listing__item contador">
                           <div class="properties properties--list">
-                            <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="<?=( file_exists($dire.$row['dato2'].'_0.jpg') ? $dire.$row['dato2'].'_0.jpg' : $imgdefecto )?>" alt=""/></a>
+                            <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262&p=50" alt=""/></a>
                             </div>
                             <!-- end of block .properties__thumb-->
                             <div class="properties__details">
