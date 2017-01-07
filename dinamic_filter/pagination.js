@@ -1,7 +1,9 @@
+var constanteBusqueda= 20;
+
 $(document).ready(function () {
   size_li = $("#articles .contador").length;
-  x=40;
-  if(size_li <= 40){
+  x=constanteBusqueda;
+  if(size_li <= constanteBusqueda){
     $('#loadMore').hide();
   }else{
     $('#loadMore').show();
@@ -11,8 +13,8 @@ $(document).ready(function () {
 
 function resetPagination() {
   size_li = $("#articles .contador").length;
-  x=40;
-  if(size_li <= 40){
+  x=constanteBusqueda;
+  if(size_li <= constanteBusqueda){
     $('#loadMore').hide();
   }else{
     $('#loadMore').show();
@@ -21,7 +23,7 @@ function resetPagination() {
 }
 
 function loadMore() {
-  x= (x+40 <= size_li) ? x+40 : size_li;
+  x= (x+constanteBusqueda <= size_li) ? x+constanteBusqueda : size_li;
   $('#articles .contador:lt('+x+')').show();
   if(x == size_li){
     $('#loadMore').hide();

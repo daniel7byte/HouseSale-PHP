@@ -749,6 +749,13 @@ becomes
                   <div class="row">
 
                     <div class="form-group">
+                      <label for="in-contract-type" class="control-label" style="font-size: 16px;">STATE</label>
+                      <select id="" data-placeholder="Contract type" class="form-control">
+                        <option>Georgia</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
                       <label for="zipcode" class="control-label">ZIP CODE</label>
                       <input class="form-control" type='text' name="zipcode" id="zipcode" value="">
                     </div>

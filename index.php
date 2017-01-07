@@ -41,7 +41,6 @@
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="dinamic_filter/jquery.cookie.js"></script>
     <script src="dinamic_filter/magic-grid.js"></script>
   </head>
   <body class="index menu-default hover-default scroll-animation">
