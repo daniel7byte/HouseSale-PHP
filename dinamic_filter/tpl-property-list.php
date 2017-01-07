@@ -1,4 +1,4 @@
-<div class="listing__item">
+<div class="listing__item contador">
     <div class="properties properties--list">
         <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="<?=( file_exists('../'.$dire.$row['dato2'].'_0.jpg') ? $dire.$row['dato2'].'_0.jpg' : $imgdefecto )?>" alt=""/></a>
         </div>

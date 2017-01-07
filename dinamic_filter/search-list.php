@@ -67,7 +67,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 
@@ -87,7 +87,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 
@@ -107,7 +107,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 
@@ -127,7 +127,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 
@@ -147,7 +147,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 
@@ -166,7 +166,7 @@ if($id != ''){
 
             foreach ($rowsOne as $row):
 
-                include('tpl-property-grid.php');
+                include('tpl-property-list.php');
 
             endforeach;
 

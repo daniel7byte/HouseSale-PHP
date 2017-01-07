@@ -106,6 +106,7 @@ function search(id, zipcode,county, city, price){
     complete: function() {
       $('#loading').hide( 1000 );
       $('#numRecords').html(number_format($('.contador').size()));
+      resetPagination();
     },
     success: function(result){
       if(result != ''){

@@ -40,9 +40,11 @@ try {
   <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-  <script src="dinamic_filter/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="dinamic_filter/jquery.cookie.js"></script>
-  <script src="dinamic_filter/magic-list.js"></script>
+    <!-- <script src="dinamic_filter/jquery-3.1.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
+    <link rel="stylesheet" href="dinamic_filter/pagination.css">
+    <script src="dinamic_filter/magic-list.js"></script>
 </head>
 <body class="properties_listing_grid menu-default hover-default ">
 <!--
@@ -677,7 +679,7 @@ becomes
                       foreach ($rows as $row):
                         ?>
 
-                        <div class="listing__item">
+                        <div class="listing__item contador">
                           <div class="properties properties--list">
                             <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="<?=( file_exists($dire.$row['dato2'].'_0.jpg') ? $dire.$row['dato2'].'_0.jpg' : $imgdefecto )?>" alt=""/></a>
                             </div>
@@ -712,18 +714,19 @@ becomes
                 </div>
               </div>
 
-              <!--div class="widget__footer"><a href="" class="widget__more js-properties-more">More listings</a></div-->
+              <div class="widget__footer"><a href="" class="widget__more" id="loadMore" onclick="loadMore(); return false;">More listings</a></div>
 
             </div>
 
             <?php
 
-            if (!isset($_POST['price'])){
+            if (isset($_POST['price'])){
 
                 ?>
                 <script>
                     $( document ).ready(function() {
-                        search("<?=($_POST['id'] != '' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '' ? $_POST['price'] : '')?>");
+                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>");
+                        resetPagination();
                     });
                 </script>
                 <?php

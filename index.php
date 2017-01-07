@@ -40,7 +40,8 @@
     <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-    <script src="dinamic_filter/jquery-3.1.1.min.js"></script>
+    <!-- <script src="dinamic_filter/jquery-3.1.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="dinamic_filter/jquery.cookie.js"></script>
     <script src="dinamic_filter/magic-grid.js"></script>
   </head>
