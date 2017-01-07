@@ -682,7 +682,7 @@
 
                                         ?>
 
-                                        <div class="slider__item slider__item--0"><a href="<?=$archivoveriOne?>" data-size="<?=$width?>x<?=$height?>" data-gallery-index='<?=$contOne?>' class="slider__img js-gallery-item"><img data-lazy="<?=$archivoveriOne?>" src="<?=$archivoveriOne?>" alt=""><span class="slider__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra, diam a eleifend tincidunt, risus quam pulvinar augue, venenatis aliquet nibh ipsum at leo.</span></a></div>
+                                        <div class="slider__item slider__item--0"><a href="<?=$archivoveriOne?>" data-size="<?=$width?>x<?=$height?>" data-gallery-index='<?=$contOne?>' class="slider__img js-gallery-item"><img data-lazy="<?=$archivoveriOne?>" src="<?=$archivoveriOne?>" alt=""></a></div>
 
                                         <?php
 
@@ -736,11 +736,6 @@
                                           }
 
                                           ?>
-
-                                          <!--div data-slide-rel='1' class="slider__item slider__item--1">
-                                            <div class="slider__img"><img data-lazy="assets/media-demo/properties/277x180/02.jpg" src="assets/img/lazy-image.jpg" alt=""></div>
-                                          </div-->
-
 
                                         </div>
                                         <button type="button" class="slider__control slider__control--prev js-slick-prev">
