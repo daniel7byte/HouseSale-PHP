@@ -886,11 +886,9 @@
                       <div class="map map--properties">
                         <div class="map__buttons">
                           <button type="button" class="map__change-map js-map-btn active">Property Map</button>
-                          <button type="button" class="map__change-panorama js-panorama-btn">Street view</button>
                         </div>
                         <div class="map__wrap">
                           <div data-type="map" id="gmap" class="map__view js-map-canvas"></div>
-                          <div data-type="panorama" id="gmapstreet" class="map__view map__view--panorama js-map-canvas"></div>
                         </div>
                       </div>
                     </div>

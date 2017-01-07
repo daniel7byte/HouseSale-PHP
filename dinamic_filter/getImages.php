@@ -1,7 +1,7 @@
 <?php
 
 // Entre mas se aproximea cero, mayor será la compresion
-$p = 20;
+$p = 50;
 
 require_once('../datosiniciales.php');
 
