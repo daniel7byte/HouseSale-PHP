@@ -1,0 +1,80 @@
+.navbar__brand-logo-p1 {
+  fill: #2c3e50;
+  height: 60px;
+  width: 215px; background: url("../../img/logo-joygle-big.png") 100% 0;
+}
+
+
+@media (max-width: 1199px) {
+  .navbar__brand-logo-p1 {
+    width: 215px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .navbar__brand-logo {
+    display: none;
+  }
+}
+
+.navbar--overlay .navbar__brand-logo-p1 {
+  fill: #fff;
+}
+
+.navbar--overlay .header-fixed .navbar__brand-logo-p1 {
+  fill: #2c3e50;
+}
+
+
+.navbar--overlay-map .navbar__brand-logo-p1 {
+  fill: #2c3e50;
+}
+
+
+.header__logo-p1 {
+  text-align: center;
+  line-height: 1; background: url("../../img/logo-joygle-m.png") 100% 0;
+}
+
+@media (min-width: 768px) {
+  .header__logo-p1 {
+    display: none;
+  }
+}
+
+.header__logo-p1 svg {
+  width: 50px;
+  height: 33px;
+}
+
+@media (max-width: 767px) {
+  .header__logo-p1 img {
+    width: 100px;
+  }
+}
+
+.header--overlay .header__logo-p1 {
+  width: auto;
+}
+
+.header--mob-opened .header__logo-p1 {
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

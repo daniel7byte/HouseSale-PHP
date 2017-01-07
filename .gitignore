@@ -1,4 +1,6 @@
 .idea
+db
+datosbasicos.php
 
 # Windows image file caches
 Thumbs.db

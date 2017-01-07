@@ -15,7 +15,7 @@
 <html>
   <head lang="en">
     <meta charset="UTF-8">
-    <title>Realty Space - Real Estate Responsive HTML Theme</title><!--[if IE]>
+    <title>Joygle - Realstate</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
@@ -40,8 +40,7 @@
     <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-    <!-- <script src="dinamic_filter/jquery-3.1.1.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="dinamic_filter/jquery.cookie.js"></script>
     <script src="dinamic_filter/magic-grid.js"></script>
   </head>
@@ -72,9 +71,9 @@
       <!-- BEGIN HEADER-->
       <header class="header header--overlay header--dark">
         <div class="container">
-          <div class="header__row"><a href="index.html" class="header__logo">
+          <div class="header__row"><a href="index.php" class="header__logo-p1">
               <svg>
-                <use xlink:href="#icon-logo--mob"></use>
+                
               </svg></a>
             <div class="header__settings">
               <div class="header__settings-column">
@@ -251,9 +250,9 @@
       <div id="header-nav-offset"></div>
       <nav id="header-nav" class="navbar navbar--header navbar--overlay">
         <div class="container">
-          <div class="navbar__row js-navbar-row"><a href="index.html" class="navbar__brand">
-              <svg class="navbar__brand-logo">
-                <use xlink:href="#icon-logo"></use>
+          <div class="navbar__row js-navbar-row"><a href="index.php" class="navbar__brand">
+              <svg class="navbar__brand-logo-p1">
+                
               </svg></a>
             <div id="navbar-collapse-1" class="navbar__wrap">
               <ul class="navbar__nav">

@@ -646,7 +646,7 @@
                 <div class="property">
                   <h1 class="property__title"><?=$result['dato7']?><span class="property__city">ID (<?=$result['dato2']?>) , County (<?=$result['dato11']?>) , City (<?=$result['dato10']?>) , ZipCode (<?=$result['dato24']?>)</span></h1>
                   <div class="property__header">
-                    <div class="property__price"><strong class="property__price-value">$<?=number_format($result['dato5'])?></strong><span class="property__price-label">Inclusive TVA</span></div>
+                    <div class="property__price"><strong class="property__price-value">$<?=number_format($result['dato5'])?></strong></div>
                     <!--h4 class="property__commision">Commision: <strong>?????%</strong></h4>
                     <div class="property__actions">
                       <button type="button" class="btn--default"><i class="fa fa-refresh"></i>Update status</button>

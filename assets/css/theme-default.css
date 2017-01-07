@@ -1,57 +1,5 @@
 @charset "UTF-8";
 
-/*------------------------------------------------------------------
-  * [Master Stylesheet]
-
-  * Project:	RealtySpace
-  * Version:	1.1
-  * Documantation online http://realtyspace.readthedocs.org/en/latest/index.html
-  * Table of contens:
-    + Header / .header
-    + Site / .site
-    + Center / .center
-    + Main / .main
-    + Authorization / .auth
-    + Banner / .banner
-    + Breadcrumbs / .breadcrumbs
-    + Contacts / .contacts
-    + Comment / .comment
-    + Dropdown / .dropdown
-    + Scroll Up Button / .scrollup
-    + Social / .social
-    + Region Select / .region-select
-    + FAQ / .faq
-    + Footer / .footer
-    + Listing / .listing
-    + Navbar / .navabar
-    + Form property / .form-property
-    + Property Details / .property
-    + Address / .address
-    + Article / .article
-    + Feature / .feature
-    + Form / .form
-    + Map / .map
-    + Nav / .nav
-    + Partners / .partners
-    + Pricing / .pricing
-    + Properites / .properties
-    + Review / .review
-    + Search / .search
-    + Slider / .slider
-    + Subscribe / .subscribe
-    + Worker / .worker
-    + Article categories / .article-categories
-    + Gosubmit / .gosubmit
-  * Vendor styles:
-    + Colorbox Core / #colorbox
-    + Bonsai / .bonsai
-    + Leaflet / .leaflet
-    + PhotoSwipe / .pswp
-    + RangeSlider / .irs
-    + Slick-slider / .slick-slider
-    + Pnotify / .ui-pnotify
-
-  @mixin =============================================================*/
 
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -12076,7 +12024,7 @@ mark {
 }
 
 .form--banner-sidebar .form-control {
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
@@ -16049,7 +15997,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .header--dark {
-  background: rgba(0, 0, 0, 0.2);
+  background: #FF6600;
   color: #fff;
 }
 

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  size_li = $("#articles .contador").size();
+  size_li = $("#articles .contador").length;
   x=40;
   if(size_li <= 40){
     $('#loadMore').hide();
@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 function resetPagination() {
-  size_li = $("#articles .contador").size();
+  size_li = $("#articles .contador").length;
   x=40;
   if(size_li <= 40){
     $('#loadMore').hide();
