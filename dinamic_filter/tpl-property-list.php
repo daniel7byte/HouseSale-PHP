@@ -1,6 +1,6 @@
 <div class="listing__item contador">
   <div class="properties properties--list">
-    <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" alt=""/></a>
+    <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt=""/></a>
     </div>
     <!-- end of block .properties__thumb-->
     <div class="properties__details">
@@ -20,7 +20,5 @@
         <p>My home is bright and spacious. Very good transport links. Close to the Olympic village, Westfield and the centre of town. The house has all the mod cons and wifi is included. The room is for a single person occupancy.</p>
       </div><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__more">View details</a>
     </div>
-    <!-- end of block .properties__info-->
   </div>
-  <!-- end of block .properties__item-->
 </div>

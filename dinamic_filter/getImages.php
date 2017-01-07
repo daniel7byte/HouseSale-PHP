@@ -1,5 +1,7 @@
 <?php
 
+header('Content-type: image/jpg');
+
 // Entre mas se aproximea cero, mayor será la compresion
 $p = 50;
 
@@ -33,7 +35,7 @@ function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
 	$newImage = $r->resize($imageData, $w, $h, $p, 'jpg', $ow, $oh);
 
 	// EMITIR LA IMAGEN
-	header('Content-type: '.$mime);
+	//header('Content-type: '.$mime);
 	echo $newImage;
 }
 
