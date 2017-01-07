@@ -1,5 +1,8 @@
 <?php
 
+// Entre mas se aproximea cero, mayor será la compresion
+$p = 20;
+
 require_once('../datosiniciales.php');
 
 function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
@@ -34,6 +37,6 @@ function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
 	echo $newImage;
 }
 
-if(isset($_GET['id']) && isset($_GET['w']) && isset($_GET['h']) && isset($_GET['p'])){
-	getImages($_GET['id'], $_GET['w'], $_GET['h'], $_GET['p'], $dire, $imgdefecto);
+if(isset($_GET['id']) && isset($_GET['w']) && isset($_GET['h'])){
+	getImages($_GET['id'], $_GET['w'], $_GET['h'], $p, $dire, $imgdefecto);
 }

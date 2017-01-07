@@ -1,6 +1,6 @@
 <div class="listing__item contador">
   <div class="properties properties--grid">
-    <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262&p=50" alt="" />
+    <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" alt="" />
         <figure class="item-photo__hover item-photo__hover--params">
           <span class="properties__more">View details</span>
         </figure></a>
