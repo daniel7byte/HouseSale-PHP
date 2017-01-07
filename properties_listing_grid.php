@@ -624,11 +624,12 @@ try {
               <div class="site site--main">
                 <header class="site__header">
                   <h1 class="site__title" style="font-size: 28px!important;">Results for</h1>
-                  <h6 class="site__headline"><strong id="search-string">
-                  <?php if (isset($_POST)): ?>
-                  <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
-                  <?php endif;?>
-                  </strong></h6>
+                  <h5 class="site__headline">Found: <strong id="numRecords">6</strong></h5>
+                  <p id="search-string">
+                    <?php if (isset($_POST['price'])): ?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
+                    <?php endif;?>
+                  </p>
                 </header>
 
                 <img id="loading" src="dinamic_filter/ellipsis.gif" style="display: none;" alt="">
@@ -710,7 +711,7 @@ try {
 
                 <?php
 
-                if (isset($_POST)){
+                if (isset($_POST['price'])){
 
                     ?>
                     <script>
