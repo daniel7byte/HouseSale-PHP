@@ -1,0 +1,100 @@
+.wFormContainer {
+     font-family: Lucida Grande, Lucida Sans Unicode, sans-serif;
+     font-size: 13px;
+     line-height: 150%;
+     border-color: #e3e3e3;
+     border-style: solid;
+     border-width: 1px;
+     color: #454545;
+}
+
+.wFormTitle {
+     font-family: Lucida Grande, Lucida Sans Unicode, sans-serif;
+     font-weight: bold;
+     font-size: 18px;
+}
+
+.wForm .primaryAction, .wForm .secondaryAction, .wForm .wfPagePreviousButton, .wForm .wfPageNextButton {
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+     border-width: 1px;
+     border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.3) rgba(0,0,0,0.8) rgba(0,0,0,0.3);
+     border-radius: 5px;
+     background-image: -moz-linear-gradient(top, transparent 50%, rgba(0,0,0,.10) 51%, rgba(0,0,0,.10));
+}
+
+.wForm .secondaryAction, .wForm .primaryAction, .wForm .wfPagePreviousButton, .wForm .wfPageNextButton {
+     background-image: -webkit-linear-gradient(top, transparent 50%, rgba(0,0,0,.10) 51%, rgba(0,0,0,.10));
+}
+
+.wForm .secondaryAction, .wForm .primaryAction, .wForm .wfPageNextButton, .wForm .wfPagePreviousButton {
+     background-image: linear-gradient(top, transparent 50%, rgba(0,0,0,.10) 51%, rgba(0,0,0,.10));
+}
+
+.wForm .primaryAction:hover, .wForm .secondaryAction:hover, .wForm .wfPagePreviousButton:hover, .wForm .wfPageNextButton:hover {
+     border-color: rgba(0,0,0,0.5) rgba(0,0,0,0.7) rgba(0,0,0,0.9) rgba(0,0,0,0.7);
+     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.wForm fieldset {
+     -moz-border-radius: 9px;
+     -webkit-border-radius: 9px;
+     border-radius: 9px;
+}
+
+.wForm textarea {
+     background: #FFFFFF url(//www.tfaforms.com/theme-editor/images/input_bg.png) repeat-x -2px -2px;
+     border-color: #888888 #CCCCCC #CCCCCC;
+     border-style: solid;
+     border-width: 1px;
+     padding: 1px 1px 1px 1px;
+}
+
+.wForm .oneField input {
+     background: #FFFFFF url(//www.tfaforms.com/theme-editor/images/input_bg.png) repeat-x -2px -2px;
+     border-color: #888888 #CCCCCC #CCCCCC;
+     border-style: solid;
+     border-width: 1px;
+     padding: 2px 0 2px 2px;
+}
+
+.wForm .oneChoice input {
+     border: none !important;
+     background: none !important;
+}
+
+.wForm .field-hint {
+     font-size: 90%;
+     background-color: #ffffff;
+}
+
+.wForm .field-hint-inactive {
+     font-size: 90%;
+}
+
+.wForm .label.reqMark:after {
+     color: #ff0000;
+}
+
+.wFormContainer .errMsg, .wForm form .errMsg {
+     color: #ff0000;
+}
+
+.wForm form .errFld {
+     border-color: #ffc2c2;
+     border-style: solid;
+     border-width: 1px;
+}
+
+.wForm input[type=button], .wForm input[type=submit] {
+     background-color: #fafafa;
+}
+
+.wForm .preField, .wForm .inlineLabel {
+     font-weight: inherit;
+     color: #000000;
+}
+
+.wFormWebPage {
+     background-position: px;
+}
+
