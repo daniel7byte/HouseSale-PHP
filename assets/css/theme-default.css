@@ -7133,7 +7133,7 @@ body {
   @mixin =============================================================*/
 
 .center {
-  background: #f6f6f6;
+  background: #fff; 
   position: relative;
 }
 

@@ -2182,11 +2182,11 @@ webpackJsonpapp([0],[
 	        .attr({type: 'text/css', rel: 'stylesheet'})
 	        .attr('href', 'assets/css/ui-panel.css');
 
-	      var htmlBlock = '<div>' +
-	        '' +
-	        '' +
-	        '' +
-	        '' +
+	      var htmlBlock = '<div class="ui-panel js-ui-panel">' +
+	        '<button class="ui-panel__toggle js-ui-panel-toggle"></button>' +
+	        '<button type="button" class="ui-panel__btn ui-panel__btn--up js-ui-panel-scroll" data-dir="up"></button>' +
+	        '<button type="button" class="ui-panel__btn ui-panel__btn--down js-ui-panel-scroll" data-dir="down"></button>' +
+	        '<button type="button" class="ui-panel__btn ui-panel__btn--next js-ui-panel-next"></button>' +
 	        '</div>';
 	      $body.append(htmlBlock);
 
