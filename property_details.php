@@ -678,6 +678,22 @@
                                         $imginicialOne = $direOne.$nomficheOne."_".$contOne.$extensionOne;
                                         while ($contOne<30){
                                           $archivoveriOne = $direOne.$nomficheOne."_".$contOne.$extensionOne;
+
+                                          $archivoveriTwoGAFMLS = $direTwo.$nomficheTwo."_1".$extensionTwo;
+
+
+                                          if($contTwo == 0 && file_exists($archivoveriTwoGAFMLS)){
+
+                                            ?>
+
+                                            <div data-slide-rel='30' class="slider__item slider__item--0">
+                                              <div class="slider__img"><img data-lazy="<?=$archivoveriTwoGAFMLS?>" src="<?=$archivoveriTwoGAFMLS?>" alt=""></div>
+                                            </div>
+
+
+                                            <?php
+                                          }
+
 //echo $archivoveri;
                                           if (file_exists($archivoveriOne)) {
 
@@ -718,7 +734,23 @@
                                           $contTwo = 0;
                                           $imginicialTwo = $direTwo.$nomficheTwo."_".$contTwo.$extensionTwo;
                                           while ($contTwo<30){
+
                                             $archivoveriTwo = $direTwo.$nomficheTwo."_".$contTwo.$extensionTwo;
+
+                                            $archivoveriTwoGAFMLS = $direTwo.$nomficheTwo."_1".$extensionTwo;
+
+
+                                            if($contTwo == 0 && file_exists($archivoveriTwoGAFMLS)){
+
+                                              ?>
+
+                                              <div data-slide-rel='30' class="slider__item slider__item--0">
+                                                <div class="slider__img"><img data-lazy="<?=$archivoveriTwoGAFMLS?>" src="<?=$archivoveriTwoGAFMLS?>" alt=""></div>
+                                              </div>
+
+
+                                              <?php
+                                            }
 //echo $archivoveri;
                                             if (file_exists($archivoveriTwo)) {
 
@@ -730,12 +762,12 @@
 
                                           <?php
 
-                                          } else {
-                                            if ($contTwo==0) $imginicialTwo = $imgdefecto;
-                                            break 1;
-                                          }
-                                          //echo "<br/>";
-                                          $contTwo++;
+                                            } else {
+                                              if ($contTwo==0) $imginicialTwo = $imgdefecto;
+                                              break 1;
+                                            }
+                                            //echo "<br/>";
+                                            $contTwo++;
                                           }
 
                                           ?>

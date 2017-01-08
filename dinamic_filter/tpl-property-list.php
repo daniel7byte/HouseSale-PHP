@@ -4,7 +4,7 @@
     </div>
     <!-- end of block .properties__thumb-->
     <div class="properties__details">
-      <div class="properties__info"><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__address"><span class="properties__address-street"><?=$row['dato7']?></span><span class="properties__address-city"><?=$row['dato8'] . ', ' . $row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US'?></span></a>
+      <div class="properties__info"><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__address"><span class="properties__address-street"><?=$row['dato7']?></span><span class="properties__address-city"><?=$row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US'?></span></a>
         <div class="properties__offer">
           <div class="properties__offer-column">
 

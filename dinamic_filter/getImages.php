@@ -10,7 +10,11 @@ require_once('../datosiniciales.php');
 function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
 	
 	if(!file_exists('../'.$dire.$fullName.'_0.jpg')){
-		$fullName = '../'.$imgdefecto;
+        if(!file_exists('../'.$dire.$fullName.'_1.jpg')){
+            $fullName = '../'.$dire.$fullName.'_1.jpg';
+        }else{
+            $fullName = '../'.$imgdefecto;
+        }
 	}else{
 		$fullName = '../'.$dire.$fullName.'_0.jpg';
 	}
