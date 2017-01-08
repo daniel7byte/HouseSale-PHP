@@ -679,10 +679,10 @@
                                         while ($contOne<30){
                                           $archivoveriOne = $direOne.$nomficheOne."_".$contOne.$extensionOne;
 
-                                          $archivoveriOneGAFMLS = $direOne.$nomficheOne."_1".$extensionOne;
+                                          $archivoveriOneGAFMLS = $direOne.$nomficheOne."_1.JPG";
 
 
-                                          if($contOne == 0 && file_exists($archivoveriOneGAFMLS)){
+                                          if($result['id'] == "0" && $contOne == 0 && file_exists($archivoveriOneGAFMLS)){
 
                                             ?>
 
@@ -740,7 +740,7 @@
                                             $archivoveriTwoGAFMLS = $direTwo.$nomficheTwo."_1.JPG";
 
 
-                                            if($contTwo == 0 && file_exists($archivoveriTwoGAFMLS)){
+                                            if($result['id'] == "0" && $contTwo == 0 && file_exists($archivoveriTwoGAFMLS)){
 
                                               ?>
 
