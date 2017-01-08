@@ -8,17 +8,17 @@ $p = 50;
 require_once('../datosiniciales.php');
 
 function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
-	
+
 	if(!file_exists('../'.$dire.$fullName.'_0.jpg')){
-        if(!file_exists('../'.$dire.$fullName.'_1.jpg')){
-            $fullName = '../'.$dire.$fullName.'_1.jpg';
+        if(!file_exists('../'.$dire.$fullName.'_1.JPG')){
+            $fullName = '../'.$dire.$fullName.'_1.JPG';
         }else{
             $fullName = '../'.$imgdefecto;
         }
 	}else{
 		$fullName = '../'.$dire.$fullName.'_0.jpg';
 	}
-	
+
 	// OBTENER INFORMACION DE LA IMAGEN ORIGINAL.
 	list($ow, $oh, $xmime) = getimagesize($fullName);
 	$imageSize = filesize($fullName);
