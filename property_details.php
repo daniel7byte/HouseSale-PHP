@@ -1015,9 +1015,8 @@
                       <div class="row">
                         <?php include('property_form.php'); ?>
                         <div class="form__buttons form__buttons--double">
-                          <button type="reset" id="reset" class="form__reset" onclick="reset();">Reset</button>
-                          <!--js-form-reset-->
-                          <button id="search" onclick="return false;" class="form__submit">Search</button>
+                          <button type="reset" onclick="reset();" id="reset" class="form__reset">Reset</button>
+                          <button type="submit" class="form__submit">Search</button>
                         </div>
                       </div>
                     </form>
