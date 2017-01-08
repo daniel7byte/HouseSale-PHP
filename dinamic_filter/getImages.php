@@ -11,9 +11,9 @@ function getImages($fullName, $w, $h, $p, $dire, $imgdefecto){
 
 	if(!file_exists('../'.$dire.$fullName.'_0.jpg')){
         if(!file_exists('../'.$dire.$fullName.'_1.JPG')){
-            $fullName = '../'.$dire.$fullName.'_1.JPG';
+					$fullName = '../'.$imgdefecto;
         }else{
-            $fullName = '../'.$imgdefecto;
+					$fullName = '../'.$dire.$fullName.'_1.JPG';
         }
 	}else{
 		$fullName = '../'.$dire.$fullName.'_0.jpg';
