@@ -74,6 +74,8 @@ $( document ).ready(function() {
         city = $('#city').val(),
         systemFiltro = $('#systemFiltro').val(),
         price = $('#price').val();
+	
+	setCookie(id, zipcode,county, city, price, systemFiltro);
 
     if(county == '-'){
       county = '';
@@ -120,6 +122,34 @@ function search(id, zipcode,county, city, price, systemFiltro){
     }
   });
   $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price);
+}
+
+function resetCookie(){
+	$.ajax({
+		type: 'GET',
+		url: 'dinamic_filter/deleteCookie.php',
+		success: function(result){
+		  console.log(result);
+		}
+	});
+}
+
+function setCookie(id, zipcode,county, city, price, systemFiltro){
+	$.ajax({
+		type: 'GET',
+		url: 'dinamic_filter/setCookie.php',
+		data: {
+		  id : id,
+		  zipcode : zipcode,
+		  county : county,
+		  city : city,
+		  systemFiltro : systemFiltro,
+		  price : price
+		},
+		success: function(result){
+		  console.log(result);
+		}
+	});
 }
 
 function reset() {
