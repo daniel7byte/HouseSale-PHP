@@ -651,7 +651,7 @@ becomes
                 </div>
               </div-->
               <!--end of block .listing__sort-->
-              <div class="listing__view"><span class="control-label">View:</span><a href="properties_listing_grid.php" class="btn--white"><i class="fa fa-th-large"></i></a><a href="properties_listing_list.php" class="btn--white active"><i class="fa fa-bars"></i></a></div>
+              <div class="listing__view"><span class="control-label">View:</span><a href="properties_listing_grid.php" class="btn--white"><i class="fa fa-th-large"></i></a><a href="properties_listing_list.php" class="btn--white active"><i class="fa fa-bars"></i></a><a href="#" class="btn--white"><i class="fa fa-map"></i></a></div>
               <!--end of block .listing__view-->
             </div>
 
