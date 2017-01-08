@@ -681,7 +681,7 @@ try {
                             <div class="listing__item contador">
                               <div class="properties properties--grid">
                                 <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
-                                    <figure class="item-photo__hover item-photo__hover--params">
+                                    <figure class="item-photo__hover item-photo__hover--params"><?=($row['id'] == "1" ? 'FMLS' : 'GAMLS' )?>
                                       <span class="properties__more">View details</span>
                                     </figure></a>
                                 </div>

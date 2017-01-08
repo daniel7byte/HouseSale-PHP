@@ -802,7 +802,7 @@
                         </svg>
                       </dt>
                       <dd class="property__plan-title">Area</dd>
-                      <dd class="property__plan-value">?????</dd>
+                      <dd class="property__plan-value"><?=$result['dato9']?></dd>
                     </dl>
                     <dl class="property__plan-item">
                       <dt class="property__plan-icon property__plan-icon--window">
@@ -825,11 +825,11 @@
                     <dl class="property__plan-item">
                       <dt class="property__plan-icon">
                         <svg>
-                          <use xlink:href="#icon-bedrooms"></use>
+                          <use xlink:href="#icon-bathrooms"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Beds</dd>
-                      <dd class="property__plan-value">?????</dd>
+                      <dd class="property__plan-title">Half Baths</dd>
+                      <dd class="property__plan-value"><?=$result['dato14']?></dd>
                     </dl>
                     <dl class="property__plan-item">
                       <dt class="property__plan-icon property__plan-icon--garage">
@@ -837,8 +837,8 @@
                           <use xlink:href="#icon-garage"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Garages</dd>
-                      <dd class="property__plan-value">?????</dd>
+                      <dd class="property__plan-title">Year Built</dd>
+                      <dd class="property__plan-value"><?=$result['dato15']?></dd>
                     </dl>
                   </div>
 
