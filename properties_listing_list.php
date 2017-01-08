@@ -723,7 +723,7 @@ becomes
                 ?>
                 <script>
                     $( document ).ready(function() {
-                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>");
+                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
                         resetPagination();
                     });
                 </script>
@@ -805,6 +805,15 @@ becomes
                     <div class="form-group">
                       <label for="id" class="control-label">ID</label>
                       <input class="form-control" type='text' name="id" id="id" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="systemFiltro" class="control-label">SYSTEM</label>
+                      <select class="form-control" name="systemFiltro" id="systemFiltro">
+                        <option value="" selected>All</option>
+                        <option value="1">FMLS</option>
+                        <option value="0">GAMLS</option>
+                      </select>
                     </div>
 
                     <div class="form__buttons form__buttons--double">

@@ -5,6 +5,7 @@ $zipcode = $_GET['zipcode'];
 $county = $_GET['county'];
 $city = $_GET['city'];
 $price = $_GET['price'];
+$system = $_GET['systemFiltro'];
 
 include("../datosiniciales.php");
 
@@ -35,10 +36,11 @@ if($id != ''){
 
         case '-':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
+                ':system' => "%$system%",
                 ':city' => "%$city%"
             ]);
 
@@ -55,11 +57,12 @@ if($id != ''){
 
         case '1-75':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 <= :price AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 <= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':price' => '75000'
             ]);
 
@@ -74,11 +77,12 @@ if($id != ''){
             break;
         case '75-150':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB  AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':priceA' => '75000',
                 ':priceB' => '150000'
             ]);
@@ -94,11 +98,12 @@ if($id != ''){
             break;
         case '150-300':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':priceA' => '150000',
                 ':priceB' => '300000'
             ]);
@@ -114,11 +119,12 @@ if($id != ''){
             break;
         case '300-600':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':priceA' => '300000',
                 ':priceB' => '600000'
             ]);
@@ -134,11 +140,12 @@ if($id != ''){
             break;
         case '600-900':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':priceA' => '600000',
                 ':priceB' => '900000'
             ]);
@@ -154,11 +161,12 @@ if($id != ''){
             break;
         case '900-mas':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :price AND dato6 = 'A' AND dato24 LIKE :zipcode");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
                 ':city' => "%$city%",
+                ':system' => "%$system%",
                 ':price' => '900000'
             ]);
 
