@@ -679,15 +679,15 @@
                                         while ($contOne<30){
                                           $archivoveriOne = $direOne.$nomficheOne."_".$contOne.$extensionOne;
 
-                                          $archivoveriTwoGAFMLS = $direTwo.$nomficheTwo."_1".$extensionTwo;
+                                          $archivoveriOneGAFMLS = $direOne.$nomficheOne."_1".$extensionOne;
 
 
-                                          if($contTwo == 0 && file_exists($archivoveriTwoGAFMLS)){
+                                          if($contOne == 0 && file_exists($archivoveriOneGAFMLS)){
 
                                             ?>
 
                                             <div data-slide-rel='30' class="slider__item slider__item--0">
-                                              <div class="slider__img"><img data-lazy="<?=$archivoveriTwoGAFMLS?>" src="<?=$archivoveriTwoGAFMLS?>" alt=""></div>
+                                              <div class="slider__img"><img data-lazy="<?=$archivoveriOneGAFMLS?>" src="<?=$archivoveriOneGAFMLS?>" alt=""></div>
                                             </div>
 
 
@@ -1013,69 +1013,11 @@
                     <!-- BEGIN SEARCH-->
                     <form action="properties_listing_grid.php" method="post" class="form form--flex form--search js-search-form form--sidebar">
                       <div class="row">
-                        <div class="form-group">
-                          <label for="in-contract-type" class="control-label" style="font-size: 16px;">STATE</label>
-                          <select id="" data-placeholder="Contract type" class="form-control">
-                            <option>Georgia</option>
-                          </select>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="zipcode" class="control-label">ZIP CODE</label>
-                          <input class="form-control" type='text' name="zipcode" id="zipcode" value="">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="county" class="control-label">COUNTY</label>
-                          <select class="form-control" name="county" id="county">
-                            <option value="-">All</option>
-                            <?php
-                            $queryCounty = $mysql->prepare("SELECT DISTINCT dato11 FROM datoscasas ORDER BY dato11 ASC;");
-                            $queryCounty->execute();
-                            $rowsCounty = $queryCounty->fetchAll();
-                            foreach ($rowsCounty as $row):
-                              ?>
-                              <option value="<?=$row['dato11']?>"><?=$row['dato11']?></option>
-                            <?php endforeach; ?>
-                          </select>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="city" class="control-label">CITY</label>
-                          <select id="city" name="city" class="form-control">
-                            <option value="-">All</option>
-                            <?php
-                            $queryCounty = $mysql->prepare("SELECT DISTINCT dato10 FROM datoscasas ORDER BY dato10 ASC;");
-                            $queryCounty->execute();
-                            $rowsCounty = $queryCounty->fetchAll();
-                            foreach ($rowsCounty as $row):
-                              ?>
-                              <option value="<?=$row['dato10']?>"><?=$row['dato10']?></option>
-                            <?php endforeach; ?>
-                          </select>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="price" class="control-label">PRICE RANGE</label>
-                          <select class="form-control" name="price" id="price">
-                            <option value="-" selected>All</option>
-                            <option value="1-75">$1 - $75.000</option>
-                            <option value="75-150">$75.000 - $150.000</option>
-                            <option value="150-300">$150.000 - $300.000</option>
-                            <option value="300-600">$300.000 - $600.000</option>
-                            <option value="600-900">$600.000 - $900.000</option>
-                            <option value="900-mas"> + $900.000</option>
-                          </select>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="id" class="control-label">ID</label>
-                          <input class="form-control" type='text' name="id" id="id" value="">
-                        </div>
-
+                        <?php include('property_form.php'); ?>
                         <div class="form__buttons form__buttons--double">
-                          <button type="reset" onclick="reset();" id="reset" class="form__reset">Reset</button>
-                          <button type="submit" class="form__submit">Search</button>
+                          <button type="reset" id="reset" class="form__reset" onclick="reset();">Reset</button>
+                          <!--js-form-reset-->
+                          <button id="search" onclick="return false;" class="form__submit">Search</button>
                         </div>
                       </div>
                     </form>
