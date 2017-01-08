@@ -630,15 +630,6 @@ try {
                     <?php if (isset($_POST['price'])): ?>
                     <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
                     <?php endif;?>
-					<?=$_COOKIE?>
-					<?php if (isset($_COOKIE['price'])): ?>
-                    <?=$_COOKIE['zipcode']?> + <?=$_COOKIE['county']?> + <?=$_COOKIE['city']?> + <?=$_COOKIE['price']?>
-					<script>
-                        $( document ).ready(function() {
-							resetCookie();
-						});
-					</script>
-                    <?php endif;?>
                   </p>
                 </header>
 
@@ -733,21 +724,6 @@ try {
                     <?php
 
                 }
-				
-				if (isset($_COOKIE['price'])){
-
-                    ?>
-                    <script>
-                        $( document ).ready(function() {
-                            search("<?=($_COOKIE['id'] != '-' ? $_COOKIE['id'] : '')?>", "<?=($_COOKIE['zipcode'] != '-' ? $_COOKIE['zipcode'] : '')?>", "<?=($_COOKIE['county'] != '-' ? $_COOKIE['county'] : '')?>", "<?=($_COOKIE['city'] != '-' ? $_COOKIE['city'] : '')?>", "<?=($_COOKIE['price'] != '-' ? $_COOKIE['price'] : '')?>", "<?=$_COOKIE['systemFiltro']?>");
-                            resetPagination();
-							resetCookie();
-                        });
-                    </script>
-                    <?php
-
-                }
-
                 ?>
 
               </div>
