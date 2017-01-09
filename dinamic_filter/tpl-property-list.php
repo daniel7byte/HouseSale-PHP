@@ -17,7 +17,7 @@
         <div class="properties__params--mob"><a href="#" class="properties__more">View details</a><span class="properties__params">Built-Up - 65 Sq Ft</span><span class="properties__params">Land Size - 110 Sq Ft</span></div>
       </div>
       <div class="properties__intro">
-        <p>My home is bright and spacious. Very good transport links. Close to the Olympic village, Westfield and the centre of town. The house has all the mod cons and wifi is included. The room is for a single person occupancy.</p>
+        <p>Joygle.com</p>
       </div><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__more">View details</a>
     </div>
   </div>

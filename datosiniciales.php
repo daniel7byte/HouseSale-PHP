@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
-//$password = "@Soporte7805";
+$password = "@Soporte7805";
+//$password = "";
 $dbname = "joygle";
 $sqlqueryini = " SELECT * FROM ".$dbname.".datoscasas d where 1=1 ";
 $limitepagina = 30;
@@ -18,4 +18,6 @@ $d3= "";
 $d4= "";
 $d5= "";
 $d6= "";
+
+$limiteRegistros = 350;
 ?>

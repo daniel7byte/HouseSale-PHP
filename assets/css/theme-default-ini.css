@@ -4438,7 +4438,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
   margin-bottom: 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  margin: 0px 0 0;
+  margin: 40px 0 0;
   text-align: left;
 }
 
@@ -6998,7 +6998,7 @@ fieldset[disabled] .post-password-form label > input {
   padding-left: 15px;
   padding-right: 15px;
   float: left;
-  margin-top: 0px;
+  margin-top: 27px;
 }
 
 @media (min-width: 768px) {
@@ -8532,7 +8532,7 @@ mark {
 }
 
 .widget--details .widget__header + .widget__content {
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
 .widget--sidebar {
@@ -8540,7 +8540,7 @@ mark {
 }
 
 .widget--sidebar:first-of-type:not(.widget--first-no-head) {
-  margin-top: 0px;
+  margin-top: 26px;
 }
 
 @media (max-width: 767px) {
@@ -8574,7 +8574,7 @@ mark {
 .widget--sidebar .widget__headline {
   font-size: 14px;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 0;
   line-height: 2;
   text-align: center;
@@ -11994,7 +11994,7 @@ mark {
 }
 
 .form--banner-sidebar {
-  padding: 20px 30px 30px 30px;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.3);
   position: relative;
   -webkit-transition: 0.5s;
@@ -14586,7 +14586,7 @@ div.wpcf7 img.ajax-loader {
 }
 
 .banner__title {
-  font-size: 90px;
+  font-size: 100px;
   color: #fff;
   font-weight: 900;
   margin: 0 80px 0 0;
@@ -14991,7 +14991,6 @@ div.wpcf7 img.ajax-loader {
   width: 100%;
   position: relative;
   z-index: 360;
-  
 }
 
 @media (min-width: 992px) {
@@ -15487,7 +15486,7 @@ div.wpcf7 img.ajax-loader {
   bottom: 30px;
   left: 50%;
   margin-left: 530px;
-  z-index: 2500;
+  z-index: 10;
   border: none;
   padding: 0 7px 3px 7px;
   opacity: 0;
@@ -15746,7 +15745,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 50px; z-index:2000;
+  height: 50px;
 }
 
 .header__settings {
@@ -15762,7 +15761,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 @media (max-width: 767px) {
   .header__settings {
-    display: none;
+   /* display: none;*/
   }
 }
 
@@ -15790,7 +15789,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .header__contacts {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.1);
   margin-left: auto;
   height: 100%;
 }
@@ -15821,7 +15820,35 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   }
 }
 
-1
+.header__phone {
+  color: #fff;
+  display: block;
+  font-weight: 400;
+  line-height: 1;
+  padding: 15px 40px 0;
+}
+
+.header__phone:hover {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .header__phone {
+    padding: 15px 0 0;
+  }
+}
+
+.header__phone-icon {
+  width: 16px;
+  height: 14px;
+}
+
+@media (max-width: 767px) {
+  .header__phone-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
 
 .header__call {
   text-align: center;
@@ -15849,7 +15876,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 @media (min-width: 768px) {
   .header__logo {
-    display: none;
+    /*display: none;*/
   }
 }
 
@@ -15871,7 +15898,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   width: 40px;
   padding: 0 !important;
   border-radius: 20px;
-  outline: none; 
+  outline: none;
 }
 
 .header__navbar-toggle.collapsed {
@@ -15979,7 +16006,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .header--dark .header__contacts {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .header--white {
@@ -16278,7 +16305,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   + Navbar / .navabar
   @mixin =============================================================*/
 
-@media (max-width: 767px) {
+@media (max-width: 2000px) {
   .navbar {
     display: none;
   }
@@ -16369,7 +16396,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   .navbar__wrap--init {
     display: block;
     background: #00bbaa;
-    height:800px!important;
+    width: 300px;
     bottom: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -16377,7 +16404,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 0;
     float: none;
     padding-top: 50px;
     overflow-y: auto;
@@ -16396,12 +16423,12 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 @media (max-width: 767px) {
   .navbar__nav {
     margin-top: 0;
-    width: 300px; height:300px!important;
+    width: 300px;
     position: relative;
     z-index: 20;
     overflow-y: auto;
     overflow-x: hidden;
-    
+    min-height: 100%;
   }
 }
 
@@ -17198,7 +17225,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   background: #f6f6f6;
   border: none;
   min-height: inherit;
-  margin-bottom: 0; display:none!important; 
+  margin-bottom: 0;
 }
 
 .navbar--header.header-fixed {
@@ -17210,7 +17237,16 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 @media (min-width: 768px) {
   .navbar--header.header-fixed {
-display:none!important; 
+    position: fixed;
+    top: -65px;
+    left: 0;
+    right: 0;
+    z-index: 35;
+    -webkit-transform: translateY(65px);
+    -ms-transform: translateY(65px);
+    transform: translateY(65px);
+    -webkit-transition: -webkit-transform 1s;
+    transition: transform 1s;
   }
 }
 
@@ -17331,7 +17367,7 @@ display:none!important;
   @mixin =============================================================*/
 
 .footer {
-  background: #222; 
+  background: #222;
 }
 
 .footer__wrap {
@@ -18852,7 +18888,7 @@ display:none!important;
 }
 
 .gosubmit .container {
-  background: url("../img/bg-gosubmit.png") no-repeat 23px -2px #fff !important;
+  background: url("../img/bg-gosubmit.jpg") no-repeat 23px -2px #fff !important;
   min-height: 200px;
 }
 
@@ -19817,7 +19853,7 @@ fieldset[disabled] .subscribe__field {
   @mixin =============================================================*/
 
 .property {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .property:before,
@@ -23394,7 +23430,7 @@ fieldset[disabled] .subscribe__field {
   color: #2c3e50;
   border: 1px solid #dcdcdc;
   padding: 18px 30px;
-  z-index: 1000;   top: 40px;
+  z-index: 1000;
 }
 
 .auth--header .dropdown__menu:before {
@@ -23410,10 +23446,10 @@ fieldset[disabled] .subscribe__field {
 
 @media (max-width: 767px) {
   .auth--header .dropdown__menu {
-  /*  width: auto !important;*/
-    left: -120px;
-    right: 0px;
-    top: 40px;
+    width: auto !important;
+    left: 15px;
+    right: 15px;
+    top: 55px;
   }
 }
 

@@ -1,13 +1,13 @@
 <?php
 
-  include("datosiniciales.php");
+include("datosiniciales.php");
 
-  try {
-      $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  } catch (Exception $e) {
-      echo "Error: " . $e->getMessage();
-      exit;
-  }
+try {
+  $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+} catch (Exception $e) {
+  echo "Error: " . $e->getMessage();
+  exit;
+}
 
 ?>
 
@@ -15,7 +15,7 @@
 <html>
   <head lang="en">
     <meta charset="UTF-8">
-    <title>Joygle - Realstate</title><!--[if IE]>
+    <title>Joygle</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
@@ -39,11 +39,24 @@
     <!--[if lt IE 11]>
     <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Meta graph protocol-->
+    <meta property="og:title" content="1600 Pennsylvania Ave NW">
+    <meta property="og:url" content="property_details.html">
+    <meta property="og:image" content="assets/media-demo/properties/554x360/01.jpg">
+    <meta property="og:description" content="Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio!">
+    <!--Meta Twitter protocol-->
+    <meta name="twitter:card" content="property">
+    <meta name="twitter:url" content="property_details.html">
+    <meta name="twitter:title" content="1600 Pennsylvania Ave NW">
+    <meta name="twitter:description" content="Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio!">
+    <meta name="twitter:image" content="assets/media-demo/properties/554x360/01.jpg">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
+    <link rel="stylesheet" href="dinamic_filter/pagination.css">	
     <script src="dinamic_filter/magic-grid.js"></script>
   </head>
-  <body class="index menu-default hover-default scroll-animation">
+  <body class="properties_listing_grid menu-default hover-default ">
     <!--
     SVG icons from sprite-inline.svg
     They are inlined in order to make them work,
@@ -68,295 +81,382 @@
     <!-- endinject -->
     <div class="box js-box">
 	
-
-
+	
       <!-- BEGIN HEADER-->
 <?php include("header.php"); ?> 
       <!-- END HEADER-->
 	
-	
-
-  
-  
-  
-	  
 	  
 	  
       <div class="site-wrap js-site-wrap">
-        <div class="widget js-widget">
-          <div class="widget__content">
-            <div class="banner js-banner banner--wide">
-              <div style="background-image: url(&quot;assets/media-demo/banner/banner-1.jpg&quot;);" class="banner__item">
-                <div class="map map--index map--banner">
-                  <div class="map__buttons">
-                    <button type="button" class="map__change-map js-map-btn">Property Map</button>
-                  </div>
-                  <div class="map__wrap">
-                    <div data-infobox-theme="white" class="map__view js-map-index-canvas"></div>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="banner__caption">
-                      <h1 class="banner__title">FIND YOUR NEXT HOME HERE</h1>
-                      <h3 class="banner__subtitle">We have more than 30.000 homes available for you in the state of Georgia. Choose your best option at a price that is right for you and you will save 1.5% with us.</h3><span class="banner__btn">Get started</span>
-                      <div class="banner__arrow-circle">•</div>
-                      <svg class="banner__arrow-end js-arrow-end">
-                        <use xlink:href="#icon-arrow-end"></use>
-                      </svg>
-                      <div class="banner__arrow">
-                        <svg id="banner-line" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                          viewBox="0 0 774 284" enable-background="new 0 0 774 284" xml:space="preserve">
-                          <path  fill="none" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="0,2004.009" d="M220.6,239.6
-                          c-3.6-15.5-17.5-27.1-34.1-27.1h-150c-19.3,0-35,15.7-35,35c0,19.3,15.7,35,35,35c0,0,88,0,150,0c169,0,244.9-7.5,291-19
-                          c41.3-10.2,114.1-33.7,118-83c4.2-53.5-59.4-67.5-102-54c-47.2,15-52.3,78.2,1,90c58.1,12.9,169.6-53.6,274.7-210"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="banner__search">
-                      <h4 class="banner__sidebar-title">FIND YOUR NEXT HOME HERE</h4>
-                      <!-- BEGIN SEARCH-->
-                      <form action="properties_listing_grid_small.php" method="post" class="formpc form form--flex form--search js-search-form form--banner-sidebar " style="">
-                        <div class="row">
-                          <?php include('property_form.php'); ?>
-                          <div class="form__buttons form__buttons--double">
-                            <button type="reset" onclick="reset();" id="reset" class="form__reset">Reset</button>
-                            <button type="submit" class="form__submit">Search</button>
-                          </div>
-                        </div>
-                      </form>
-                      <!-- end of block-->
-                      <!-- END SEARCH-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-
-        <div class="widget js-widget widget--landing widget--gray">
-            <div class="widget__header">
-                <h2 class="widget__title">Real estates</h2>
-                <h5 class="widget__headline">Our agents are licensed professionals that specialise in searching, evaluating and negotiating the purchase of property on behalf of the buyer. They will sell you real estate. Insights, tips & how-to guides on selling property and preparing your home or investment property for sale and working to maximise your sale price.</h5>
-            </div>
-            <div class="widget__content">
-                <div class="tab tab--properties">
-                    <div class="tab-content">
-
-
-                        <div id="tab-popular" class="tab-pane in active">
-                            <div class="listing listing--grid">
-
-                                <?php
-                                $query = $mysql->prepare("SELECT * FROM banderas ORDER BY id ASC;");
-                                $query->execute();
-                                $rows = $query->fetchAll();
-                                foreach ($rows as $row):
-                                ?>
-
-                                    <?php
-                                    $query = $mysql->prepare("SELECT * FROM datoscasas WHERE dato2 = :dato2;");
-                                    $query->execute([':dato2' => $row['casa_id']]);
-                                    $rows = $query->fetchAll();
-                                    foreach ($rows as $row):
-                                    ?>
-
-                                    <div class="listing__item contador">
-									  <div class="properties properties--grid">
-										<div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
-											<figure class="item-photo__hover item-photo__hover--params">
-											  <span class="properties__more">View details</span>
-											</figure></a>
-										</div>
-										<div class="properties__details">
-										  <div class="properties__info"><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__address"><span class="properties__address-street"><?=$row['dato7']?></span><span class="properties__address-city"><?=$row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US'?> - <?=($row['id'] == "1" ? 'FMLS' : 'GAMLS' )?></span></a>
-											<div class="properties__offer">
-											  <div class="properties__offer-column">
-												<div class="properties__offer-value"><strong>$<?=number_format($row['dato5'])?></strong><span class="properties__offer-period"></span>
-												</div>
-											  </div>
-											</div>
-										  </div>
-										</div>
-									  </div>
-									</div>
-
-                                    <?php endforeach; ?>
-
-                                <?php endforeach; ?>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="widget js-widget">
-          <div class="widget__content">
-            <!-- BEGIN SECTION FEATURE-->
-            <section class="feature">
-              <div class="feature__picture"></div>
-              <!-- end of .feature__picture-->
-              <div class="container">
-                <div class="feature__content">
-                  <div class="feature__header">
-                    <h3 data-sr="enter right ease-in-out 150px" class="feature__title">WHY SHOULD YOU USE JOYGLE</h3>
-                    <h4 data-sr="enter right ease-in-out 250px" class="feature__headline">Our efficient platform provides all the necessary tools for you to buy/sell real estate the best and fastest way. with us you’ll get the following benefits:</h4>
-                  </div>
-                  <!-- end of block .feature__header-->
-                  <div class="feature__list">
-                    <div data-sr="enter right ease 150px" class="feature__item">
-                      <svg class="feature__icon feature__icon--money-save">
-                        <use xlink:href="#icon-money-save"></use>
-                      </svg>
-                      <div class="feature__item-content">
-                        <h3 class="feature__item-title">BIG SAVINGS</h3>
-                        <div class="feature__text">
-                          <p>Our commission is one of the lowest in the market: 4.5%.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end of block .feature__item-->
-                    <div data-sr="enter right ease 250px" class="feature__item">
-                      <svg class="feature__icon feature__icon--good-sales">
-                        <use xlink:href="#icon-good-sales"></use>
-                      </svg>
-                      <div class="feature__item-content">
-                        <h3 class="feature__item-title">WE FACILITATE SALES</h3>
-                        <div class="feature__text">
-                          <p>We take care of your real property for you to have peace of mind.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end of block .feature__item-->
-                    <div data-sr="enter right ease 150px" class="feature__item">
-                      <svg class="feature__icon">
-                        <use xlink:href="#icon-comfort"></use>
-                      </svg>
-                      <div class="feature__item-content">
-                        <h3 class="feature__item-title">USER FRIENDLY</h3>
-                        <div class="feature__text">
-                          <p>We are transforming the way consumers make home-related decisions and connect with professionals.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end of block .feature__item-->
-                    <div data-sr="enter right ease 250px" class="feature__item">
-                      <svg class="feature__icon">
-                        <use xlink:href="#icon-easy"></use>
-                      </svg>
-                      <div class="feature__item-content">
-                        <h3 class="feature__item-title">VARIOUS OPTIONS</h3>
-                        <div class="feature__text">
-                          <p>It starts with our living database of more than 110 million U.S. homes – including homes for sale, homes for rent and homes not currently on the market.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end of block .feature__item-->
-                  </div>
-                  <!-- end of block .feature__list-->
-                </div>
-                <!-- end of .feature__content-->
-              </div>
-            </section>
-            <!-- END SECTION FEATURE-->
-          </div>
-        </div>
-		
-		
-
-		
-		
-		
-		
-
-		
-		
-		
-		
-
-
-		
-		
-		
-		
-        <div class="widget js-widget">
-          <div class="widget__content">
-            <!-- BEGIN BLOCK GO SUBMIT-->
-            <div data-sr="flip 45deg over 0.5s" class="gosubmit">
-              <div class="container">
-                <div class="gosubmit__title">
-                  <div class="gosubmit__title__row gosubmit__title__row--second"style="text-align: left!important;"><span class="gosubmit__title__option" style="text-align: left!important;">We </span>Buy and <span class="gosubmit__title__option"></span></div>					
-                  <div class="gosubmit__title__row gosubmit__title__row--first"> </div>
-			  
-                  <div class="gosubmit__title__row gosubmit__title__row--second"><span class="gosubmit__title__option">Sell </span>Your  Propierty<span class="gosubmit__title__option"></span></div>
-                  <div class="gosubmit__title__row gosubmit__title__row--third"></div>
-                </div>
-                <!-- end of block .gosubmit__title--><a href="contact.php" class="gosubmit__btn">Contact US</a>
-              </div>
-            </div>
-            <!-- END BLOCK GO SUBMIT-->
-          </div>
-        </div>
         <div class="center">
           <div class="container">
+            <div-- class="row">
+              <!-- BEGIN site-->
+              <div class="site site--main">
+                <header class="site__header">
+                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=$limiteRegistros?></strong> </h1>
+                  <p id="search-string">
+                    <?php if (isset($_POST['price'])): ?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
+                    <?php endif;?>
+                  </p>
+                </header>
+
+                <img id="loading" src="dinamic_filter/ellipsis.gif" style="display: none;" alt="">
+
+                <p style="display: none;" id="noRecords">No records found</p>
+
+                <button type="button" data-goto-target=".js-search-form" class="widget__btn--goto js-goto-btn">Show Filter</button>
+                <div class="site__panel">
+                  <!--div class="listing__sort">
+                    <div class="form-group">
+                      <label for="in-listing-sort" class="control-label">Sort by:</label>
+                      <div class="form-control--select">
+                        <select id="in-listing-sort" class="form-control js-in-select">
+                          <option>Price + P&amp;P: Highest First</option>
+                          <option>Time: Ending Soonset</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div-->
+                  <!--end of block .listing__sort-->
+				  <div class="listing__view">
+					<span class="control-label">View:</span>
+					<a href="properties_listing_grid.php" class="btn--white"><i class="fa fa-th-large"></i></a>
+					<a href="properties_listing_list.php" class="btn--white"><i class="fa fa-bars"></i></a>
+					<a href="properties_listing_grid_small.php" class="btn--white active"><i class="fa fa-table"></i></a>
+					<a href="#" class="btn--white"><i class="fa fa-map"></i></a>
+				  </div>
+                  <!--end of block .listing__view-->
+                </div>
+
+                <!--div class="listing__param"><span class="listing__param-item"><a class="listing__param-delete"></a>USA</span><span class="listing__param-item"><a class="listing__param-delete"></a>New Jersey</span><span class="listing__param-item"><a class="listing__param-delete"></a>New York City</span><span class="listing__param-item"><a class="listing__param-delete"></a>California</span><span class="listing__param-item"><a class="listing__param-delete"></a>Los Angeles</span><span class="listing__param-item"><a class="listing__param-delete"></a>For sale</span><span class="listing__param-item"><a class="listing__param-delete"></a>Privat apartment</span><span class="listing__param-item"><a class="listing__param-delete"></a>Price: $50k - $400k</span><span class="listing__param-item"><a class="listing__param-delete"></a>Area: 60 - 145 m2</span><span class="listing__param-item"><a class="listing__param-delete"></a>2 bedrooms</span><span class="listing__param-item"><a class="listing__param-delete"></a>3 bedrooms</span><span class="listing__param-item"><a class="listing__param-delete"></a>4 bedrooms<span class="listing__param-item"></span><a class="listing__param-delete"></a>Clear All</span></div-->
+
+                <!--end of block .listing__param-->
+                <div class="site__main">
+
+                  <div class="widget js-widget widget--main">
+                    <div class="widget__content">
+                      <div class="listing listing--grid listing--lg-4 js-properties-list" id="articles">
+
+                          <?php
+                          $query = $mysql->prepare("SELECT * FROM datoscasas ORDER BY rand() LIMIT $limiteRegistros");
+                          $query->execute();
+                          $rows = $query->fetchAll();
+                          foreach ($rows as $row):
+                          ?>
+
+                            <div class="listing__item contador">
+                              <div class="properties properties--grid">
+                                <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
+                                    <figure class="item-photo__hover item-photo__hover--params">
+                                      <span class="properties__more">View details</span>
+                                    </figure></a>
+                                </div>
+                                <div class="properties__details">
+                                  <div class="properties__info"><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__address"><span class="properties__address-street"><?=$row['dato7']?></span><span class="properties__address-city"><?=$row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US'?> - <?=($row['id'] == "1" ? 'FMLS' : 'GAMLS' )?></span></a>
+                                    <div class="properties__offer">
+                                      <div class="properties__offer-column">
+                                        <div class="properties__offer-value"><strong>$<?=number_format($row['dato5'])?></strong><span class="properties__offer-period"></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+							
+							<script>
+							$( document ).ready(function() {
+								resetPagination();
+							});
+							</script>
+
+                          <?php endforeach; ?>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="widget__footer"><a href="" class="widget__more" id="loadMore" onclick="loadMore(); return false;">More listings</a></div>
+
+                </div>
+
+                <?php
+
+                if (isset($_POST['price'])){
+
+                    ?>
+                    <script>
+                        $( document ).ready(function() {
+                            search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                            resetPagination();
+                        });
+                    </script>
+                    <?php
+
+                }
+                ?>
+
+              </div>
+              <!-- END site-->
+			  
+			  
+			  
+              <!-- BEGIN SIDEBAR-->
+              <div class="sidebar">
+			  
+			  
+                <div class="widget js-widget widget--sidebar">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Find</h2>
+                    <h5 class="widget__headline">Find your next home here</h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
+                  </div>
+                  <div class="widget__content">
+                    <!-- BEGIN SEARCH-->
+                    <form method="post" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
+                      <div class="row">
+                        <?php include('property_form.php'); ?>
+                        <div class="form__buttons form__buttons--double">
+                          <button type="reset" id="reset" class="form__reset" onclick="reset();">Reset</button>
+                          <!--js-form-reset-->
+                          <button id="search" onclick="return false;" class="form__submit">Search</button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- end of block-->
+                    <!-- END SEARCH-->
+                  </div>
+                </div>
+				
+				
+				
+				
+				  
+                <div class="widget js-widget widget--sidebar widget--dark">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Popular estate</h2>
+                    <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
+                  </div>
+                  <div class="widget__content">
+				  
+				  
+                    <div class="listing listing--sidebar">
+					
+					
+						<?php
+                        $query = $mysql->prepare("SELECT * FROM banderas ORDER BY id ASC;");
+                        $query->execute();
+                        $rows = $query->fetchAll();
+                        foreach ($rows as $row):
+                        ?>
+
+                          <?php
+                          $query = $mysql->prepare("SELECT * FROM datoscasas WHERE dato2 = :dato2;");
+                          $query->execute([':dato2' => $row['casa_id']]);
+                          $rows = $query->fetchAll();
+                          foreach ($rows as $row):
+                          ?>
+
+                            <div class="listing__item">
+                              <div class="properties properties--sidebar">
+                                <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo item-photo--static"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
+                                    <figure class="item-photo__hover">
+                                      <span class="item-photo__more">View details</span>
+                                    </figure></a>
+                                </div>
+                                <div class="properties__details">
+                                  <div class="properties__info"><a href="property_details.php?id=<?=$row['dato2']?>" class="properties__address"><span class="properties__address-street"><?=$row['dato7']?></span><span class="properties__address-city"><?=$row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US'?> - <?=($row['id'] == "1" ? 'FMLS' : 'GAMLS' )?></span></a>
+                                    <div class="properties__offer">
+                                      <div class="properties__offer-column">
+                                        <div class="properties__offer-value"><strong>$<?=number_format($row['dato5'])?></strong><span class="properties__offer-period"></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          <?php endforeach; ?>
+
+                        <?php endforeach; ?>
+					  
+					  
+                    </div>
+                  </div>
+                </div>
+                <div class="widget js-widget widget--sidebar widget--dark">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Agents</h2>
+                    <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
+                  </div>
+                  <div class="widget__content">
+                    <div class="listing listing--sidebar">
+					<?php include('agents.php'); ?>
+                    </div>
+                  </div>
+                </div>
+             			
+				
+              </div>
+              <!-- END SIDEBAR-->
+			  
+			  
+			  
+			  
+			  
+              <div class="clearfix"></div>
+            </div>
           </div>
         </div>
         <!-- END CENTER SECTION-->
         <!-- BEGIN AFTER CENTER SECTION-->
-        <div class="widget js-widget widget--landing">
-          <div class="widget__header">
-            <h2 class="widget__title"><span class="title-thin">GET TO KNOW</span>  OUR STRATEGIC ALLIES</h2>
-            <h5 class="widget__headline">We work with you to provide you with a better experience.</h5>
-          </div>
-          <div class="widget__content">
-            <!-- BEGIN PARTNERS-->
-            <div id="partners-slider" class="partners">
-              <div class="partners__slider js-slick-slider">
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-1.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-3.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-4.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-5.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-3.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
+        <!-- END AFTER CENTER SECTION-->
+        <!-- BEGIN FOOTER-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="footer__col footer__col--first">
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Menu</h2>
+                  </div>
+                  <div class="widget__content">
+                    <nav class="nav nav--footer"><a href="index.html">Home</a><a href="properties_listing_grid.html">Realty</a><a href="agents_listing_grid.html">Agents</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="pricing.html">Pricing</a><a href="contacts.html">Contacts</a><a href="feature_ui.html">UI</a></nav>
+                    <!-- end of block .nav-footer-->
+                  </div>
+                </div>
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">About</h2>
+                  </div>
+                  <div class="widget__content">
+                    <aside class="widget_text">
+                      <div class="textwidget">
+                        RealtySpace is the leader in online real estate and operator of the WK of real estate web site for consumers and real estate professionals. Real Estate of websites captures more than 20 million monthly visitors
+                        <p>RealtySpace is the leader in online real estate and operator of the WK of real</p>
+                        <p><a>Read more</a></p>
+                      </div>
+
+                    </aside>
+                  </div>
+                </div>
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Social</h2>
+                  </div>
+                  <div class="widget__content">
+                    <div class="social social--footer"><a href="#" class="social__item"><i class="fa fa-facebook"></i></a><a href="#" class="social__item"><i class="fa fa-twitter"></i></a><a href="#" class="social__item"><i class="fa fa-google-plus"></i></a></div>
+                    <!-- end of block .social-footer-->
+                  </div>
+                </div>
               </div>
-              <div class="partners__controls">
-                <button class="partners__arrow partners__arrow--prev js-partners-prev"></button>
-                <button class="partners__arrow partners__arrow--next js-partners-next"></button>
+              <!-- end of block .footer__col-first-->
+              <div class="footer__col footer__col--second">
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Contact</h2>
+                  </div>
+                  <div class="widget__content">
+                    <section class="address address--footer">
+                      <h4 class="address__headline">Our office</h4>
+                      <address class="address__main"><span>1950 New York, NY, Ave NW, California, DC 3000600, USA</span><span>08 - 17 mon-fr</span><a href="tel:+442240052225">+1 202 555 0135</a><a href="tel:+442240052225">+1 202 555 0135</a><span>Fax: +1 202 555 0135</span><a href="mailto:hello@example.com">hello@example.com</a></address>
+                    </section>
+                    <!-- end of block .address-->
+                  </div>
+                </div>
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Feedback</h2>
+                  </div>
+                  <div class="widget__content">
+                    <!-- BEGIN SECTION FEEDBACK-->
+                    <form action="#" class="form form--flex form--footer js-parsley">
+                      <div class="row">
+                        <div class="form-group">
+                          <label for="in-email" class="sr-only control-label">E-mail</label>
+                          <input id="in-email" type="email" name="email" placeholder="E-mail" required data-parsley-trigger="change" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="in-message" class="sr-only control-label">Message for Us</label>
+                          <textarea id="in-message" name="message" placeholder="Message for Us" required data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-validation-threshold="10" data-parsley-minlength-message="You need to enter at least a 20 caracters long comment.." class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <button type="submit" class="form__submit">Send</button>
+                      </div>
+                    </form>
+                    <!-- end of block .form__wrap-->
+                    <!-- END SECTION FEEDBACK-->
+                  </div>
+                </div>
               </div>
-              <!-- end of block .partners__controls-->
+              <!--end of block .footer__col-second-->
+              <div class="footer__col footer__col--third">
+                <div class="widget js-widget widget--footer">
+                  <div class="widget__header">
+                    <h2 class="widget__title">Latest Articles</h2>
+                  </div>
+                  <div class="widget__content">
+                    <div class="listing listing--footer">
+                      <div class="listing__item">
+                        <!-- BEGIN SECTION ARTICLE-->
+                        <div class="article article--footer">
+                          <div class="article__details"><a href="blog_details.html" class="article__item-title">Sustainable architecture &amp; design.</a>
+                            <time datetime="2009-08-29" class="article__time">Mon - 3 Sep - 3:17 PM</time>
+                          </div>
+                          <!-- end of block .article-->
+                        </div>
+                        <!-- END SECTION ARTICLE-->
+                      </div>
+                      <div class="listing__item">
+                        <!-- BEGIN SECTION ARTICLE-->
+                        <div class="article article--footer">
+                          <div class="article__details"><a href="blog_details.html" class="article__item-title">You’ve been approved for a rental home.</a>
+                            <time datetime="2009-08-29" class="article__time">Mon - 3 Sep - 3:17 PM</time>
+                          </div>
+                          <!-- end of block .article-->
+                        </div>
+                        <!-- END SECTION ARTICLE-->
+                      </div>
+                      <div class="listing__item">
+                        <!-- BEGIN SECTION ARTICLE-->
+                        <div class="article article--footer">
+                          <div class="article__details"><a href="blog_details.html" class="article__item-title">The Block Glasshouse winners.</a>
+                            <time datetime="2009-08-29" class="article__time">Mon - 3 Sep - 3:17 PM</time>
+                          </div>
+                          <!-- end of block .article-->
+                        </div>
+                        <!-- END SECTION ARTICLE-->
+                      </div>
+                    </div><a href="blog.html" class="widget__more"> More articles</a>
+                  </div>
+                </div>
+              </div>
+              <!-- end of block .footer__col-third-->
+              <div class="clearfix"></div><span class="footer__copyright">&copy; 2016 RealtySpace. All rights reserved</span>
+              <!-- end of block .footer__copyright-->
             </div>
-            <!-- end of block .partners-->
           </div>
-        </div>
-        <!-- END PARTNERS-->
-
-		
-      <!-- BEGIN FOOTER-->
-<?php include("footer.php"); ?> 
-      <!-- END FOOTER-->
-					
-      <!-- BEGIN FOOTER-->
-<?php include("header.php"); ?> 
-      <!-- END FOOTER-->
-			
-		
-		
-		
-
+        </footer>
+        <!-- end of block .footer-->
+        <!-- END FOOTER-->
       </div>
     </div>
     <button type="button" class="scrollup js-scrollup"></button>
     <!-- end of block .scrollup-->
+	
+	
     <!-- BEGIN SCRIPTS and INCLUDES-->
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places,drawing,geometry"></script>
+
+    <!-- INICIO NO ELIMINAR-->
+    <!--script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places,drawing,geometry"></script-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" async ></script>
+    <!-- FIN NO ELIMINAR-->
+
     <script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
     <!--
     Contains vendor libraries (Bootstrap3, Jquery, Chosen, etc) already compiled into a single file, with
@@ -389,5 +489,9 @@
     <!-- endbuild--><!-- inject:ga  -->
     <!-- endinject -->
     <!-- END SCRIPTS and INCLUDES-->
+	  
+				  
+	
+	
   </body>
 </html>
