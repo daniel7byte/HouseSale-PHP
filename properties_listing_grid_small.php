@@ -175,14 +175,14 @@ try {
                                 </div>
                               </div>
                             </div>
-							
-							<script>
-							$( document ).ready(function() {
-								resetPagination();
-							});
-							</script>
 
                           <?php endforeach; ?>
+
+                        <script>
+                          $( document ).ready(function() {
+                            resetPagination();
+                          });
+                        </script>
 
                       </div>
                     </div>
@@ -323,18 +323,14 @@ try {
         <!-- END CENTER SECTION-->
         <!-- BEGIN AFTER CENTER SECTION-->
         <!-- END AFTER CENTER SECTION-->
-		
-		
-		
-      <!-- BEGIN FOOTER-->
-<?php include("footer.php"); ?> 
-      <!-- END FOOTER-->
+
+        <!-- BEGIN FOOTER-->
+        <?php include("footer.php"); ?>
+        <!-- END FOOTER-->
 					
-      <!-- BEGIN FOOTER-->
-<?php include("header-footer.php"); ?> 
-      <!-- END FOOTER-->
-		
-		
+        <!-- BEGIN FOOTER-->
+        <?php include("header-footer.php"); ?>
+        <!-- END FOOTER-->
 		
       </div>
     </div>

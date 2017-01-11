@@ -20,7 +20,7 @@
 
                         
                         Carlos Cardona Broker investor license # 218046 / Tel: 404-867-0421 . <br>	<br>
-                        <img src="/img/logo-footer-eh.png" width="90px" height="80px"  alt="">		<br>				
+                        <img src="img/logo-footer-eh.png" width="90px" height="80px"  alt="">		<br>
                       </div>
                       
                     </aside>
