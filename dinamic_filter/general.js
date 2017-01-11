@@ -10,11 +10,11 @@ function setForm(id, zipcode,county, city, price, systemFiltro){
   let form__city = $("select#city option", searchForm)
   let form__price = $("select#price option", searchForm)
   let form__systemFiltro = $("select#systemFiltro option", searchForm)
-  
-  $("input#zipcode", searchForm).val(zipcode)
-  $("input#id", searchForm).val(zipcode)
 
-  // Recorrer cada conty del formulario.
+  $("input#zipcode", searchForm).val(zipcode)
+  $("input#id", searchForm).val(id)
+
+  // Recorrer cada county del formulario.
   for(i=0; i < form__county.length; i++) {
   // Si el valor de un county coincide, colocarle el atributo selected
     if($(form__county)[i].value == county) {
@@ -45,5 +45,5 @@ function setForm(id, zipcode,county, city, price, systemFiltro){
       $(form__systemFiltro)[i].setAttribute("selected","selected")
     }
   }
-  
+
 }
