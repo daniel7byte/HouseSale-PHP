@@ -44,16 +44,16 @@ try {
     <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
     <link rel="stylesheet" href="dinamic_filter/pagination.css">
     <script src="dinamic_filter/magic-list.js"></script>
-	
-	
-	
+    <script src="dinamic_filter/general.js"></script>
+
+
     <script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
-    <script type="text/javascript" src="assets/js/vendor.js"></script>	
-    <script type="text/javascript" src="assets/js/demodata.js"></script>	
-    <script type="text/javascript" src="assets/js/app.js"></script>		
-	
-	
-	
+    <script type="text/javascript" src="assets/js/vendor.js"></script>
+    <script type="text/javascript" src="assets/js/demodata.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+
 </head>
 <body class="properties_listing_grid menu-default hover-default ">
 <!--
@@ -82,11 +82,11 @@ becomes
 
 
       <!-- BEGIN HEADER-->
-<?php include("header.php"); ?> 
+<?php include("header.php"); ?>
       <!-- END HEADER-->
-	
-  
-  
+
+
+
   <div class="site-wrap js-site-wrap">
 
     <div class="center">
@@ -123,9 +123,9 @@ becomes
               <!--end of block .listing__sort-->
               <div class="listing__view">
 				<span class="control-label">View:</span>
-				<a href="properties_listing_grid.php" class="btn--white"><i class="fa fa-th-large"></i></a>
-				<a href="properties_listing_list.php" class="btn--white active"><i class="fa fa-bars"></i></a>
-				<a href="properties_listing_grid_small.php" class="btn--white"><i class="fa fa-table"></i></a>
+        <a onclick="changeListing('properties_listing_grid.php');" class="btn--white"><i class="fa fa-th-large"></i></a>
+        <a onclick="changeListing('properties_listing_list.php');" class="btn--white active"><i class="fa fa-bars"></i></a>
+        <a onclick="changeListing('properties_listing_grid_small.php');" class="btn--white"><i class="fa fa-table"></i></a>
 				<a href="#" class="btn--white"><i class="fa fa-map"></i></a>
 			  </div>
               <!--end of block .listing__view-->
@@ -216,7 +216,7 @@ becomes
               </div>
               <div class="widget__content">
                 <!-- BEGIN SEARCH-->
-                <form method="post" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
+                <form method="post" action="" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
                   <div class="row">
                     <?php include('property_form.php'); ?>
                     <div class="form__buttons form__buttons--double">
@@ -230,18 +230,18 @@ becomes
                 <!-- END SEARCH-->
               </div>
             </div>
-			
+
 			<div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
                     <h2 class="widget__title">Popular estate</h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">
-				  
-				  
+
+
                     <div class="listing listing--sidebar">
-					
-					
+
+
 						<?php
                         $query = $mysql->prepare("SELECT * FROM banderas ORDER BY id ASC;");
                         $query->execute();
@@ -279,8 +279,8 @@ becomes
                           <?php endforeach; ?>
 
                         <?php endforeach; ?>
-					  
-					  
+
+
                     </div>
                   </div>
                 </div>
@@ -295,7 +295,7 @@ becomes
                     </div>
                   </div>
                 </div>
-			
+
           </div>
           <!-- END SIDEBAR-->
           <div class="clearfix"></div>

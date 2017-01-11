@@ -36,7 +36,7 @@ if($id != ''){
 
         case '-':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -57,7 +57,7 @@ if($id != ''){
 
         case '1-75':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 <= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 <= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -77,7 +77,7 @@ if($id != ''){
             break;
         case '75-150':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -98,7 +98,7 @@ if($id != ''){
             break;
         case '150-300':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -119,7 +119,7 @@ if($id != ''){
             break;
         case '300-600':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -140,7 +140,7 @@ if($id != ''){
             break;
         case '600-900':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceA AND dato5 <= :priceB AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
@@ -161,7 +161,7 @@ if($id != ''){
             break;
         case '900-mas':
 
-            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system ORDER BY RAND()");
+            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :price AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
             $queryOne->execute([
                 ':zipcode' => "%$zipcode%",
                 ':county' => "%$county%",
