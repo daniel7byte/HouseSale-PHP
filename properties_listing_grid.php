@@ -55,6 +55,15 @@ try {
     <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
     <link rel="stylesheet" href="dinamic_filter/pagination.css">	
     <script src="dinamic_filter/magic-grid.js"></script>
+	
+	
+    <script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <script type="text/javascript" src="assets/js/vendor.js"></script>	
+    <script type="text/javascript" src="assets/js/demodata.js"></script>	
+    <script type="text/javascript" src="assets/js/app.js"></script>	
+	
+	
+	
   </head>
   <body class="properties_listing_grid menu-default hover-default ">
     <!--
@@ -91,8 +100,8 @@ try {
       <div class="site-wrap js-site-wrap">
 
         <div class="center">
-          <div class="container">
-            <div-- class="row">
+          <div class="container" style="width: 94%!important; ">
+            <div class="row">
               <!-- BEGIN site-->
               <div class="site site--main">
                 <header class="site__header">
@@ -454,16 +463,18 @@ try {
 
     <!-- INICIO NO ELIMINAR-->
     <!--script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places,drawing,geometry"></script-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" async ></script>
+
+	
+	
     <!-- FIN NO ELIMINAR-->
 
-    <script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+
     <!--
     Contains vendor libraries (Bootstrap3, Jquery, Chosen, etc) already compiled into a single file, with
     versions that are verified to work with our theme. Normally, you should not edit that file.
     -->
     <!-- build:jsvendor-->
-    <script type="text/javascript" src="assets/js/vendor.js"></script>
+
     <!-- endbuild-->
     <!--
     This file is used for demonstration purposes and contains example property items, that are mostly used to
@@ -471,21 +482,21 @@ try {
     to use your own data.
     -->
     <!-- build:jsdemodata-->
-    <script type="text/javascript" src="assets/js/demodata.js"></script>
+
     <!-- endbuild-->
     <!--
     The library code that Realtyspace theme relies on, in order to function properly.
     Normally, you should not edit this file or add your own code there.
     -->
     <!-- build:jsapp-->
-    <script type="text/javascript" src="assets/js/app.js"></script>
+
     <!-- endbuild-->
     <!--
     the main file, that you should modify. It contains lots of examples of
     plugin usage, with detailed comments about specific sections of the code.
     -->
     <!-- build:jsdemo-->
-    <script type="text/javascript" src="assets/js/demo.js"></script>
+    <script type="text/javascript" src="assets/js/demo1.js"></script>
     <!-- endbuild--><!-- inject:ga  -->
     <!-- endinject -->
     <!-- END SCRIPTS and INCLUDES-->

@@ -68,6 +68,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="dinamic_filter/magic-grid.js"></script>
+	
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
+    <script type="text/javascript" src="assets/js/vendor.js"></script>	
+    <script type="text/javascript" src="assets/js/app.js"></script>		
+	
+	
   </head>
   <body class="property_details menu-default hover-default ">
     <!--
@@ -111,7 +117,7 @@
               <div class="site site--main">
                 <!-- BEGIN PROPERTY DETAILS-->
                 <div class="property">
-                  <h1 class="property__title"><?=$result['dato7']?><span class="property__city">ID (<?=$result['dato2']?>) , County (<?=$result['dato11']?>) , City (<?=$result['dato10']?>) , ZipCode (<?=$result['dato24']?>)</span></h1>
+                  <h1 class="property__title"><?=$result['dato7']?><span class="property__city" style="font-size:23px;">ID (<?=$result['dato2']?>) , County (<?=$result['dato11']?>) , City (<?=$result['dato10']?>) , ZipCode (<?=$result['dato24']?>)</span></h1>
                   <div class="property__header">
                     <div class="property__price"><strong class="property__price-value">$<?=number_format($result['dato5'])?></strong></div>
                     <!--h4 class="property__commision">Commision: <strong>?????%</strong></h4>
@@ -261,12 +267,7 @@
 
 
                   </div>
-                  <div class="property__info">
-                    <div class="property__info-item">Property type: <strong> ?????</strong></div>
-                    <div class="property__info-item">Built Up: <strong> ?????</strong></div>
-                    <div class="property__info-item">Date: <strong> ?????</strong></div>
-                    <div class="property__info-item">Land Size: <strong> ?????</strong></div>
-                  </div>
+
                   <div class="property__plan">
                     <dl class="property__plan-item">
                       <dt class="property__plan-icon">
@@ -315,7 +316,12 @@
                     </dl>
                   </div>
 
+                  <div class="property__info">
+                    <div class="property__info-item">High School: <strong> ?????</strong></div>
+                    <div class="property__info-item">Primary School: <strong> ?????</strong></div>
+                    <div class="property__info-item">Basic School: <strong> ?????</strong></div>
 
+                  </div>
                   <!--div class="property__params">
                     <h4 class="property__subtitle">The space</h4>
                     <ul class="property__params-list">
@@ -442,28 +448,40 @@ Opcion de descripcion de agente comercial
                         <div class="clearfix"></div>
                       </div>
                       <!-- end of block .worker-->
-                      <form action="#" method="POST" class="form form--flex form--property-agent js-contact-form form--properties">
+                      <form action="https://www.tfaforms.com/responses/processor" method="POST" class="form form--flex form--property-agent js-contact-form form--properties">
                         <div class="row">
+						
+
+   
+						
                           <div class="form-group form-group--col-4 required">
                             <label for="in-form-name" class="control-label">Your Name</label>
-                            <input id="in-form-name" type="text" name="name" required class="form-control">
+                            <input id="in-form-name" type="text" name="Name" required class="form-control">
                           </div>
                           <div class="form-group form-group--col-4">
                             <label for="in-form-phone" class="control-label">Telephone</label>
-                            <input id="in-form-phone" type="text" name="phone" class="form-control">
+                            <input id="in-form-phone" type="text" name="Phone" class="form-control">
                           </div>
                           <div class="form-group form-group--col-4 required">
                             <label for="in-form-email" class="control-label">E-mail</label>
-                            <input id="in-form-email" type="email" name="email" required data-parsley-trigger="change" class="form-control">
+                            <input id="in-form-email" type="email" name="Email" required data-parsley-trigger="change" class="form-control">
                           </div>
                           <div class="form-group required">
-                            <label for="in-form-message" class="control-label">Message</label>
-                            <textarea id="in-form-message" name="message" required data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-validation-threshold="10" data-parsley-minlength-message="You need to enter at least a 20 caracters long comment.." class="form-control"></textarea>
+                            <label for="in-form-message" class="control-label">Message : ID (<?=$result['dato2']?>)</label>
+                            <textarea id="in-form-message" name="Message : ID (<?=$result['dato2']?>)" required data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-validation-threshold="10" data-parsley-minlength-message="You need to enter at least a 20 caracters long comment.." class="form-control"></textarea>
                           </div>
                         </div>
                         <div class="row">
                           <button type="submit" class="form__submit">Submit</button>
                         </div>
+						
+<input type="hidden" value="405259" name="tfa_dbFormId" id="tfa_dbFormId">
+<input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">
+<input type="hidden" value="4aeadf90dbe8076fd36315aa4f096abe" name="tfa_dbControl" id="tfa_dbControl">
+<input type="hidden" value="7" name="tfa_dbVersionId" id="tfa_dbVersionId">
+<input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">						
+						
+						
                       </form>
                       <!-- end of block form-->
                       <div class="clearfix"></div>
@@ -519,9 +537,8 @@ Opcion de descripcion de agente comercial
       <!-- END FOOTER-->
 					
       <!-- BEGIN FOOTER-->
-<?php include("header.php"); ?> 
+<?php include("header-footer.php"); ?> 
       <!-- END FOOTER-->
-		
 		
 		
 		
@@ -535,16 +552,17 @@ Opcion de descripcion de agente comercial
 
     <!-- INICIO NO ELIMINAR-->
     <!--script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places,drawing,geometry"></script-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" async ></script>
+
+	
     <!-- FIN NO ELIMINAR-->
 
-    <script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>
+    <!--script type="text/javascript" src="http://cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script-->
     <!--
     Contains vendor libraries (Bootstrap3, Jquery, Chosen, etc) already compiled into a single file, with
     versions that are verified to work with our theme. Normally, you should not edit that file.
     -->
     <!-- build:jsvendor-->
-    <script type="text/javascript" src="assets/js/vendor.js"></script>
+
     <!-- endbuild-->
     <!--
     This file is used for demonstration purposes and contains example property items, that are mostly used to
@@ -552,14 +570,14 @@ Opcion de descripcion de agente comercial
     to use your own data.
     -->
     <!-- build:jsdemodata-->
-    <script type="text/javascript" src="assets/js/demodata.js"></script>
+    <!--script type="text/javascript" src="assets/js/demodata.js"></script-->
     <!-- endbuild-->
     <!--
     The library code that Realtyspace theme relies on, in order to function properly.
     Normally, you should not edit this file or add your own code there.
     -->
     <!-- build:jsapp-->
-    <script type="text/javascript" src="assets/js/app.js"></script>
+
     <!-- endbuild-->
     <!--
     the main file, that you should modify. It contains lots of examples of
@@ -581,7 +599,8 @@ Opcion de descripcion de agente comercial
           map = new GMaps({
             el: '#gmap',
             lat: 0,
-            lng: 0
+            lng: 0,
+			mapTypeId: google.maps.MapTypeId.HYBRID
           });
 
           <?php

@@ -19,5 +19,5 @@ $d4= "";
 $d5= "";
 $d6= "";
 
-$limiteRegistros = 350;
+$limiteRegistros = 80;
 ?>

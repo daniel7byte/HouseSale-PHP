@@ -3236,7 +3236,7 @@
 /*------------------------------------------------------------------
   * Brand color ($brandColor): #00bbaa
   * Brand color dark ($brandColorDark): darken($brandColor, 10%)
-  * Highlight color ($highlightColor): #ff6600
+  * Highlight color ($highlightColor): #f3bc65
   * Highlight Color Dark ($highlightColorDark): #d99221
   * Default Color ($defaultColor): #2c3e50
   * Gray Color ($grayColor): #a6a6a6
@@ -3257,7 +3257,7 @@
   * Footer Color ($footerColor): #bebebe
 
   * Succes Color ($succesColor): $brandColor
-  * Warning Color ($warningColor): #ff6600
+  * Warning Color ($warningColor): #f3bc65
   * Danger Color ($dangerColor): #e95b35
 
   @mixin =============================================================*/
@@ -3279,7 +3279,7 @@ a:focus {
 
 a.active,
 a:active {
-  color: #ff6600;
+  color: #f3bc65;
   text-decoration: none;
 }
 
@@ -4142,9 +4142,9 @@ select {
 
 .pagination-custom > li > a:hover,
 .pagination-custom > li > a:focus {
-  color: #ff6600;
+  color: #f3bc65;
   background-color: none;
-  border-color: #ff6600;
+  border-color: #f3bc65;
 }
 
 .pagination-custom > .active > a,
@@ -4163,8 +4163,8 @@ select {
 .pagination-custom > .active > span:focus {
   z-index: 2;
   color: #fff;
-  background-color: #ff6600;
-  border-color: #ff6600;
+  background-color: #f3bc65;
+  border-color: #f3bc65;
   cursor: default;
 }
 
@@ -4295,14 +4295,14 @@ select {
 
 .hover-default .item-photo__more:hover,
 .hover-default .item-photo__more.hover {
-  color: #ff6600;
-  border: 2px solid #ff6600;
+  color: #f3bc65;
+  border: 2px solid #f3bc65;
 }
 
 .hover-default .item-photo__more:active,
 .hover-default .item-photo__more.active {
   color: #fff;
-  background: #ff6600;
+  background: #f3bc65;
 }
 
 .hover-default .item-photo__more:disabled,
@@ -4752,7 +4752,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
 }
 
@@ -4842,7 +4842,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .button__action.hover,
 .button__action:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -4940,8 +4940,8 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .button__more.hover,
 .button__more:hover {
-  border-color: #ff6600;
-  color: #ff6600;
+  border-color: #f3bc65;
+  color: #f3bc65;
   text-decoration: none;
 }
 
@@ -4949,8 +4949,8 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 .button__more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -5092,8 +5092,8 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 @media (min-width: 992px) {
   .button__default.hover,
   .button__default:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -5101,8 +5101,8 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 .button__default.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -5823,7 +5823,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .social-panel__link:active,
 .social-panel__link.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel__link:disabled,
@@ -5853,7 +5853,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .social-panel--brand .social-panel__link:active,
 .social-panel--brand .social-panel__link.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel--brand .social-panel__link:disabled,
@@ -5877,7 +5877,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .social-panel--black-white .social-panel__link:active,
 .social-panel--black-white .social-panel__link.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel--black-white .social-panel__link:disabled,
@@ -5891,7 +5891,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 }
 
 .social-panel--highlight .social-panel__link {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel--highlight .social-panel__link:hover,
@@ -5901,7 +5901,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .social-panel--highlight .social-panel__link:active,
 .social-panel--highlight .social-panel__link.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel--highlight .social-panel__link:disabled,
@@ -5921,7 +5921,7 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .social-panel--simple .social-panel__link:active,
 .social-panel--simple .social-panel__link.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social-panel--simple .social-panel__link:disabled,
@@ -5995,12 +5995,12 @@ input[type=checkbox].in-checkbox:indeterminate + label:before {
 
 .ul-list--star li:before {
   content: "\f006";
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .ul-list--x li:before {
   content: "\f00d";
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .ul-list--ordered {
@@ -6531,7 +6531,7 @@ fieldset[disabled] .widget_search .search-field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   width: auto;
   float: right;
@@ -6625,7 +6625,7 @@ fieldset[disabled] .widget_search .search-field {
 
 .comments-link a.hover,
 .comments-link a:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -6674,7 +6674,7 @@ fieldset[disabled] .widget_search .search-field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   width: auto;
   float: right;
@@ -6768,7 +6768,7 @@ fieldset[disabled] .widget_search .search-field {
 
 .edit-link a.hover,
 .edit-link a:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -6875,7 +6875,7 @@ fieldset[disabled] .post-password-form label > input {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
 }
 
@@ -6965,7 +6965,7 @@ fieldset[disabled] .post-password-form label > input {
 
 .post-password-form input[type="submit"].hover,
 .post-password-form input[type="submit"]:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -7250,7 +7250,7 @@ body {
 
 @media (min-width: 768px) {
   .header_color_brand .navbar .navbar__nav > .active {
-    background: #ff6600;
+    background: #f3bc65;
   }
 }
 
@@ -7261,7 +7261,7 @@ body {
 @media (min-width: 768px) {
   .header_color_brand .navbar .navbar__nav > li:hover,
   .header_color_brand .navbar .navbar__nav > li:focus {
-    background: #ff6600;
+    background: #f3bc65;
   }
 }
 
@@ -7613,7 +7613,7 @@ mark {
 
 .parsley-type,
 .parsley-minlength {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .parsley-required {
@@ -7979,8 +7979,8 @@ mark {
 
 .widget__more.hover,
 .widget__more:hover {
-  border-color: #ff6600;
-  color: #ff6600;
+  border-color: #f3bc65;
+  color: #f3bc65;
   text-decoration: none;
 }
 
@@ -7988,8 +7988,8 @@ mark {
 .widget__more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -8268,8 +8268,8 @@ mark {
 @media (min-width: 992px) {
   .widget--dashboard .widget__btn.hover,
   .widget--dashboard .widget__btn:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -8277,8 +8277,8 @@ mark {
 .widget--dashboard .widget__btn.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -8313,7 +8313,7 @@ mark {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   white-space: inherit;
   margin-right: 0;
@@ -8406,7 +8406,7 @@ mark {
 
 .widget--dashboard .widget__btn--action.hover,
 .widget--dashboard .widget__btn--action:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -9127,7 +9127,7 @@ mark {
 }
 
 .worker__favorites--highlight {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .worker__avatar {
@@ -9353,8 +9353,8 @@ mark {
 @media (min-width: 992px) {
   .worker__more.hover,
   .worker__more:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -9362,8 +9362,8 @@ mark {
 .worker__more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -10712,8 +10712,8 @@ mark {
 @media (min-width: 992px) {
   .article__more.hover,
   .article__more:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -10721,8 +10721,8 @@ mark {
 .article__more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -10844,8 +10844,8 @@ mark {
 
 .article__btn-more.hover,
 .article__btn-more:hover {
-  border-color: #ff6600;
-  color: #ff6600;
+  border-color: #f3bc65;
+  color: #f3bc65;
   text-decoration: none;
 }
 
@@ -10853,8 +10853,8 @@ mark {
 .article__btn-more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -11604,7 +11604,7 @@ mark {
 
 .form__submit.hover,
 .form__submit:hover {
-  border-bottom: 0px solid #ff6600;
+  border-bottom: 0px solid #f3bc65;
   color: #222;
 }
 
@@ -11786,8 +11786,8 @@ mark {
 @media (min-width: 992px) {
   .form__reset.hover,
   .form__reset:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -11795,8 +11795,8 @@ mark {
 .form__reset.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -12533,8 +12533,8 @@ mark {
 @media (min-width: 992px) {
   .form--search .form__favorite.hover,
   .form--search .form__favorite:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -12542,8 +12542,8 @@ mark {
 .form--search .form__favorite.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -12559,7 +12559,7 @@ mark {
   font-family: FontAwesome;
   content: "";
   margin: 0 5px 0 0;
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .form--wide {
@@ -12967,7 +12967,7 @@ div.wpcf7 img.ajax-loader {
 }
 
 .banner .help-block .parsley-type {
-  background: #ff6600;
+  background: #f3bc65;
 }
 
 /*------------------------------------------------------------------
@@ -13202,7 +13202,7 @@ div.wpcf7 img.ajax-loader {
 
 .slider__control:active,
 .slider__control.active {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .slider__control:disabled,
@@ -13530,7 +13530,7 @@ div.wpcf7 img.ajax-loader {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   padding: 11px 66px;
   width: auto;
@@ -13626,7 +13626,7 @@ div.wpcf7 img.ajax-loader {
 
 .slider--wide .slider__more.hover,
 .slider--wide .slider__more:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -13712,7 +13712,7 @@ div.wpcf7 img.ajax-loader {
 
 .slider--wide .slider__control:hover,
 .slider--wide .slider__control.hover {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .slider--wide .slider__control:active,
@@ -14828,13 +14828,13 @@ div.wpcf7 img.ajax-loader {
 }
 
 .banner__arrow svg {
-  stroke: #ff6600;
+  stroke: #f3bc65;
   width: 770px;
   height: 284px;
 }
 
 .banner__arrow-circle {
-  color: #ff6600;
+  color: #f3bc65;
   margin: -71px 0 0 213px;
   font-size: 50px;
   opacity: 0;
@@ -14849,7 +14849,7 @@ div.wpcf7 img.ajax-loader {
 }
 
 .banner__arrow-end {
-  stroke: #ff6600;
+  stroke: #f3bc65;
   position: absolute;
   width: 30px;
   height: 30px;
@@ -16081,7 +16081,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 .social__item:hover,
 .social__item:focus {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social--header .social__item {
@@ -16094,7 +16094,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .social--header .social__item:hover {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social--circles .social__item {
@@ -16184,7 +16184,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .social--footer .social__item:hover {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social--join {
@@ -16202,7 +16202,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 .social--join .social__item:hover {
   text-decoration: none;
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .social--worker {
@@ -17665,8 +17665,8 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 @media (min-width: 992px) {
   .region-select__btn.hover,
   .region-select__btn:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -17674,8 +17674,8 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 .region-select__btn.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -17983,7 +17983,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .properties__state--highlight:before {
-  background: #ff6600;
+  background: #f3bc65;
 }
 
 .properties__state--hidden:before {
@@ -17991,7 +17991,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 }
 
 .properties__state--pending:before {
-  background: #ff6600;
+  background: #f3bc65;
 }
 
 .properties__state--pending:after {
@@ -18114,7 +18114,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   margin-left: 0;
   margin-bottom: 7px;
@@ -18206,7 +18206,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 .properties__pay.hover,
 .properties__pay:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -18249,11 +18249,11 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   }
 
   .properties--grid:hover .properties__time {
-    color: #ff6600;
+    color: #f3bc65;
   }
 
   .properties--grid:hover .properties__offer {
-    color: #ff6600;
+    color: #f3bc65;
   }
 
   .properties--grid:hover .properties__more {
@@ -18962,7 +18962,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   float: left;
   width: 175px;
@@ -19055,7 +19055,7 @@ fieldset[disabled] .dropdown--select .dropdown-toggle {
 
 .gosubmit__btn.hover,
 .gosubmit__btn:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -19670,7 +19670,7 @@ fieldset[disabled] .subscribe__field {
   position: absolute;
   top: -30px;
   right: 5%;
-  background: #ff6600;
+  background: #f3bc65;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -19739,7 +19739,7 @@ fieldset[disabled] .subscribe__field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
 }
 
@@ -19829,7 +19829,7 @@ fieldset[disabled] .subscribe__field {
 
 .pricing__button.hover,
 .pricing__button:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -20300,8 +20300,8 @@ fieldset[disabled] .subscribe__field {
 
 .property__btn-more.hover,
 .property__btn-more:hover {
-  border-color: #ff6600;
-  color: #ff6600;
+  border-color: #f3bc65;
+  color: #f3bc65;
   text-decoration: none;
 }
 
@@ -20309,8 +20309,8 @@ fieldset[disabled] .subscribe__field {
 .property__btn-more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -21170,7 +21170,7 @@ fieldset[disabled] .subscribe__field {
 }
 
 .listing--items .listing__categories {
-  color: #ff6600;
+  color: #f3bc65;
 }
 
 .listing--items .listing__categories:before {
@@ -21182,7 +21182,7 @@ fieldset[disabled] .subscribe__field {
 }
 
 .listing--items .listing__category {
-  color: #ff6600;
+  color: #f3bc65;
   text-transform: uppercase;
   margin-left: 5px;
 }
@@ -21646,7 +21646,7 @@ fieldset[disabled] .subscribe__field {
 
 .listing--list .listing__category {
   font-size: 13px;
-  color: #ff6600;
+  color: #f3bc65;
   text-transform: uppercase;
   display: block;
   margin-top: 30px;
@@ -21728,7 +21728,7 @@ fieldset[disabled] .subscribe__field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   margin-left: 0;
   margin-top: 30px;
@@ -21820,7 +21820,7 @@ fieldset[disabled] .subscribe__field {
 
 .listing--list .listing__view.hover,
 .listing--list .listing__view:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -21957,8 +21957,8 @@ fieldset[disabled] .subscribe__field {
 @media (min-width: 992px) {
   .listing--list .listing__delete.hover,
   .listing--list .listing__delete:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -21966,8 +21966,8 @@ fieldset[disabled] .subscribe__field {
 .listing--list .listing__delete.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -22513,8 +22513,8 @@ fieldset[disabled] .subscribe__field {
 @media (min-width: 992px) {
   .form-property__upload-btn-delete.hover,
   .form-property__upload-btn-delete:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -22522,8 +22522,8 @@ fieldset[disabled] .subscribe__field {
 .form-property__upload-btn-delete.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -22981,8 +22981,8 @@ fieldset[disabled] .subscribe__field {
 @media (min-width: 992px) {
   .comment__reply.hover,
   .comment__reply:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -22990,8 +22990,8 @@ fieldset[disabled] .subscribe__field {
 .comment__reply.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -23736,7 +23736,7 @@ fieldset[disabled] .subscribe__field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   float: right;
   width: 120px;
@@ -23830,7 +23830,7 @@ fieldset[disabled] .subscribe__field {
 
 .map__more.hover,
 .map__more:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -24633,7 +24633,7 @@ fieldset[disabled] .subscribe__field {
 }
 
 .achievement__name {
-  color: #ff6600;
+  color: #f3bc65;
   text-transform: uppercase;
 }
 
@@ -24656,7 +24656,7 @@ fieldset[disabled] .subscribe__field {
 
 .achievement__counter {
   margin-top: 50px;
-  color: #ff6600;
+  color: #f3bc65;
   font-size: 64px;
   font-weight: 200;
   height: 102px;
@@ -25159,8 +25159,8 @@ fieldset[disabled] .subscribe__field {
 @media (min-width: 992px) {
   .info__more.hover,
   .info__more:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -25168,8 +25168,8 @@ fieldset[disabled] .subscribe__field {
 .info__more.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -25532,9 +25532,9 @@ fieldset[disabled] .subscribe__field {
 }
 
 .tags__item.active {
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
-  border-color: #ff6600;
+  border-color: #f3bc65;
 }
 
 .tags__item.editable {
@@ -25548,9 +25548,9 @@ fieldset[disabled] .subscribe__field {
 }
 
 .tags__item--new {
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
-  border-color: #ff6600;
+  border-color: #f3bc65;
 }
 
 .tags__new-icon {
@@ -25755,8 +25755,8 @@ fieldset[disabled] .subscribe__field {
 @media (min-width: 992px) {
   .btn--default.hover,
   .btn--default:hover {
-    border-color: #ff6600;
-    color: #ff6600;
+    border-color: #f3bc65;
+    color: #f3bc65;
   }
 }
 
@@ -25764,8 +25764,8 @@ fieldset[disabled] .subscribe__field {
 .btn--default.active {
   -webkit-transform: translate3d(0, 1px, 0);
   transform: translate3d(0, 1px, 0);
-  border-color: #ff6600;
-  background: #ff6600;
+  border-color: #f3bc65;
+  background: #f3bc65;
   color: #fff;
 }
 
@@ -25810,7 +25810,7 @@ fieldset[disabled] .subscribe__field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
 }
 
@@ -25900,7 +25900,7 @@ fieldset[disabled] .subscribe__field {
 
 .btn--primary.hover,
 .btn--primary:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
@@ -25921,7 +25921,7 @@ fieldset[disabled] .subscribe__field {
 .btn--primary:active {
   border: none;
   border-top: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -25980,7 +25980,7 @@ fieldset[disabled] .subscribe__field {
   position: relative;
   border: none;
   border-bottom: 4px solid #d99221;
-  background: #ff6600;
+  background: #f3bc65;
   color: #222;
   font-size: 13px;
 }
@@ -26071,7 +26071,7 @@ fieldset[disabled] .subscribe__field {
 
 .btn--action.hover,
 .btn--action:hover {
-  border-bottom: 4px solid #ff6600;
+  border-bottom: 4px solid #f3bc65;
   color: #222;
 }
 
