@@ -1,6 +1,7 @@
 .idea
 datosiniciales.php
 *.rar
+debug.log
 
 # Windows image file caches
 Thumbs.db
