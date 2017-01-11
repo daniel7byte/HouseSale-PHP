@@ -226,6 +226,13 @@ becomes
                     </div>
                   </div>
                 </form>
+                <?php if (isset($_POST['price'])): ?>
+                  <script>
+                  $( document ).ready(function() {
+                    setForm("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                  });
+                  </script>
+                <?php endif; ?>
                 <!-- end of block-->
                 <!-- END SEARCH-->
               </div>
