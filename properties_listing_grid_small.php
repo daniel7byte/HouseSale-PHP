@@ -105,7 +105,7 @@ try {
               <!-- BEGIN site-->
               <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=$limiteRegistros?></strong> </h1>
+                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($_POST['price']) ? '' : $limiteRegistros )?></strong> </h1>
                   <p id="search-string">
                     <?php if (isset($_POST['price'])): ?>
                     <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
@@ -150,6 +150,8 @@ try {
                     <div class="widget__content">
                       <div class="listing listing--grid listing--lg-4 js-properties-list" id="articles">
 
+                        <?php if (!isset($_POST['price'])): ?>
+
                           <?php
                           $query = $mysql->prepare("SELECT * FROM datoscasas ORDER BY rand() LIMIT $limiteRegistros");
                           $query->execute();
@@ -184,6 +186,8 @@ try {
                             resetPagination();
                           });
                         </script>
+
+                        <?php endif; ?>
 
                       </div>
                     </div>
