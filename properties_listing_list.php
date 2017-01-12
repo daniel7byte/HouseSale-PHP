@@ -115,7 +115,7 @@ becomes
                     <?php if (isset($formPrice)): ?>
                     <?=($formZipcode == "-" ? '' : $formZipcode )?> + <?=($formCounty == "-" ? '' : $formCounty )?> + <?=($formCity == "-" ? '' : $formCity )?> + <?=($formPrice == "-" ? '' : $formPrice )?> + <?=($formSystemFiltro == "1" ? "FMLS" : "" ).($formSystemFiltro == "2" ? "GAMLS" : "" )?>
                     <?php elseif (isset($_POST['price'])): ?>
-                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : "" ).($_POST['systemFiltro'] == "2" ? "GAMLS" : "" )?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : ($_POST['systemFiltro'] == "2" ? "GAMLS" : $_POST['systemFiltro'] ) )?>
                     <?php endif;?>
                   </p>
                 </header>
