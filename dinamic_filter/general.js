@@ -6,43 +6,87 @@ function changeListing(page) {
 
 function setForm(id, zipcode,county, city, price, systemFiltro){
   let searchForm = $("#searchForm")
-  let form__county = $("select#county option", searchForm)
-  let form__city = $("select#city option", searchForm)
-  let form__price = $("select#price option", searchForm)
-  let form__systemFiltro = $("select#systemFiltro option", searchForm)
+  let form__county = $("select#county", searchForm)
+  let form__city = $("select#city", searchForm)
+  let form__price = $("select#price", searchForm)
+  let form__systemFiltro = $("select#systemFiltro", searchForm)
 
   $("input#zipcode", searchForm).val(zipcode)
   $("input#id", searchForm).val(id)
 
   // Recorrer cada county del formulario.
-  for(i=0; i < form__county.length; i++) {
+  for(i=0; i < $("option", form__county).length; i++) {
   // Si el valor de un county coincide, colocarle el atributo selected
-    if($(form__county)[i].value == county) {
-      $(form__county)[i].setAttribute("selected","selected")
+    if($("option", form__county)[i].value == county) {
+      $(form__county).val($("option", form__county)[i].value)
+      if(county != '-'){
+        $.ajax({
+          type: 'GET',
+          url: 'dinamic_filter/county-city.php',
+          data: {
+            param1 : county
+          },
+          success: function(result){
+            if($('#city').val() == '-'){
+              $('#city').html('<option value="-">All</option>');
+            }else{
+              $('#city').html('<option value="'+$('#city').val()+'" selected>'+$('#city').val()+'</option>');
+              $('#city').append('<option value="-">All</option>');
+            }
+            $('#city').append('<option value="" disabled>---</option>');
+
+            $('#city').append(result);
+          }
+        });
+      }else{
+        reset();
+      }
     }
   }
 
   // Recorrer cada city del formulario.
-  for(i=0; i < form__city.length; i++) {
+  for(i=0; i < $("option", form__city).length; i++) {
   // Si el valor de una city coincide, colocarle el atributo selected
-    if($(form__city)[i].value == city) {
-      $(form__city)[i].setAttribute("selected","selected")
+    if($("option", form__city)[i].value == city) {
+      $(form__city).val($("option", form__city)[i].value)
+      if(city != '-'){
+        $.ajax({
+          type: 'GET',
+          url: 'dinamic_filter/city-county.php',
+          data: {
+            param1 : city
+          },
+          success: function(result){
+            if($('#county').val() == '-'){
+              $('#county').html('<option value="-">All</option>');
+            }else{
+              $('#county').html('<option value="'+$('#county').val()+'" selected>'+$('#county').val()+'</option>');
+              $('#county').append('<option value="-">All</option>');
+            }
+            $('#county').append('<option value="" disabled>---</option>');
+
+            $('#county').append(result);
+          }
+        });
+      }else{
+        reset();
+      }
     }
   }
 
   // Recorrer cada price range del formulario.
-  for(i=0; i < form__price.length; i++) {
+  for(i=0; i < $("option", form__price).length; i++) {
   // Si el valor de una price range coincide, colocarle el atributo selected
-    if($(form__price)[i].value == price) {
-      $(form__price)[i].setAttribute("selected","selected")
+    if($("option", form__price)[i].value == price) {
+      $("option", form__price)[i].setAttribute("selected", "selected")
     }
   }
 
   // Recorrer cada systemFiltro del formulario.
-  for(i=0; i < form__systemFiltro.length; i++) {
+  for(i=0; i < $("option", form__systemFiltro).length; i++) {
   // Si el valor de una systemFiltro coincide, colocarle el atributo selected
-    if($(form__systemFiltro)[i].value == systemFiltro) {
-      $(form__systemFiltro)[i].setAttribute("selected","selected")
+    if($("option", form__systemFiltro)[i].value == systemFiltro) {
+      $("option", form__systemFiltro)[i].setAttribute("selected", "selected")
     }
   }
 
