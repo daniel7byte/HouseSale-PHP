@@ -124,6 +124,8 @@ function search(id, zipcode,county, city, price, systemFiltro){
     strSystem = "FMLS";
   }else if(systemFiltro == "2"){
     strSystem = "GAMLS";
+  }else{
+    strSystem = "";
   }
   $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price + ' + ' + strSystem);
 }
