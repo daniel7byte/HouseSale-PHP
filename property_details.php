@@ -30,7 +30,7 @@
     // setcookie('formPrice', ($_GET['formPrice'] == ""? "-" : $_GET['formPrice'] ));
     // setcookie('formSystemFiltro', ($_GET['formSystemFiltro'] == ""? "-" : $_GET['formSystemFiltro'] ));
     // setcookie('formId', ($_GET['formId'] == ""? "-" : $_GET['formId'] ));
-    // $conCookies = true;
+    $conCookies = true;
   }
 
 ?>
