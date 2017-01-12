@@ -113,9 +113,9 @@ becomes
                   <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($formPrice) ? '' : ( isset($_POST['price']) ? '' : $limiteRegistros ) )?></strong> </h1>
                   <p id="search-string">
                     <?php if (isset($formPrice)): ?>
-                    <?=($formZipcode == "-" ? '' : $formZipcode )?> + <?=($formCounty == "-" ? '' : $formCounty )?> + <?=($formCity == "-" ? '' : $formCity )?> + <?=($formPrice == "-" ? '' : $formPrice )?> + <?=($formSystemFiltro == "-" ? '' : '' ).($formSystemFiltro == "1" ? "FMLS" : "GAMLS" )?>
+                    <?=($formZipcode == "-" ? '' : $formZipcode )?> + <?=($formCounty == "-" ? '' : $formCounty )?> + <?=($formCity == "-" ? '' : $formCity )?> + <?=($formPrice == "-" ? '' : $formPrice )?> + <?=($formSystemFiltro == "1" ? "FMLS" : "" ).($formSystemFiltro == "2" ? "GAMLS" : "" )?>
                     <?php elseif (isset($_POST['price'])): ?>
-                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : "GAMLS" )?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : "" ).($_POST['systemFiltro'] == "2" ? "GAMLS" : "" )?>
                     <?php endif;?>
                   </p>
                 </header>

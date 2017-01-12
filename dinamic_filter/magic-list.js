@@ -122,7 +122,7 @@ function search(id, zipcode,county, city, price, systemFiltro){
   });
   if(systemFiltro == "1"){
     strSystem = "FMLS";
-  }else{
+  }else if(systemFiltro == "2"){
     strSystem = "GAMLS";
   }
   $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price + ' + ' + strSystem);
