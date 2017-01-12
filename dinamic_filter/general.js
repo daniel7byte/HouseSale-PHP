@@ -47,3 +47,28 @@ function setForm(id, zipcode,county, city, price, systemFiltro){
   }
 
 }
+
+function concatenarLinksGrid() {
+  // EN ESTA PARTE SE REGORRERÁN CADA UNO DE LOS <a href=""> DE LA ESTRUCTURA (GRID & GRID_SMALL)
+  // Y SE LES CONCATENARÁ LA INFORMACION DEL FORMULARIO (CON SUFIJO form xD).
+  // EJ: ...&formZipcode=12345&formCounty=Cobb&formCity=Atlanta&formPrice=75-150&formSystemFiltro=FMLS&formId=654321
+
+  /*
+  SELECTORES PARA EL GRID
+  $('.contador > .properties > .properties__thumb > a')
+  $('.contador > .properties  > .properties__details > .properties__info > a')
+  */
+}
+
+function concatenarLinksList() {
+  // EN ESTA PARTE SE REGORRERÁN CADA UNO DE LOS <a href=""> DE LA ESTRUCTURA (LIST)
+  // Y SE LES CONCATENARÁ LA INFORMACION DEL FORMULARIO (CON SUFIJO form xD).
+  // EJ: ...&formZipcode=12345&formCounty=Cobb&formCity=Atlanta&formPrice=75-150&formSystemFiltro=FMLS&formId=654321
+
+  /*
+  SELECTORES PARA EL LIST
+  $('.contador > .properties > .properties__thumb > a')
+  $('.contador > .properties > .properties__details > .properties__info > a')
+  $('.contador > .properties > .properties__details > a')
+  */
+}
