@@ -9,6 +9,21 @@ try {
   exit;
 }
 
+if (isset($_COOKIE['formPrice'])){
+  $formZipcode = $_COOKIE['formZipcode'];
+  $formCounty = $_COOKIE['formCounty'];
+  $formCity = $_COOKIE['formCity'];
+  $formPrice = $_COOKIE['formPrice'];
+  $formSystemFiltro = $_COOKIE['formSystemFiltro'];
+  $formId = $_COOKIE['formId'];
+  setcookie('formId', '', time() - 3600);
+  setcookie('formZipcode', '', time() - 3600);
+  setcookie('formCounty', '', time() - 3600);
+  setcookie('formCity', '', time() - 3600);
+  setcookie('formPrice', '', time() - 3600);
+  setcookie('formSystemFiltro', '', time() - 3600);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -95,10 +110,12 @@ becomes
           <!-- BEGIN site-->
           <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($_POST['price']) ? '' : $limiteRegistros )?></strong> </h1>
+                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($formPrice) ? '' : ( isset($_POST['price']) ? '' : $limiteRegistros ) )?></strong> </h1>
                   <p id="search-string">
-                    <?php if (isset($_POST['price'])): ?>
-                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?>
+                    <?php if (isset($formPrice)): ?>
+                    <?=($formZipcode == "-" ? '' : $formZipcode )?> + <?=($formCounty == "-" ? '' : $formCounty )?> + <?=($formCity == "-" ? '' : $formCity )?> + <?=($formPrice == "-" ? '' : $formPrice )?> + <?=($formSystemFiltro == "-" ? '' : '' ).($formSystemFiltro == "1" ? "FMLS" : "GAMLS" )?>
+                    <?php elseif (isset($_POST['price'])): ?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : "GAMLS" )?>
                     <?php endif;?>
                   </p>
                 </header>
@@ -140,7 +157,7 @@ becomes
                 <div class="widget__content">
                   <div class="listing listing--list js-properties-list" id="articles">
 
-                    <?php if (!isset($_POST['price'])): ?>
+                    <?php if (!isset($_POST['price']) && !isset($formPrice)): ?>
 
                     <?php
                       $query = $mysql->prepare("SELECT * FROM datoscasas ORDER BY rand() LIMIT $limiteRegistros");
@@ -194,7 +211,18 @@ becomes
 
             <?php
 
-            if (isset($_POST['price'])){
+            if (isset($formPrice)){
+
+              ?>
+              <script>
+                  $( document ).ready(function() {
+                      search("<?=($formId != '-' ? $formId : '')?>", "<?=($formZipcode != '-' ? $formZipcode : '')?>", "<?=($formCounty != '-' ? $formCounty : '')?>", "<?=($formCity != '-' ? $formCity : '')?>", "<?=($formPrice != '-' ? $formPrice : '')?>", "<?=($formSystemFiltro != '-' ? $formSystemFiltro : '' )?>");
+                      resetPagination();
+                  });
+              </script>
+              <?php
+
+            }elseif (isset($_POST['price'])){
 
                 ?>
                 <script>
@@ -206,7 +234,6 @@ becomes
                 <?php
 
             }
-
             ?>
 
           </div>
@@ -230,7 +257,11 @@ becomes
                     </div>
                   </div>
                 </form>
-                <?php if (isset($_POST['price'])): ?>
+                <?php if (isset($formPrice)): ?>
+                  <script>
+                    setForm("<?=($formId != '-' ? $formId : '')?>", "<?=($formZipcode != '-' ? $formZipcode : '')?>", "<?=($formCounty != '-' ? $formCounty : '')?>", "<?=($formCity != '-' ? $formCity : '')?>", "<?=($formPrice != '-' ? $formPrice : '')?>", "<?=($formSystemFiltro != '-' ? $formSystemFiltro : '' )?>");
+                  </script>
+                <?php elseif (isset($_POST['price'])): ?>
                   <script>
                   $( document ).ready(function() {
                     setForm("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");

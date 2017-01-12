@@ -119,7 +119,12 @@ function search(id, zipcode,county, city, price, systemFiltro){
       }
     }
   });
-  $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price);
+  if(systemFiltro == "1"){
+    strSystem = "FMLS";
+  }else{
+    strSystem = "GAMLS";
+  }
+  $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price + ' + ' + strSystem);
 }
 
 function reset() {

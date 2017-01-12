@@ -24,12 +24,12 @@
   }
 
   if(isset($_GET['formZipcode']) && isset($_GET['formCounty']) && isset($_GET['formCity']) && isset($_GET['formPrice']) && isset($_GET['formSystemFiltro']) && isset($_GET['formId'])){
-    setcookie('formZipcode', $_GET['formZipcode']);
-    setcookie('formCounty', $_GET['formCounty']);
-    setcookie('formCity', $_GET['formCity']);
-    setcookie('formPrice', $_GET['formPrice']);
-    setcookie('formSystemFiltro', $_GET['formSystemFiltro']);
-    setcookie('formId', $_GET['formId']);
+    setcookie('formZipcode', ($_GET['formZipcode'] == ""? "-" : $_GET['formZipcode'] ));
+    setcookie('formCounty', ($_GET['formCounty'] == ""? "-" : $_GET['formCounty'] ));
+    setcookie('formCity', ($_GET['formCity'] == ""? "-" : $_GET['formCity'] ));
+    setcookie('formPrice', ($_GET['formPrice'] == ""? "-" : $_GET['formPrice'] ));
+    setcookie('formSystemFiltro', ($_GET['formSystemFiltro'] == ""? "-" : $_GET['formSystemFiltro'] ));
+    setcookie('formId', ($_GET['formId'] == ""? "-" : $_GET['formId'] ));
     $conCookies = true;
   }
 
@@ -530,7 +530,7 @@ Opcion de descripcion de agente comercial
                     </form>
                     <?php if ($conCookies): ?>
                       <script>
-                        setForm("<?=($_GET['formId'] != '-' ? $_GET['formId'] : '')?>", "<?=($_GET['formZipcode'] != '-' ? $_GET['formZipcode'] : '')?>", "<?=($_GET['formCounty'] != '-' ? $_GET['formCounty'] : '')?>", "<?=($_GET['formCity'] != '-' ? $_GET['formCity'] : '')?>", "<?=($_GET['formPrice'] != '-' ? $_GET['formPrice'] : '')?>", "<?=$_GET['formSystemFiltro']?>");
+                        setForm("<?=($_GET['formId'] != '-' ? $_GET['formId'] : '')?>", "<?=($_GET['formZipcode'] != '-' ? $_GET['formZipcode'] : '')?>", "<?=($_GET['formCounty'] != '-' ? $_GET['formCounty'] : '')?>", "<?=($_GET['formCity'] != '-' ? $_GET['formCity'] : '')?>", "<?=($_GET['formPrice'] != '-' ? $_GET['formPrice'] : '')?>", "<?=($_GET['formSystemFiltro'] != '-' ? $_GET['formSystemFiltro'] : '' )?>");
                       </script>
                     <?php endif; ?>
                     <!-- end of block-->
