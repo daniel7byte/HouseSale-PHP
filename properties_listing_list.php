@@ -218,6 +218,7 @@ becomes
                   $( document ).ready(function() {
                       search("<?=($formId != '-' ? $formId : '')?>", "<?=($formZipcode != '-' ? $formZipcode : '')?>", "<?=($formCounty != '-' ? $formCounty : '')?>", "<?=($formCity != '-' ? $formCity : '')?>", "<?=($formPrice != '-' ? $formPrice : '')?>", "<?=($formSystemFiltro != '-' ? $formSystemFiltro : '' )?>");
                       resetPagination();
+                      concatenarLinks('list');
                   });
               </script>
               <?php
@@ -229,6 +230,7 @@ becomes
                     $( document ).ready(function() {
                         search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
                         resetPagination();
+                        concatenarLinks('list');
                     });
                 </script>
                 <?php

@@ -54,17 +54,6 @@ if (isset($_COOKIE['formPrice'])){
     <!--[if lt IE 11]>
     <link rel="stylesheet" href="assets/css/ie-fix.css"><![endif]-->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <!-- Meta graph protocol-->
-    <meta property="og:title" content="1600 Pennsylvania Ave NW">
-    <meta property="og:url" content="property_details.html">
-    <meta property="og:image" content="assets/media-demo/properties/554x360/01.jpg">
-    <meta property="og:description" content="Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio!">
-    <!--Meta Twitter protocol-->
-    <meta name="twitter:card" content="property">
-    <meta name="twitter:url" content="property_details.html">
-    <meta name="twitter:title" content="1600 Pennsylvania Ave NW">
-    <meta name="twitter:description" content="Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio!">
-    <meta name="twitter:image" content="assets/media-demo/properties/554x360/01.jpg">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="dinamic_filter/pagination.js"></script>
@@ -223,6 +212,7 @@ if (isset($_COOKIE['formPrice'])){
                       $( document ).ready(function() {
                           search("<?=($formId != '-' ? $formId : '')?>", "<?=($formZipcode != '-' ? $formZipcode : '')?>", "<?=($formCounty != '-' ? $formCounty : '')?>", "<?=($formCity != '-' ? $formCity : '')?>", "<?=($formPrice != '-' ? $formPrice : '')?>", "<?=($formSystemFiltro != '-' ? $formSystemFiltro : '' )?>");
                           resetPagination();
+                          concatenarLinks('grid');
                       });
                   </script>
                   <?php
@@ -234,6 +224,7 @@ if (isset($_COOKIE['formPrice'])){
                         $( document ).ready(function() {
                             search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
                             resetPagination();
+                            concatenarLinks('grid');
                         });
                     </script>
                     <?php

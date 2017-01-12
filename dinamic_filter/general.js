@@ -48,7 +48,7 @@ function setForm(id, zipcode,county, city, price, systemFiltro){
 
 }
 
-function concatenarLinksGrid() {
+function concatenarLinks(tipoListing) {
   // EN ESTA PARTE SE REGORRERÁN CADA UNO DE LOS <a href=""> DE LA ESTRUCTURA (GRID & GRID_SMALL)
   // Y SE LES CONCATENARÁ LA INFORMACION DEL FORMULARIO (CON SUFIJO form xD).
   // EJ: ...&formZipcode=12345&formCounty=Cobb&formCity=Atlanta&formPrice=75-150&formSystemFiltro=FMLS&formId=654321
@@ -56,14 +56,8 @@ function concatenarLinksGrid() {
   /*
   SELECTORES PARA EL GRID
   $('.contador > .properties > .properties__thumb > a')
-  $('.contador > .properties  > .properties__details > .properties__info > a')
+  $('.contador > .properties > .properties__details > .properties__info > a')
   */
-}
-
-function concatenarLinksList() {
-  // EN ESTA PARTE SE REGORRERÁN CADA UNO DE LOS <a href=""> DE LA ESTRUCTURA (LIST)
-  // Y SE LES CONCATENARÁ LA INFORMACION DEL FORMULARIO (CON SUFIJO form xD).
-  // EJ: ...&formZipcode=12345&formCounty=Cobb&formCity=Atlanta&formPrice=75-150&formSystemFiltro=FMLS&formId=654321
 
   /*
   SELECTORES PARA EL LIST
@@ -71,4 +65,33 @@ function concatenarLinksList() {
   $('.contador > .properties > .properties__details > .properties__info > a')
   $('.contador > .properties > .properties__details > a')
   */
+
+
+  var searchForm = $('#searchForm');
+  var zipcode = $('input#zipcode', searchForm).val();
+  var county = $('select#county', searchForm).val();
+  var city = $('select#city', searchForm).val();
+  var price = $('select#price', searchForm).val();
+  var systemFiltro = $('select#systemFiltro', searchForm).val();
+  var id = $('input#id', searchForm).val();
+
+  $('.contador > .properties > .properties__thumb > a').each(function (index) {
+    var cadena = $(this).attr( "href" );
+    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+  });
+
+  $('.contador > .properties > .properties__details > .properties__info > a').each(function (index) {
+    var cadena = $(this).attr( "href" );
+    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+  });
+
+
+  if(tipoListing == 'list'){
+
+    $('.contador > .properties > .properties__details > a').each(function (index) {
+      var cadena = $(this).attr( "href" );
+      $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+    });
+
+  }
 }

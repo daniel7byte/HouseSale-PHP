@@ -109,6 +109,7 @@ function search(id, zipcode,county, city, price, systemFiltro){
       $('#loading').hide( 1000 );
       $('#numRecords').html(number_format($('.contador').size()));
       resetPagination();
+      concatenarLinks('list');
     },
     success: function(result){
       if(result != ''){
