@@ -249,13 +249,12 @@ becomes
               </div>
               <div class="widget__content">
                 <!-- BEGIN SEARCH-->
-                <form method="post" action="" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
+                <form method="post" action="properties_listing_list.php" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
                   <div class="row">
                     <?php include('property_form.php'); ?>
                     <div class="form__buttons form__buttons--double">
                       <button type="reset" id="reset" class="form__reset" onclick="reset();">Reset</button>
-                      <!--js-form-reset-->
-                      <button id="search" onclick="return false;" class="form__submit">Search</button>
+                      <button type="submit" class="form__submit">Search</button>
                     </div>
                   </div>
                 </form>
