@@ -127,7 +127,7 @@ function search(id, zipcode,county, city, price, systemFiltro){
   }else{
     strSystem = "";
   }
-  $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price + ' + ' + strSystem);
+  // $('#search-string').html(zipcode + ' + ' + county + ' + ' + city + ' + ' + price + ' + ' + strSystem);
 }
 
 function reset() {
