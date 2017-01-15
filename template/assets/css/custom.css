@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    height: 100%;
+    min-height: 100%;
+}
+nav.navbar.navbar-default {
+    background-color: #ff6600 !important;
+    margin: 0;
+    border: 0;
+}
+nav.navbar .navbar-brand img{
+    position: relative;
+    bottom: .6rem;
+}
+nav.navbar .navbar-toggle .icon-bar {
+    background: white;
+}
+nav.navbar .navbar-toggle:hover {
+    background: white;
+}
+nav.navbar .navbar-toggle:hover .icon-bar {
+    background: #ff6600;
+}
+nav.navbar .navbar-collapse {
+    background: white;
+}
+.main {
+    margin: 0;
+    height: 95%;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex .section {
+    width: 100%;
+    height: 100%;
+}
+.flex .section:first-child {
+    position: relative;
+    background: url('../images/house.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.main.flex .section:first-child .container {
+    position: relative;
+    width: 100% !important;
+    max-width: 1000px !important;
+    z-index: 2;
+}
+.main.flex .section .container h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #333;
+}
+.flex .section:first-child:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+.flex .section:last-child {
+    position: relative;
+}
+.map iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.vertical-container {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.vertical-container .vertical{
+    display: table-cell;
+    vertical-align: middle;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    nav.navbar .navbar-collapse {
+        background: transparent;
+    }
+    nav.navbar .navbar-collapse .navbar-nav li a {
+        color: white;
+    }
+    .main.flex .section{
+        flex: 1;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
