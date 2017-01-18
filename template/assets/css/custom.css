@@ -109,7 +109,7 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     top: 10px;
 }
 /* //// MAP \\\\ */
-.map iframe {
+#map {
     position: absolute;
     top: 0;
     bottom: 0;

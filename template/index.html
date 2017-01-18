@@ -5,12 +5,25 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
+    <script src="assets/js/gmaps.min.js"></script>
+    <script type="text/javascript">
+        var map;
+        $(document).ready(function(){
+            map = new GMaps({
+                div: '#map',
+                lat: 33.756944,
+                lng: -84.390278,
+                zoom: 7
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -100,16 +113,14 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="col-xs2 col-md-2 hide-xs"></div>
+                            <div class="col-xs-2 col-md-2 hide-xs"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d863309.9225624632!2d-83.6372728939407!3d32.303675253618984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sve!4v1484463981554" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+            <div id="map"></div>
         </section>
     </main>
 </body>
