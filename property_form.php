@@ -53,7 +53,7 @@
     </select>
 </div>
 
-<div class="form-group">
+<div class="form-group" style="display:none;">
     <label for="id" class="control-label">ID</label>
     <input class="form-control" type='text' name="id" id="id" value="">
 </div>

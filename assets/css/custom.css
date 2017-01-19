@@ -1,29 +1,19 @@
-
-.form-control-1 {
-  display: block;
-  width: 90%;
-  height: 28px!important;
-  padding: 6px 12px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #2c3e50;
-  background-color: red;
-  background-image: none;
-  border: 1px solid #d6d6d6;
-  border-radius: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-
-
 .formpc {
     top:-80px; 
 } 
  
-
+.label-1 {
+  display: inline;
+ /* padding: .2em .6em .3em;*/
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
  
   .logo-eh {
 
@@ -84,7 +74,7 @@ display:none!important;
   
  .banner--wide .banner__item {
 
-  padding: 20px 0 70px!important;
+  padding: 15px 0 70px!important;
 
 } 
   
@@ -93,10 +83,10 @@ display:none!important;
  
  
 .banner-pub1 {
-  background: red; margin-top: 40px; display:none:
+   margin-top: 40px; 
 position:relative;
   height: 800px;
-  width: 263px; background: url("../../img/banner/banner-tmp1.jpg");
+  width: 263px; 
 }
 
 
@@ -204,6 +194,12 @@ position:relative;
   .header__span-p1 {
      padding-right:10px; padding-left:10px; font-weight:700; display:none!important;
   }
+  
+ .formpc {
+    top:-15px; 
+}  
+  
+  
 }
 
 @media (max-width: 767px) {
@@ -326,6 +322,15 @@ position:relative;
   height: 35px!important; margin-left:10px!important;
     background: url("../../img/logo-joygle-big.png") 100% 0!important; display:visibility!important;
   }
+  
+  
+  
+  
+  
+  
+  
+  
+
 }
 
 .header__logo svg {
@@ -364,6 +369,14 @@ position:relative;
   .header__logo-p2 img {
     width: 100px; 
   }
+  
+  
+  .banner-pub1 {
+display:none;
+}
+  
+  
+  
 }
 
 .header--overlay .header__logo-p2 {

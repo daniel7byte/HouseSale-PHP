@@ -1,0 +1,441 @@
+.formpc {
+    top:-80px; 
+} 
+ 
+.label-1 {
+  display: inline;
+ /* padding: .2em .6em .3em;*/
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+ 
+  .logo-eh {
+
+  height: 100%;
+  width: 100%; background: url("../../img/logo-footer-eh.png") 96% 0;
+} 
+
+
+.gosubmit__title {
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%!important;
+  float: left;
+  margin: 42px 0 0 495px;
+}
+
+.gosubmit__btn {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+  font-size: 15px;
+  position: relative;
+  border: none;
+  border-bottom: 4px solid #d99221;
+  background: #ff6600;
+  color: #222;
+  float: left;
+  width: 175px;
+  margin: 20px 0 0 30px!important;
+}
+ 
+ .map__view {
+  border: 8px solid #fff;
+  margin: 17px 0;
+  width: 99.9%!important;
+  min-height: 350px!important;
+  z-index: 20;
+}
+ 
+ .header__row {
+  width: 100%!important;
+
+}
+
+
+ .container-header {
+  width: 100%!important;
+
+}
+
+ .header__logo-p1 {
+
+  height: 35px;
+  width: 125px; background: url("../../img/logo-joygle-big.png") 96% 0;
+}  
+ 
+
+.header  {
+     background-color:#FF6600!important;
+} 
+ 
+.banner--wide .banner__item {
+
+  padding: 0px 0 70px;
+
+} 
+
+  @media (max-width: 770px) {
+
+  
+} 
+
+ @media (min-width: 768px) {
+  .navbar--header.header-fixed {
+display:none!important; 
+  }
+  
+ .banner--wide .banner__item {
+
+  padding: 15px 0 70px!important;
+
+} 
+  
+  
+}
+ 
+ 
+.banner-pub1 {
+   margin-top: 40px; 
+position:relative;
+  height: 800px;
+  width: 263px; 
+}
+
+
+.header__contacts-p1 {
+  background: transparent;
+  margin-left: auto; font-weight:700; font-size:17px!important;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .header__contacts-p1 {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__contacts-p1 {
+    background: none !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+ .dropdown__menu {
+
+  width: 180px!important;
+
+} 
+  
+.header__logo-p1 {
+
+ display: none !important;
+}
+
+.header__logo-p2 {
+
+  height: 35px;
+  width: 35px; background: url("../../img/logo-joygle-m.png") 100% 0;
+ z-index:2000!important; 
+ 
+}
+
+
+
+}
+
+
+ 
+  
+.formpc {
+    top:0px; 
+} 
+  
+  
+ .banner-pub1 {
+    background: none !important;
+} 
+  
+  
+  
+}
+
+
+
+.header__contacts-p1 {
+  background: transparent;
+}
+
+
+
+
+.header__phone-p1 {
+  color: #fff;
+  display: block;
+  font-weight:700;
+  line-height: 1;
+  padding: 15px 40px 0;
+}
+
+.header__phone-p1:hover {
+  color: #fff; font-weight:700;
+}
+
+@media (max-width: 767px) {
+  .header__phone-p1 {
+    padding: 15px 0 0;
+  }
+}
+
+
+
+
+
+
+.header__span-p1 {
+  margin-left: 15px; font-weight:700; font-size:17px!important; padding-right:10px; padding-left:10px; text-decoration:none!important; color:#fff!important;
+}
+
+.header__span-p2 {
+  margin-left: 0px; font-weight:700; font-size:17px!important; padding-right:10px; padding-left:10px; text-decoration:none!important; color:#fff!important;
+}
+
+
+
+@media (max-width: 850px) {
+  .header__span-p1 {
+     padding-right:10px; padding-left:10px; font-weight:700; display:none!important;
+  }
+  
+ .formpc {
+    top:-15px; 
+}  
+  
+  
+}
+
+@media (max-width: 767px) {
+  .header__span-p2 {
+     padding-right:10px; padding-left:10px; font-weight:700; z-index:2000;
+  }
+  
+  
+  
+
+  
+}
+
+
+
+.header__span-p1 {
+  margin-left: 0px;
+}
+
+
+
+
+
+
+.header__settings-p1 {
+ margin-left: auto;
+}
+
+
+
+
+  .header__logo {
+	    width: 125px!important;
+  height: 35px!important; margin-left:10px!important;
+    background: url("../../img/logo-joygle-m.png") 100% 0; display:visibility!important;
+  }
+
+
+
+
+@media (max-width: 1199px) {
+  .navbar__brand-logo-p1 {
+    width: 215px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .navbar__brand-logo {
+    display: none;
+  }
+  
+ .header__settings-p1 {
+ margin-left: 10px;
+} 
+
+.dropdown--header  {
+
+  padding: 0 5px 0 0px!important;
+
+}  
+
+
+
+.header__settings-column {
+    display: none!important;
+  }
+
+
+
+  
+}
+
+.navbar--overlay .navbar__brand-logo-p1 {
+  fill: #fff;
+}
+
+.navbar--overlay .header-fixed .navbar__brand-logo-p1 {
+  fill: #2c3e50;
+}
+
+
+.navbar--overlay-map .navbar__brand-logo-p1 {
+  fill: #2c3e50;
+}
+
+
+
+
+
+  
+  
+
+  
+  
+  
+.navbar__brand-logo-p2 {
+  fill: #2c3e50;
+  height: 35px;
+  width: 35px; background: url("../../img/logo-joygle-m.png") 100% 0;
+}  
+  
+  
+  
+  
+  
+}
+
+
+
+
+.header__logo {
+  text-align: center!important;
+  line-height: 1!important;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+	    width: 125px!important;
+  height: 35px!important; margin-left:10px!important;
+    background: url("../../img/logo-joygle-big.png") 100% 0!important; display:visibility!important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+}
+
+.header__logo svg {
+  width: 50px!important;
+  height: 35px!important;
+}
+
+@media (max-width: 767px) {
+  .header__logo img {
+    width: 100px!important;
+  }
+}
+
+
+
+
+
+
+
+
+
+.header__logo-p2 {
+  text-align: left;z-index:3000!important;   width: 35px;
+  height: 33px; 
+  line-height: 1; background: url("../../img/logo-joygle-m.png") 100% 0;
+}
+
+
+
+.header__logo-p2 svg {
+  width: 35px;
+  height: 32px; 
+}
+
+@media (max-width: 767px) {
+  .header__logo-p2 img {
+    width: 100px; 
+  }
+  
+  
+  .banner-pub1 {
+display:none;
+}
+  
+  
+  
+}
+
+.header--overlay .header__logo-p2 {
+  width: auto;
+}
+
+.header--mob-opened .header__logo-p2 {
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

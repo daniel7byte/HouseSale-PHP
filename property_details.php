@@ -328,82 +328,16 @@
                   </div>
 
                   <div class="property__info">
-                    <div class="property__info-item">High School: <strong> ?????</strong></div>
-                    <div class="property__info-item">Primary School: <strong> ?????</strong></div>
-                    <div class="property__info-item">Basic School: <strong> ?????</strong></div>
+                    <div class="property__info-item">High School: <strong><?=$result['dato28']?></strong></div>
+                    <div class="property__info-item">Primary School: <strong><?=$result['dato27']?></strong></div>
+                    <div class="property__info-item">Basic School: <strong><?=$result['dato26']?></strong></div>
 
                   </div>
-                  <!--div class="property__params">
-                    <h4 class="property__subtitle">The space</h4>
-                    <ul class="property__params-list">
-                      <li>Year Built:<strong>1971</strong></li>
-                      <li>Number of Parking Spaces:<strong>24</strong></li>
-                      <li>Garage Size In Square Feet:<strong>50</strong></li>
-                      <li>Basement:<strong>Full</strong></li>
-                      <li>External<strong>Construction: Terace</strong></li>
-                      <li>Roofing:<strong>New</strong></li>
-                      <li>Exterior Material:<strong>Brick</strong></li>
-                      <li>Structure Type:<strong>Mansion</strong></li>
-                      <li>Doors &amp; windows:<strong>Double Pane Windows, Skylights</strong></li>
-                      <li>Fireplace description:<strong> Brick</strong></li>
-                      <li>Fireplace fuel:<strong>Uses Both Gas &amp; Wood</strong></li>
-                      <li>Fireplace location:<strong>Living Room</strong></li>
-                      <li>Floors:<strong>Carpet - Partial, Ceramic Tile</strong></li>
-                      <li>Plumbing:<strong>Full Copper Plumbing/</strong></li>
-                      <li>Garage Size In Square Feet:<strong>500</strong></li>
-                      <li>Basement:<strong>Full</strong></li>
-                      <li>Available From:<strong>2013-05-29</strong></li>
-                      <li>MLS ID #:<strong>0</strong></li>
-                    </ul>
-                  </div-->
 
 
-                  <!--div class="property__params">
-                    <h4 class="property__subtitle">Amenities</h4>
-                    <ul class="property__params-list property__params-list--options">
-                      <li>Wireless Internet</li>
-                      <li>Kitchen</li>
-                      <li>Internet</li>
-                      <li>Air Conditioning</li>
-                      <li>Heating</li>
-                      <li>Smoking Allowed</li>
-                      <li>Wheelchair Accessible</li>
-                      <li>Washer</li>
-                      <li>Dryer</li>
-                      <li>TV</li>
-                      <li>Suitable for Events</li>
-                      <li>Smoking Allowed</li>
-                      <li>Wheelchair Accessible</li>
-                      <li>Elevator in Building</li>
-                      <li>Indoor Fireplace</li>
-                      <li>Buzzer/Wireless Intercom</li>
-                      <li>Doorman</li>
-                      <li>Pool</li>
-                      <li>Hot Tub</li>
-                      <li>Gym</li>
-                    </ul>
-                  </div-->
 
 
-                  <!--div class="property__description js-unhide-block">
-                    <h4 class="property__subtitle">Description</h4>
-                    <div class="property__description-wrap">
-                      <p>Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio! (Very rare in the city) washer dryer/ Gourmet kitchen. Close to the city&apos;s best night clubs, restaurants and shopping</p>
-                      <p>This is a spacious private room for rent in my Large 2 bedroom apt with large outdoor patio suitable for eating in the heart of the Meat-Packing District. right across the street from the chelsea market and just steps away from the cites best shopping, restaurants, and night-life</p>
-                      <p>
-                        The apartment is newly renovated with brand new furniture and appliances. It&apos;s a clean and cozy oasis in the coolest neighborhood in nyc.
-                        The private outdoor patio is huge and has a covered eating area, a gas Webber BBQ , 2 lounge chairs for sunbathing and plenty of space to just hang out.
-                      </p>
-                      <p>The bedroom has a queen-sized bed that sleeps 2 and a large desk, a 32 inch flatscreen cable/tv, with 3 large windows overlooking the posh area we call the meatpacking district.</p>
-                      <p>
-                        The bathroom has a shower/tub (perfect for soaking) with sliding glass doors. (towels and bedding provided)
-                        Living room has a new huge leather sectional couch that comfortably holds 5 for movies/meals or just hanging.There is a brand new 42&quot; flat screen TV mounted on the wall. with playstation 3, dvd, and free cable TV w DVR.
-                        this apartment also has a dj booth for anyone that is experienced. or an iPod dock for ppl that just want to play music that way
-                        The kitchen is very large with black marble counter tops,and bar to eat and hang out. It has all the appliances you&apos;ll need including trash compactor, dishwasher, stove/over, toaster, blender and enough space for a chef and several helpers. Air conditioning. And yes, the apartment does have free wireless Internet access.
-                      </p>
-                    </div>
-                    <button type="button" class="property__btn-more js-unhide">More information ...</button>
-                  </div-->
+
 
 
                   <div class="widget js-widget widget--details">
@@ -428,7 +362,7 @@
                           <div class="worker__intro-head">
                             <div class="worker__intro-name">
                               <h3 class="worker__name fn">Pablo Cardona</h3>
-                              <div class="worker__post">Agent, Joygle USA Realty</div>
+                              <div class="worker__post">Real Estate Agent</div>
                             </div>
 
                             <!-- end of block .worker__listings-->
@@ -437,21 +371,26 @@
                           <div class="worker__intro-row">
                             <div class="worker__intro-col">
                               <div class="worker__contacts">
-                                <div class="tel"><span class="type">Tel.</span><a href="tel:+44(0)2035102390" class="uri value">+44 (0) 20 3510 2390</a></div>
-                                <div class="tel"><span class="type">Mob.</span><a href="tel:+44(0)30345207210" class="uri value">+44 (0) 303 4520 7210</a></div>
-                                <div class="email"><span class="type">Email</span><a href="mailto:rs@realtyspace.com" class="uri value">pablo@joygle.com</a></div>
-                                <div class="skype"><span class="type">Skype</span><a href="skype:Walkenboy?call" class="uri value">pablo-joygle</a></div>
+                                <div class="tel"><span class="type">Tel.</span><a href="#" class="uri value">+1 404-9573940</a></div>
+                                
+                                <div class="email"><span class="type">Email</span><a href="#" class="uri value">p.cardona@joygle.com</a></div>
+                                
                               </div>
                               <!-- end of block .worker__contacts-->
                             </div>
                             <div class="worker__intro-col">
-                              <div class="social social--worker"><a href="#" class="social__item"><i class="fa fa-facebook"></i></a><a href="#" class="social__item"><i class="fa fa-linkedin"></i></a><a href="#" class="social__item"><i class="fa fa-twitter"></i></a><a href="#" class="social__item"><i class="fa fa-google-plus"></i></a></div>
+                              <div class="social social--worker">
+							  <a href="#" class="social__item"><i class="fa fa-facebook"></i></a>
+							  
+							  <a href="#" class="social__item"><i class="fa fa-twitter"></i></a>
+							  <a href="#" class="social__item"><i class="fa fa-google-plus"></i></a>
+							  </div>
                             </div>
                           </div>
                           <div class="worker__intro-row">
                             <div class="worker__descr">
                               <p>
-Opcion de descripcion de agente comercial
+Available 24/7.
 							 </p>
                             </div>
                           </div>
@@ -466,9 +405,17 @@ Opcion de descripcion de agente comercial
 
 
                           <div class="form-group form-group--col-4 required">
-                            <label for="in-form-name" class="control-label">Your Name</label>
+                            <label for="in-form-name" class="control-label">Name</label>
                             <input id="in-form-name" type="text" name="Name" required class="form-control">
                           </div>
+						  
+                          <div class="form-group form-group--col-4 required">
+                            <label for="in-form-name" class="control-label">Last Name</label>
+                            <input id="in-form-name-x" type="text" name="Last Name" required class="form-control">
+                          </div>						  
+						  
+						  
+						  
                           <div class="form-group form-group--col-4">
                             <label for="in-form-phone" class="control-label">Telephone</label>
                             <input id="in-form-phone" type="text" name="Phone" class="form-control">
@@ -514,8 +461,8 @@ Opcion de descripcion de agente comercial
 
                 <div class="widget js-widget widget--sidebar">
                   <div class="widget__header">
-                    <h2 class="widget__title">Filter</h2>
-                    <h5 class="widget__headline">Find your apartment or house on the exact key parameters.</h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
+                    <h2 class="widget__title">Find</h2>
+                    <h5 class="widget__headline">Find your next home here</h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
                   </div>
                   <div class="widget__content">
                     <!-- BEGIN SEARCH-->
@@ -535,7 +482,22 @@ Opcion de descripcion de agente comercial
                     <?php endif; ?>
                     <!-- end of block-->
                     <!-- END SEARCH-->
+					
+					
+
+					
+					
+					
+					
+					
                   </div>
+				  
+				  
+					<div  class="banner-pub1">
+					<img src="img/banner/banner-tmp2.jpg" alt="">
+					</div>				  
+				  
+				  
                 </div>
               </div>
               <!-- END SIDEBAR-->
@@ -647,6 +609,15 @@ Opcion de descripcion de agente comercial
 
         });
       </script>
+	  
+	  
+	  
+	  
+      <!-- BEGIN analytics.google -->
+<?php include("google-analytics.php"); ?> 
+      <!-- END analytics.google -->		  
+	  
+	  
 
   </body>
 </html>

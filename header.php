@@ -22,10 +22,10 @@
 				
 				
                 <li class="dropdown auth__nav-item">
-				<a href="index.php" class="header__span-p1"><span class="header__span-p1">SELL</span></a>
+				<a href="sell.php" class="header__span-p1"><span class="header__span-p1">SELL</span></a>
                 </li>				
                 <li class="dropdown auth__nav-item">
-				<a href="index.php" class="header__span-p1"><span class="header__span-p1">CONTACT US</span></a>
+				<a href="contact.php" class="header__span-p1"><span class="header__span-p1">CONTACT US</span></a>
                 </li>					
 				
 
@@ -42,8 +42,8 @@
                   </button>
                   <div class="dropdown__menu">
                     <ul>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">English</a></li>
-                      <li class="dropdown__item"><a href="#" class="dropdown__link">Español</a></li>
+                      <li class="dropdown__item"><a href="http://www.joygle.com" class="dropdown__link">English</a></li>
+                      <li class="dropdown__item"><a href="http://www.joygle.com/es" class="dropdown__link">Español</a></li>
                       
                     </ul>
                   </div>
@@ -55,7 +55,7 @@
               <ul class="auth__nav">
 
                 <li class="dropdown auth__nav-item">
-				<a href="index.php" class="header__span-p2"><span class="header__span-p2">+1 202 555 0135</span></a>
+				<a href="index.php" class="header__span-p2"><span class="header__span-p2">+1 404-9573940</span></a>
                 </li>	
 				
 				
@@ -109,7 +109,7 @@
 			
               <ul class="navbar__nav">
 			  
-                <li class="navbar__item js-dropdown"><a class="navbar__link">Home
+                <li class="navbar__item js-dropdown"><a class="navbar__link" onmouseover="">LANGUAGE - IDIOMA
                     <svg class="navbar__arrow">
                       <use xlink:href="#icon-arrow-right"></use>
                     </svg></a>
@@ -121,16 +121,9 @@
                     </button>
                     <div class="navbar__submenu">
                       <ul class="navbar__subnav">
-                        <li class="navbar__subitem"><a href="index.html" class="navbar__sublink js-navbar-sublink">Banner & Search</a></li>
-                        <li class="navbar__subitem"><a href="index_slider.html" class="navbar__sublink js-navbar-sublink">Property slider</a></li>
-                        <li class="navbar__subitem"><a href="index_projects.html" class="navbar__sublink js-navbar-sublink">Property projects</a></li>
-                        <li class="navbar__subitem"><a href="index_slider_search.html" class="navbar__sublink js-navbar-sublink">Slider & Search</a></li>
-                        <li class="navbar__subitem"><a href="index_slider_auth.html" class="navbar__sublink js-navbar-sublink">Slider & Authorization</a></li>
-                        <li class="navbar__subitem"><a href="index_vmap_light.html" class="navbar__sublink js-navbar-sublink">Google Map & Light search</a></li>
-                        <li class="navbar__subitem"><a href="index_vmap_dark.html" class="navbar__sublink js-navbar-sublink">Google Map & Dark search</a></li>
-                        <li class="navbar__subitem"><a href="index_hmap_light.html" class="navbar__sublink js-navbar-sublink">Google Map & Horizontal search</a></li>
-                        <li class="navbar__subitem"><a href="feature_map_leaflet.html" class="navbar__sublink js-navbar-sublink">Openstreet Map & Filter</a></li>
-                        <li class="navbar__subitem"><a href="feature_vmap_fullscreen.html" class="navbar__sublink js-navbar-sublink">Fullscreen Google Map</a></li>
+                        <li class="navbar__subitem"><a href="http://www.joygle.com" class="navbar__sublink js-navbar-sublink">English</a></li>
+                        <li class="navbar__subitem"><a href="http://www.joygle.com/es" class="navbar__sublink js-navbar-sublink">Español</a></li>
+
                       </ul>
                     </div>
                   </div>
@@ -138,9 +131,9 @@
 			  
 			  
 				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink">HOME</a></li>
-				<li class="navbar__subitem"><a href="#" class="navbar__sublink js-navbar-sublink">OUR COMPANY</a></li>	
-				<li class="navbar__subitem"><a href="#" class="navbar__sublink js-navbar-sublink">SELL</a></li>					
-				<li class="navbar__subitem"><a href="#" class="navbar__sublink js-navbar-sublink">CONTACT US</a></li>					
+				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink">OUR COMPANY</a></li>	
+				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink">SELL</a></li>					
+				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink">CONTACT US</a></li>					
 				
 
 

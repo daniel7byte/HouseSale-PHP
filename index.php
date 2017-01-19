@@ -131,8 +131,8 @@
 
         <div class="widget js-widget widget--landing widget--gray">
             <div class="widget__header">
-                <h2 class="widget__title">Real estates</h2>
-                <h5 class="widget__headline">Our agents are licensed professionals that specialise in searching, evaluating and negotiating the purchase of property on behalf of the buyer. They will sell you real estate. Insights, tips & how-to guides on selling property and preparing your home or investment property for sale and working to maximise your sale price.</h5>
+                <h2 class="widget__title">HOT SALES</h2>
+                <h5 class="widget__headline">We specialize in providing excellent advice for you to help you decide on the home you always dreamed of.</h5>
             </div>
             <div class="widget__content">
                 <div class="tab tab--properties">
@@ -223,7 +223,7 @@
                       <div class="feature__item-content">
                         <h3 class="feature__item-title">WE FACILITATE SALES</h3>
                         <div class="feature__text">
-                          <p>We take care of your real property for you to have peace of mind.</p>
+                          <p>We take care of your real estate in order for you to have a piece of mind.</p>
                         </div>
                       </div>
                     </div>
@@ -288,7 +288,7 @@
                   <div class="gosubmit__title__row gosubmit__title__row--second"style="text-align: left!important;"><span class="gosubmit__title__option" style="text-align: left!important;">We </span>Buy and <span class="gosubmit__title__option"></span></div>					
                   <div class="gosubmit__title__row gosubmit__title__row--first"> </div>
 			  
-                  <div class="gosubmit__title__row gosubmit__title__row--second"><span class="gosubmit__title__option">Sell </span>Your  Propierty<span class="gosubmit__title__option"></span></div>
+                  <div class="gosubmit__title__row gosubmit__title__row--second"><span class="gosubmit__title__option">Sell </span>Your  Property<span class="gosubmit__title__option"></span></div>
                   <div class="gosubmit__title__row gosubmit__title__row--third"></div>
                 </div>
                 <!-- end of block .gosubmit__title--><a href="contact.php" class="gosubmit__btn">Contact US</a>
@@ -312,13 +312,13 @@
             <!-- BEGIN PARTNERS-->
             <div id="partners-slider" class="partners">
               <div class="partners__slider js-slick-slider">
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-1.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-3.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-4.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-5.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-3.png" alt=""><span class="partners__name"></span></a>
-			  <a class="partners__item"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
+			  <a  href="http://www.fmls.com" class="partners__item" target="_blank"><img src="assets/media-demo/partners/logo-company-1.png" alt="FMLS"><span class="partners__name"></span></a>
+			  <a  href="http://www.flinsurance.us/" class="partners__item" target="_blank"><img src="assets/media-demo/partners/logo-company-5.png" alt=""><span class="partners__name"></span></a>			  
+			  <a  href="http://www.gamls.com/" class="partners__item" target="_blank"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
+			  <a  href="#" class="partners__item" ><img src="assets/media-demo/partners/logo-company-3.png" alt=""><span class="partners__name"></span></a>
+			  <a  href="#" class="partners__item" ><img src="assets/media-demo/partners/logo-company-4.png" alt=""><span class="partners__name"></span></a>
+			  <a  href="http://www.gamls.com/" class="partners__item" target="_blank"><img src="assets/media-demo/partners/logo-company-2.png" alt=""><span class="partners__name"></span></a>
+			  
               </div>
               <div class="partners__controls">
                 <button class="partners__arrow partners__arrow--prev js-partners-prev"></button>
@@ -336,6 +336,9 @@
 <?php include("footer.php"); ?> 
       <!-- END FOOTER-->
 					
+      </div>
+    </div>					
+					
       <!-- BEGIN FOOTER-->
 <?php include("header-footer.php"); ?> 
       <!-- END FOOTER-->
@@ -344,8 +347,7 @@
 		
 		
 
-      </div>
-    </div>
+
     <button type="button" class="scrollup js-scrollup"></button>
     <!-- end of block .scrollup-->
     <!-- BEGIN SCRIPTS and INCLUDES-->
@@ -355,5 +357,12 @@
 	
 
     <!-- END SCRIPTS and INCLUDES-->
+	
+	
+	
+      <!-- BEGIN analytics.google -->
+<?php include("google-analytics.php"); ?> 
+      <!-- END analytics.google -->	
+	
   </body>
 </html>
