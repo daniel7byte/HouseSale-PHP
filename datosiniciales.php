@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "@Soporte7805";
+$password = "";
 //$password = "";
 $dbname = "joygle";
 $sqlqueryini = " SELECT * FROM ".$dbname.".datoscasas d where 1=1 ";
