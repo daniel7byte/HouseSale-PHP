@@ -25,7 +25,7 @@
         });
     </script>
 </head>
-<body>
+<body class="main-template">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -123,5 +123,12 @@
             <div id="map"></div>
         </section>
     </main>
+    <script>
+    // Fixing height of main tag
+    ((d)=>{
+        let   clientWindow = d.getElementsByClassName('main')[0]
+        clientWindow.style.maxHeight = 'calc(100% - '+ clientWindow.offsetTop +'px)'
+    })(document)
+    </script>
 </body>
 </html>
