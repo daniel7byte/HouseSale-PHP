@@ -115,7 +115,25 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     display: block;
     width: 100%;
     padding: 1rem 0;
-    background: #333;
+    background: #2b2b2b;
+}
+.sale-template .pre-search {
+    padding: 1rem 0;
+}
+.sale-template .pre-search .allies {
+    width: 80%;
+    margin: auto;
+    padding: 1rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.sale-template .pre-search .allies .allies__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sale-template .pre-search .allies .allies__list .allies__item {
+    display: inline-block;
 }
 /* //// FORMS \\\\ */
 .flex .section:first-child form {
