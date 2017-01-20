@@ -48,12 +48,14 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
 .flex .section {
     width: 100%;
     height: 100%;
+    max-height: 100%;
 }
-.flex .section:first-child {
+.main-template .flex .section:first-child {
     position: relative;
     background: url('../images/house.jpg');
     background-size: cover;
     background-position: 50% 50%;
+    overflow-y: auto;
 }
 .main.flex .section:first-child .container {
     position: relative;
@@ -61,14 +63,14 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     max-width: 1000px !important;
     z-index: 2;
 }
-.main.flex .section .container h2 {
+.main-template .main.flex .section .container h2 {
     color: white;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 1px 1px 1px #333;
 }
-.flex .section:first-child:before {
+.main-template .flex .section:first-child:before {
     content: '';
     position: absolute;
     top: 0;
@@ -80,6 +82,36 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
 .flex .section:last-child {
     position: relative;
 }
+.sale-template .card-section {
+    padding: 1.5rem 0;
+    position: relative;
+    background: #ececec;
+    overflow-y: auto;
+}
+.sale-template .section .card {
+    width: 100%;
+    background: white;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.sale-template .section .card .card__thumbnail {
+    height: 190px;
+    background-size: 100%;
+}
+.sale-template .section .card .card__content {
+    padding: 1rem;
+    color: #999;
+}
+.sale-template .section .card .card__content .card__content__price {
+    color: #333;
+    font-size: 2rem;
+}
+.filter-section {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    background: #333;
+}
 /* //// FORMS \\\\ */
 .flex .section:first-child form {
     background: rgba(255,255,255,0.2);
@@ -90,6 +122,33 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
 }
 .flex .section:first-child form .form-control {
     border-radius: 0;
+}
+.sale-template .filter-section .form-group .btn {
+    margin: 0 .4rem;
+}
+.form-group .input-button {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+}
+.form-group .input-button input {
+    border: 0;
+    padding: .7rem;
+    float:left;
+}
+.form-group .input-button button {
+    border: 0;
+    background: transparent;
+    border: 0;
+    border-left: 1px solid #d7d7d7;
+    color: #555;
+    border-radius: 0 5px 5px 0;
+    float: right;
+    padding: .7rem 1rem;
 }
 /* //// BUTTONS \\\\ */
 .flex .section:first-child form .btn {
