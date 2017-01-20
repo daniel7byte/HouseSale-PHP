@@ -53,74 +53,76 @@
             </div>
         </div>
     </nav>
-    <main class="main flex">
-        <section class="section">
-            <div class="vertical-container">
-                <div class="vertical">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-2 hide-xs"></div>
-                            <div class="col-xs-8 col-md-8">
-                                <h2 class="text-center">Find the right home and neighborhood for you</h2>
-                                <form>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="state">State</label>
-                                        <select name="state" id="state" class="form-control">
-                                            <option value="georgia">Georgia</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="zipcode">Zip Code</label>
-                                        <input type="text" name="zipcode" id="zipcode" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="county">County</label>
-                                        <select name="county" id="county" class="form-control">
-                                            <option value="-">All</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="city">City</label>
-                                        <select name="city" id="city" class="form-control">
-                                            <option value="-">All</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="price">Price Range</label>
-                                        <select name="price" id="price" class="form-control">
-                                            <option value="-">All</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="id">ID</label>
-                                        <input type="text" name="id" id="id" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="uppercase" for="system">System</label>
-                                        <select name="system" id="system" class="form-control">
-                                            <option value="-">All</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6">
-                                                <button class="btn btn-ghost btn-block uppercase">Reset</button>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6">
-                                                <button class="btn btn-joygle btn-block uppercase">Search</button>
+    <main class="main">
+        <section class="flex">
+            <section class="section">
+                <div class="vertical-container">
+                    <div class="vertical">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-2 hide-xs"></div>
+                                <div class="col-xs-8 col-md-8">
+                                    <h2 class="text-center">Find the right home and neighborhood for you</h2>
+                                    <form>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="state">State</label>
+                                            <select name="state" id="state" class="form-control">
+                                                <option value="georgia">Georgia</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="zipcode">Zip Code</label>
+                                            <input type="text" name="zipcode" id="zipcode" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="county">County</label>
+                                            <select name="county" id="county" class="form-control">
+                                                <option value="-">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="city">City</label>
+                                            <select name="city" id="city" class="form-control">
+                                                <option value="-">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="price">Price Range</label>
+                                            <select name="price" id="price" class="form-control">
+                                                <option value="-">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="id">ID</label>
+                                            <input type="text" name="id" id="id" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="uppercase" for="system">System</label>
+                                            <select name="system" id="system" class="form-control">
+                                                <option value="-">All</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-6">
+                                                    <button class="btn btn-ghost btn-block uppercase">Reset</button>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6">
+                                                    <button class="btn btn-joygle btn-block uppercase">Search</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
+                                <div class="col-xs-2 col-md-2 hide-xs"></div>
                             </div>
-                            <div class="col-xs-2 col-md-2 hide-xs"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section">
-            <div id="map"></div>
+            </section>
+            <section class="section">
+                <div id="map"></div>
+            </section>
         </section>
     </main>
     <script>

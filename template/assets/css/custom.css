@@ -7,13 +7,18 @@ body {
     min-height: 100%;
 }
 .main {
+    display: block;
     margin: 0;
     height: calc(100% - 50px);
     max-height: calc(100% - 50px);
 }
 .flex {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height: 100%;
 }
 /* //// NAVBAR \\\\ */
 nav.navbar.navbar-default {
@@ -57,13 +62,13 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     background-position: 50% 50%;
     overflow-y: auto;
 }
-.main.flex .section:first-child .container {
+.flex .section:first-child .container {
     position: relative;
     width: 100% !important;
     max-width: 1000px !important;
     z-index: 2;
 }
-.main-template .main.flex .section .container h2 {
+.main-template .flex .section .container h2 {
     color: white;
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -196,6 +201,9 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
 .uppercase {
     text-transform: uppercase;
 }
+.relative {
+    position: relative;
+}
 /* //// RESPONSIVE \\\\ */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -205,7 +213,7 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     nav.navbar .navbar-collapse .navbar-nav li a {
         color: white;
     }
-    .main.flex .section{
+    .flex .section{
         flex: 1;
     }
     .flex .section:first-child form .btn.btn-joygle {
