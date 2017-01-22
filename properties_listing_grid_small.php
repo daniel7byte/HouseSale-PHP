@@ -366,5 +366,30 @@ if (isset($_COOKIE['formPrice'])){
 <?php include("google-analytics.php"); ?> 
       <!-- END analytics.google -->		
 	
+
+  <!-- PRICE RANGE PLUGIN -->
+  <script>
+  $(document).ready(function(){
+      $('#price-selector').slider({
+          min: 1,
+          max: 900000,
+          range: true,
+          steps: 75000,
+          values: [150000,750000],
+          create: function(event, ui) {
+              $('.price-from span').text(ui.values[0]);
+              $('.price-to span').text(ui.values[1]);
+              $('#price-min').val(ui.values[0]);
+              $('#price-max').val(ui.values[1]);
+          },
+          slide: function(event, ui) {
+              $('.price-from span').text(ui.values[0]);
+              $('.price-to span').text(ui.values[1]);
+              $('#price-min').val(ui.values[0]);
+              $('#price-max').val(ui.values[1]);
+          }
+      });
+  });
+  </script>
   </body>
 </html>

@@ -32,7 +32,9 @@ if (isset($_COOKIE['formPrice'])){
     <title>Joygle - Results</title>
 	
 	
-<?php include("head-list.php"); ?> 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<?php include("head-list.php"); ?>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
  </head>
   <body class="properties_listing_grid menu-default hover-default ">
@@ -368,5 +370,29 @@ if (isset($_COOKIE['formPrice'])){
 <?php include("google-analytics.php"); ?> 
       <!-- END analytics.google -->		
 	
+  <!-- PRICE RANGE PLUGIN -->
+  <script>
+  $(document).ready(function(){
+      $('#price-selector').slider({
+          min: 1,
+          max: 900000,
+          range: true,
+          steps: 75000,
+          values: [150000,750000],
+          create: function(event, ui) {
+              $('.price-from span').text(ui.values[0]);
+              $('.price-to span').text(ui.values[1]);
+              $('#price-min').val(ui.values[0]);
+              $('#price-max').val(ui.values[1]);
+          },
+          slide: function(event, ui) {
+              $('.price-from span').text(ui.values[0]);
+              $('.price-to span').text(ui.values[1]);
+              $('#price-min').val(ui.values[0]);
+              $('#price-max').val(ui.values[1]);
+          }
+      });
+  });
+  </script>
   </body>
 </html>

@@ -45,17 +45,16 @@
   <input type="text" id="in-datetime" name="in-datetime" data-start-date="12/03/2015" data-end-date="12/22/2015" data-time-picker="false" data-single-picker="false" class="js-datetimerange form-control">
 </div>
 
-<div class="form-group">
+<div class="form-group" style="width:100%">
     <label for="price" class="control-label">PRICE RANGE</label>
-    <select class="form-control" name="price" id="price">
-        <option value="-" selected>All</option>
-        <option value="1-75">$1 - $75.000</option>
-        <option value="75-150">$75.000 - $150.000</option>
-        <option value="150-300">$150.000 - $300.000</option>
-        <option value="300-600">$300.000 - $600.000</option>
-        <option value="600-900">$600.000 - $900.000</option>
-        <option value="900-mas"> + $900.000</option>
-    </select>
+    <inupt type="hidden" name="price-min" id="price-min" style="width:100%">
+    <inupt type="hidden" name="price-max" id="price-max" style="width:100%">
+    <div class="range-prices">
+        <div class="price-from">$<span>150000</span></div>
+        <div class="divisor">-</div>
+        <div class="price-to">$<span>750000</span></div>
+    </div>
+    <div id="price-selector"></div>
 </div>
 
 <div class="form-group" style="display:none;">

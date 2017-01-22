@@ -38,6 +38,7 @@ if (isset($_COOKIE['formPrice'])){
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7cSource+Sans+Pro:200,400,600,700,900,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <!-- Boostrap and other lib styles-->
   <!-- build:cssvendor-->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="assets/css/vendor.css">
   <!-- endbuild-->
   <!-- Font-awesome lib-->
@@ -66,6 +67,7 @@ if (isset($_COOKIE['formPrice'])){
     <script type="text/javascript" src="assets/js/vendor.js"></script>
     <script type="text/javascript" src="assets/js/demodata.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
 
@@ -399,5 +401,29 @@ plugin usage, with detailed comments about specific sections of the code.
 <?php include("google-analytics.php"); ?> 
       <!-- END analytics.google -->	
 
+<!-- PRICE RANGE PLUGIN -->
+<script>
+$(document).ready(function(){
+    $('#price-selector').slider({
+        min: 1,
+        max: 900000,
+        range: true,
+        steps: 75000,
+        values: [150000,750000],
+        create: function(event, ui) {
+            $('.price-from span').text(ui.values[0]);
+            $('.price-to span').text(ui.values[1]);
+            $('#price-min').val(ui.values[0]);
+            $('#price-max').val(ui.values[1]);
+        },
+        slide: function(event, ui) {
+            $('.price-from span').text(ui.values[0]);
+            $('.price-to span').text(ui.values[1]);
+            $('#price-min').val(ui.values[0]);
+            $('#price-max').val(ui.values[1]);
+        }
+    });
+});
+</script>
 </body>
 </html>
