@@ -7,12 +7,14 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
     <script src="assets/js/gmaps.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript">
         var map;
         $(document).ready(function(){
@@ -88,9 +90,14 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="uppercase" for="price">Price Range</label>
-                                            <select name="price" id="price" class="form-control">
-                                                <option value="-">All</option>
-                                            </select>
+                                            <inupt type="hidden" name="price-min" id="price-min">
+                                            <inupt type="hidden" name="price-max" id="price-max">
+                                            <div class="range-prices">
+                                                <div class="price-from">$<span>150000</span></div>
+                                                <div class="divisor">-</div>
+                                                <div class="price-to">$<span>750000</span></div>
+                                            </div>
+                                            <div id="price-selector"></div>
                                         </div>
                                         <div class="form-group">
                                             <label class="uppercase" for="id">ID</label>
@@ -131,6 +138,29 @@
         let   clientWindow             = d.getElementsByClassName('main')[0]
         clientWindow.style.maxHeight = 'calc(100% - '+ clientWindow.offsetTop +'px)'
     })(document)
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('#price-selector').slider({
+            min: 1,
+            max: 900000,
+            range: true,
+            steps: 75000,
+            values: [150000,750000],
+            create: function(event, ui) {
+                $('.price-from span').text(ui.values[0]);
+                $('.price-to span').text(ui.values[1]);
+                $('#price-min').val(ui.values[0]);
+                $('#price-max').val(ui.values[1]);
+            },
+            slide: function(event, ui) {
+                $('.price-from span').text(ui.values[0]);
+                $('.price-to span').text(ui.values[1]);
+                $('#price-min').val(ui.values[0]);
+                $('#price-max').val(ui.values[1]);
+            }
+        });
+    });
     </script>
 </body>
 </html>

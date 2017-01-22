@@ -181,6 +181,41 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     float: right;
     padding: .7rem 1rem;
 }
+.form-group .range-prices {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.form-group .range-prices .price-from,
+.form-group .range-prices .price-to,
+.form-group .range-prices .divisor {
+    display: inline-block;
+}
+.ui-widget.ui-widget-content,
+.ui-widget-content {
+    border: 0;
+    border-radius: 0;
+}
+.ui-slider-horizontal {
+    height: .5rem;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.6rem;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header {
+    background: linear-gradient(90deg, #ff6600, #fbb459);
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br,
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-tr,
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-bl,
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-tl  {
+    border-radius: 0;
+}
+.ui-slider-handle.ui-corner-all.ui-state-default {
+    border-radius: 200px;
+    outline: none;
+}
 /* //// BUTTONS \\\\ */
 .flex .section:first-child form .btn {
     border-radius: 0;
