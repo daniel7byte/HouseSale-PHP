@@ -48,7 +48,8 @@ if (isset($_COOKIE['formPrice'])){
 	
 	
       <!-- BEGIN HEADER-->
-<?php include("header.php"); ?> 
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+      <?php include("header.php"); ?> 
       <!-- END HEADER-->
 	
 	  
@@ -368,6 +369,7 @@ if (isset($_COOKIE['formPrice'])){
 	
 
   <!-- PRICE RANGE PLUGIN -->
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $(document).ready(function(){
       $('#price-selector').slider({

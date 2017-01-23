@@ -409,15 +409,15 @@ display:none;
 }
 .ui-widget.ui-widget-content,
 .ui-widget-content {
-    border: 0;
-    border-radius: 0;
+    border: 0 !important;
+    border-radius: 0 !important;
     background: #ddd;
 }
 .ui-slider-horizontal {
-    height: .5rem;
+    height: .5rem !important;
 }
 .ui-slider-horizontal .ui-slider-handle {
-    top: -.6rem;
+    top: -.6rem !important;
 }
 .ui-slider-range.ui-corner-all.ui-widget-header {
     background: linear-gradient(90deg, #ff6600, #fbb459);
@@ -426,11 +426,11 @@ display:none;
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-tr,
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-bl,
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-tl  {
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 .ui-slider-handle.ui-corner-all.ui-state-default {
-    border-radius: 200px;
-    outline: none;
+    border-radius: 200px !important;
+    outline: none !important;
 }
 
 

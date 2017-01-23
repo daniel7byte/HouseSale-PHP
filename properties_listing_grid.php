@@ -34,7 +34,6 @@ if (isset($_COOKIE['formPrice'])){
 	
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 <?php include("head-list.php"); ?>
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
  </head>
   <body class="properties_listing_grid menu-default hover-default ">
@@ -371,6 +370,7 @@ if (isset($_COOKIE['formPrice'])){
       <!-- END analytics.google -->		
 	
   <!-- PRICE RANGE PLUGIN -->
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $(document).ready(function(){
       $('#price-selector').slider({
