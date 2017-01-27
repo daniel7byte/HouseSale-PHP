@@ -38,8 +38,8 @@ if($id != ''){
         ':county' => "%$county%",
         ':system' => "%$system%",
         ':city' => "%$city%",
-        ':priceMin' => "%$priceMin%",
-        ':priceMax' => "%$priceMax%"
+        ':priceMin' => $priceMin,
+        ':priceMax' => $priceMax
     ]);
 
     $rowsOne = $queryOne->fetchAll();
