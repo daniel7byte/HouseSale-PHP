@@ -396,8 +396,10 @@ display:none;
 .index .ui-widget.ui-widget-content,
 .index .ui-widget-content {
   background: white;
+  width: 100%;
 }
 .form-group .range-prices {
+    display: block;
     font-weight: bold;
     margin-bottom: 1rem;
     font-size: 1.5rem;
