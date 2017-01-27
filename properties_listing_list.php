@@ -9,21 +9,6 @@ try {
   exit;
 }
 
-if (isset($_COOKIE['formPrice'])){
-  $formZipcode = $_COOKIE['formZipcode'];
-  $formCounty = $_COOKIE['formCounty'];
-  $formCity = $_COOKIE['formCity'];
-  $formPrice = $_COOKIE['formPrice'];
-  $formSystemFiltro = $_COOKIE['formSystemFiltro'];
-  $formId = $_COOKIE['formId'];
-  setcookie('formId', '', time() - 3600);
-  setcookie('formZipcode', '', time() - 3600);
-  setcookie('formCounty', '', time() - 3600);
-  setcookie('formCity', '', time() - 3600);
-  setcookie('formPrice', '', time() - 3600);
-  setcookie('formSystemFiltro', '', time() - 3600);
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -109,18 +94,18 @@ becomes
     <div class="center">
       <div class="container" style="width: 94%!important; ">
         <div class="row">
-		
-		
-		
-		
-		
+
+
+
+
+
           <!-- BEGIN site-->
           <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($formPrice) ? '' : ( isset($_POST['price']) ? '' : $limiteRegistros ) )?></strong> </h1>
+                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($_POST['city']) ? '' : $limiteRegistros )?></strong> </h1>
                   <p id="search-string">
-                    <?php if (isset($_POST['price'])): ?>
-                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : ($_POST['systemFiltro'] == "0" ? "GAMLS" : $_POST['systemFiltro'] ) )?>
+                    <?php if (isset($_POST['city'])): ?>
+                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price-min']?> - <?=$_POST['price-max']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : ($_POST['systemFiltro'] == "0" ? "GAMLS" : $_POST['systemFiltro'] ) )?>
                     <?php endif;?>
                   </p>
                 </header>
@@ -162,7 +147,7 @@ becomes
                 <div class="widget__content">
                   <div class="listing listing--list js-properties-list" id="articles">
 
-                    <?php if (!isset($_POST['price']) && !isset($formPrice)): ?>
+                    <?php if (!isset($_POST['city'])): ?>
 
                     <?php
                       $query = $mysql->prepare("SELECT * FROM datoscasas ORDER BY rand() LIMIT $limiteRegistros");
@@ -216,12 +201,12 @@ becomes
 
             <?php
 
-            if (isset($_POST['price'])){
+            if (isset($_POST['city'])){
 
                 ?>
                 <script>
                     $( document ).ready(function() {
-                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price-min'] != '-' ? $_POST['price-min'] : '')?>", "<?=($_POST['price-max'] != '-' ? $_POST['price-max'] : '')?>", "<?=$_POST['systemFiltro']?>");
                         resetPagination();
                         concatenarLinks('list');
                     });
@@ -233,10 +218,10 @@ becomes
 
           </div>
           <!-- END site-->
-		  
-		  
-		  
-		  
+
+
+
+
           <!-- BEGIN SIDEBAR-->
           <div class="sidebar">
             <div class="widget js-widget widget--sidebar">
@@ -334,13 +319,13 @@ becomes
 
           </div>
           <!-- END SIDEBAR-->
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+
+
+
+
+
+
+
           <div class="clearfix"></div>
       </div>
     </div>
@@ -398,8 +383,8 @@ plugin usage, with detailed comments about specific sections of the code.
 
 
       <!-- BEGIN analytics.google -->
-<?php include("google-analytics.php"); ?> 
-      <!-- END analytics.google -->	
+<?php include("google-analytics.php"); ?>
+      <!-- END analytics.google -->
 
 <!-- PRICE RANGE PLUGIN -->
 <script>

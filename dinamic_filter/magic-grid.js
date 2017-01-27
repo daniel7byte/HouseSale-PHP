@@ -73,7 +73,8 @@ $( document ).ready(function() {
         county = $('#county').val(),
         city = $('#city').val(),
         systemFiltro = $('#systemFiltro').val(),
-        price = $('#price').val();
+        priceMin = $('#price-min').val(),
+        priceMax = $('#price-max').val();
 
     if(county == '-'){
       county = '';
@@ -83,13 +84,13 @@ $( document ).ready(function() {
       city = '';
     }
 
-    search(id, zipcode,county, city, price, systemFiltro);
+    search(id, zipcode,county, city, priceMin, priceMax, systemFiltro);
 
   });
 
 });
 
-function search(id, zipcode,county, city, price, systemFiltro){
+function search(id, zipcode,county, city, priceMin, priceMax, systemFiltro){
 
   $('#noRecords').hide( 1000 );
 
@@ -102,7 +103,8 @@ function search(id, zipcode,county, city, price, systemFiltro){
       county : county,
       city : city,
       systemFiltro : systemFiltro,
-      price : price
+      priceMin : priceMin,
+      priceMax : priceMax
     },
     beforeSend: function() { $('#loading').show( "slow" ); },
     complete: function() {

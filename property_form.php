@@ -40,11 +40,6 @@
     </select>
 </div>
 
-<div class="form-group">
-  <label for="in-datetime" class="control-label">DATE RANGE</label>
-  <input type="text" id="in-datetime" name="in-datetime" data-start-date="12/03/2015" data-end-date="12/22/2015" data-time-picker="false" data-single-picker="false" class="js-datetimerange form-control">
-</div>
-
 <div class="form-group" style="width:100%">
     <label for="price" class="control-label">PRICE RANGE</label>
     <inupt type="hidden" name="price-min" id="price-min" style="width:100%">

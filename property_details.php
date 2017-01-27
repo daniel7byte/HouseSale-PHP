@@ -23,7 +23,7 @@
     $result = $query->fetch(PDO::FETCH_ASSOC);
   }
 
-  if(isset($_GET['formZipcode']) && isset($_GET['formCounty']) && isset($_GET['formCity']) && isset($_GET['formPrice']) && isset($_GET['formSystemFiltro']) && isset($_GET['formId'])){
+  if(isset($_GET['formZipcode']) && isset($_GET['formCounty']) && isset($_GET['formCity']) && isset($_GET['formPriceMin']) && isset($_GET['formPriceMax']) && isset($_GET['formSystemFiltro']) && isset($_GET['formId'])){
     // setcookie('formZipcode', ($_GET['formZipcode'] == ""? "-" : $_GET['formZipcode'] ));
     // setcookie('formCounty', ($_GET['formCounty'] == ""? "-" : $_GET['formCounty'] ));
     // setcookie('formCity', ($_GET['formCity'] == ""? "-" : $_GET['formCity'] ));
@@ -372,16 +372,16 @@
                             <div class="worker__intro-col">
                               <div class="worker__contacts">
                                 <div class="tel"><span class="type">Tel.</span><a href="#" class="uri value">+1 404-9573940</a></div>
-                                
+
                                 <div class="email"><span class="type">Email</span><a href="#" class="uri value">p.cardona@joygle.com</a></div>
-                                
+
                               </div>
                               <!-- end of block .worker__contacts-->
                             </div>
                             <div class="worker__intro-col">
                               <div class="social social--worker">
 							  <a href="#" class="social__item"><i class="fa fa-facebook"></i></a>
-							  
+
 							  <a href="#" class="social__item"><i class="fa fa-twitter"></i></a>
 							  <a href="#" class="social__item"><i class="fa fa-google-plus"></i></a>
 							  </div>
@@ -408,14 +408,14 @@ Available 24/7.
                             <label for="in-form-name" class="control-label">Name</label>
                             <input id="in-form-name" type="text" name="Name" required class="form-control">
                           </div>
-						  
+
                           <div class="form-group form-group--col-4 required">
                             <label for="in-form-name" class="control-label">Last Name</label>
                             <input id="in-form-name-x" type="text" name="Last Name" required class="form-control">
-                          </div>						  
-						  
-						  
-						  
+                          </div>
+
+
+
                           <div class="form-group form-group--col-4">
                             <label for="in-form-phone" class="control-label">Telephone</label>
                             <input id="in-form-phone" type="text" name="Phone" class="form-control">
@@ -477,27 +477,27 @@ Available 24/7.
                     </form>
                     <?php if ($conCookies): ?>
                       <script>
-                        setForm("<?=($_GET['formId'] != '-' ? $_GET['formId'] : '')?>", "<?=($_GET['formZipcode'] != '-' ? $_GET['formZipcode'] : '')?>", "<?=($_GET['formCounty'] != '-' ? $_GET['formCounty'] : '')?>", "<?=($_GET['formCity'] != '-' ? $_GET['formCity'] : '')?>", "<?=($_GET['formPrice'] != '-' ? $_GET['formPrice'] : '')?>", "<?=($_GET['formSystemFiltro'] != '-' ? $_GET['formSystemFiltro'] : '' )?>");
+                        setForm("<?=($_GET['formId'] != '-' ? $_GET['formId'] : '')?>", "<?=($_GET['formZipcode'] != '-' ? $_GET['formZipcode'] : '')?>", "<?=($_GET['formCounty'] != '-' ? $_GET['formCounty'] : '')?>", "<?=($_GET['formCity'] != '-' ? $_GET['formCity'] : '')?>", "<?=($_GET['formPriceMin'] != '-' ? $_GET['formPriceMin'] : '')?>", "<?=($_GET['formPriceMax'] != '-' ? $_GET['formPriceMax'] : '')?>", "<?=($_GET['formSystemFiltro'] != '-' ? $_GET['formSystemFiltro'] : '' )?>");
                       </script>
                     <?php endif; ?>
                     <!-- end of block-->
                     <!-- END SEARCH-->
-					
-					
 
-					
-					
-					
-					
-					
+
+
+
+
+
+
+
                   </div>
-				  
-				  
+
+
 					<div  class="banner-pub1">
 					<img src="img/banner/banner-tmp2.jpg" alt="">
-					</div>				  
-				  
-				  
+					</div>
+
+
                 </div>
               </div>
               <!-- END SIDEBAR-->
@@ -609,15 +609,15 @@ Available 24/7.
 
         });
       </script>
-	  
-	  
-	  
-	  
+
+
+
+
       <!-- BEGIN analytics.google -->
-<?php include("google-analytics.php"); ?> 
-      <!-- END analytics.google -->		  
-	  
-	  
+<?php include("google-analytics.php"); ?>
+      <!-- END analytics.google -->
+
+
 
   </body>
 </html>

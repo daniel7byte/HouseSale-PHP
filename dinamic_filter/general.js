@@ -108,8 +108,8 @@ function concatenarLinks(tipoListing) {
   var zipcode = $('input#zipcode', searchForm).val();
   var county = $('select#county', searchForm).val();
   var city = $('select#city', searchForm).val();
-  var priceMax = $('select#price-min', searchForm).val();
-  var priceMin = $('select#price-max', searchForm).val();
+  var priceMin = $('select#price-min', searchForm).val();
+  var priceMax = $('select#price-max', searchForm).val();
   var systemFiltro = $('select#systemFiltro', searchForm).val();
   var id = $('input#id', searchForm).val();
 
