@@ -4,15 +4,16 @@ function changeListing(page) {
   searchForm.submit();
 }
 
-function setForm(id, zipcode,county, city, price, systemFiltro){
+function setForm(id, zipcode,county, city, priceMin, priceMax, systemFiltro){
   let searchForm = $("#searchForm")
   let form__county = $("select#county", searchForm)
   let form__city = $("select#city", searchForm)
-  let form__price = $("select#price", searchForm)
   let form__systemFiltro = $("select#systemFiltro", searchForm)
 
   $("input#zipcode", searchForm).val(zipcode)
   $("input#id", searchForm).val(id)
+  $("input#price-min", searchForm).val(priceMin)
+  $("input#price-max", searchForm).val(priceMax)
 
   // Recorrer cada county del formulario.
   for(i=0; i < $("option", form__county).length; i++) {
@@ -74,14 +75,6 @@ function setForm(id, zipcode,county, city, price, systemFiltro){
     }
   }
 
-  // Recorrer cada price range del formulario.
-  for(i=0; i < $("option", form__price).length; i++) {
-  // Si el valor de una price range coincide, colocarle el atributo selected
-    if($("option", form__price)[i].value == price) {
-      $("option", form__price)[i].setAttribute("selected", "selected")
-    }
-  }
-
   // Recorrer cada systemFiltro del formulario.
   for(i=0; i < $("option", form__systemFiltro).length; i++) {
   // Si el valor de una systemFiltro coincide, colocarle el atributo selected
@@ -115,18 +108,19 @@ function concatenarLinks(tipoListing) {
   var zipcode = $('input#zipcode', searchForm).val();
   var county = $('select#county', searchForm).val();
   var city = $('select#city', searchForm).val();
-  var price = $('select#price', searchForm).val();
+  var priceMax = $('select#price-min', searchForm).val();
+  var priceMin = $('select#price-max', searchForm).val();
   var systemFiltro = $('select#systemFiltro', searchForm).val();
   var id = $('input#id', searchForm).val();
 
   $('.contador > .properties > .properties__thumb > a').each(function (index) {
     var cadena = $(this).attr( "href" );
-    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPriceMin='+priceMin+'&formPriceMax='+priceMax+'&formSystemFiltro='+systemFiltro+'&formId='+id);
   });
 
   $('.contador > .properties > .properties__details > .properties__info > a').each(function (index) {
     var cadena = $(this).attr( "href" );
-    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+    $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPriceMin='+priceMin+'&formPriceMax='+priceMax+'&formSystemFiltro='+systemFiltro+'&formId='+id);
   });
 
 
@@ -134,7 +128,7 @@ function concatenarLinks(tipoListing) {
 
     $('.contador > .properties > .properties__details > a').each(function (index) {
       var cadena = $(this).attr( "href" );
-      $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPrice='+price+'&formSystemFiltro='+systemFiltro+'&formId='+id);
+      $(this).attr( "href", cadena + '&formZipcode='+zipcode+'&formCounty='+county+'&formCity='+city+'&formPriceMin='+priceMin+'&formPriceMax='+priceMax+'&formSystemFiltro='+systemFiltro+'&formId='+id);
     });
 
   }
