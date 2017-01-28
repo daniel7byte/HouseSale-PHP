@@ -186,10 +186,10 @@ try {
                         </div>
                       </div>
                     </form>
-                    <?php if (isset($_POST['price'])): ?>
+                    <?php if (isset($_POST['price-min'])): ?>
                       <script>
                       $( document ).ready(function() {
-                        setForm("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price'] != '-' ? $_POST['price'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                        setForm("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price-min'] != '-' ? $_POST['price-min'] : '')?>", "<?=($_POST['price-max'] != '-' ? $_POST['price-max'] : '')?>", "<?=$_POST['systemFiltro']?>");
                       });
                       </script>
                     <?php endif; ?>
@@ -356,28 +356,5 @@ try {
 
   <!-- PRICE RANGE PLUGIN -->
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $(document).ready(function(){
-      $('#price-selector').slider({
-          min: 1,
-          max: 900000,
-          range: true,
-          steps: 75000,
-          values: [150000,750000],
-          create: function(event, ui) {
-              $('.price-from span').text(ui.values[0]);
-              $('.price-to span').text(ui.values[1]);
-              $('#price-min').val(ui.values[0]);
-              $('#price-max').val(ui.values[1]);
-          },
-          slide: function(event, ui) {
-              $('.price-from span').text(ui.values[0]);
-              $('.price-to span').text(ui.values[1]);
-              $('#price-min').val(ui.values[0]);
-              $('#price-max').val(ui.values[1]);
-          }
-      });
-  });
-  </script>
   </body>
 </html>

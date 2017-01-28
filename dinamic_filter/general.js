@@ -75,6 +75,27 @@ function setForm(id, zipcode,county, city, priceMin, priceMax, systemFiltro){
     }
   }
 
+  // Setear valores de Price Range
+  $('#price-selector').slider({
+    min: 1,
+    max: 900000,
+    range: true,
+    steps: 75000,
+    values: [priceMin,priceMax],
+    create: function(event, ui) {
+        $('.price-from span').text(priceMin);
+        $('.price-to span').text(priceMax);
+        $('#price-min').val(priceMin);
+        $('#price-max').val(priceMax);
+    },
+    slide: function(event, ui) {
+        $('.price-from span').text(ui.values[0]);
+        $('.price-to span').text(ui.values[1]);
+        $('#price-min').val(ui.values[0]);
+        $('#price-max').val(ui.values[1]);
+    }
+  });
+
   // Recorrer cada systemFiltro del formulario.
   for(i=0; i < $("option", form__systemFiltro).length; i++) {
   // Si el valor de una systemFiltro coincide, colocarle el atributo selected
@@ -82,7 +103,6 @@ function setForm(id, zipcode,county, city, priceMin, priceMax, systemFiltro){
       $("option", form__systemFiltro)[i].setAttribute("selected", "selected")
     }
   }
-
 }
 
 function concatenarLinks(tipoListing) {

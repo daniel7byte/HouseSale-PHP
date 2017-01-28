@@ -48,6 +48,7 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7cSource+Sans+Pro:200,400,600,700,900,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <!-- Boostrap and other lib styles-->
     <!-- build:cssvendor-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/vendor.css">
     <!-- endbuild-->
     <!-- Font-awesome lib-->
@@ -617,7 +618,8 @@ Available 24/7.
 <?php include("google-analytics.php"); ?>
       <!-- END analytics.google -->
 
-
+<!-- PRICE RANGE PLUGIN -->
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   </body>
 </html>
