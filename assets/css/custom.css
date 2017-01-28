@@ -411,6 +411,7 @@ display:none;
 }
 .ui-widget.ui-widget-content,
 .ui-widget-content {
+    width: 100%;
     border: 0 !important;
     border-radius: 0 !important;
     background: #ddd;
