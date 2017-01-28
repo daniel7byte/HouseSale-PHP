@@ -4,7 +4,7 @@ function changeListing(page) {
   searchForm.submit();
 }
 
-function setForm(id, zipcode,county, city, priceMin, priceMax, systemFiltro){
+function setForm(id, zipcode, county, city, priceMin, priceMax, systemFiltro){
   let searchForm = $("#searchForm")
   let form__county = $("select#county", searchForm)
   let form__city = $("select#city", searchForm)

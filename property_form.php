@@ -42,8 +42,8 @@
 
 <div class="form-group" style="min-width:100% !important">
     <label for="price" class="control-label">PRICE RANGE</label>
-    <input type="hidden" name="price-min" id="price-min" style="width:100%" class="form-control">
-    <input type="hidden" name="price-max" id="price-max" style="width:100%" class="form-control">
+    <input type="hidden" value="150000" name="price-min" id="price-min" style="width:100%" class="form-control">
+    <input type="hidden" value="750000" name="price-max" id="price-max" style="width:100%" class="form-control">
     <div class="range-prices">
         <div class="price-from">$<span>150000</span></div>
         <div class="divisor">-</div>

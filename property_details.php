@@ -24,12 +24,6 @@
   }
 
   if(isset($_GET['formZipcode']) && isset($_GET['formCounty']) && isset($_GET['formCity']) && isset($_GET['formPriceMin']) && isset($_GET['formPriceMax']) && isset($_GET['formSystemFiltro']) && isset($_GET['formId'])){
-    // setcookie('formZipcode', ($_GET['formZipcode'] == ""? "-" : $_GET['formZipcode'] ));
-    // setcookie('formCounty', ($_GET['formCounty'] == ""? "-" : $_GET['formCounty'] ));
-    // setcookie('formCity', ($_GET['formCity'] == ""? "-" : $_GET['formCity'] ));
-    // setcookie('formPrice', ($_GET['formPrice'] == ""? "-" : $_GET['formPrice'] ));
-    // setcookie('formSystemFiltro', ($_GET['formSystemFiltro'] == ""? "-" : $_GET['formSystemFiltro'] ));
-    // setcookie('formId', ($_GET['formId'] == ""? "-" : $_GET['formId'] ));
     $conCookies = true;
   }
 
@@ -84,6 +78,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
     <script type="text/javascript" src="assets/js/vendor.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
   </head>
@@ -617,9 +612,6 @@ Available 24/7.
       <!-- BEGIN analytics.google -->
 <?php include("google-analytics.php"); ?>
       <!-- END analytics.google -->
-
-<!-- PRICE RANGE PLUGIN -->
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
   </body>
 </html>
