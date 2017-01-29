@@ -51,7 +51,7 @@ try {
               <!-- BEGIN site-->
               <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title" style="font-size: 28px!important;">Results : <strong id="numRecords"><?=( isset($_POST['city']) ? '' : $limiteRegistros )?></strong> </h1>
+                  <h1 class="site__title" style="font-size: 28px!important;"><?php echo LISTING_RESULT ?> : <strong id="numRecords"><?=( isset($_POST['city']) ? '' : $limiteRegistros )?></strong> </h1>
                   <p id="search-string">
                     <?php if (isset($_POST['city'])): ?>
                     <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price-min']?> - <?=$_POST['price-max']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : ($_POST['systemFiltro'] == "0" ? "GAMLS" : $_POST['systemFiltro'] ) )?>
@@ -72,7 +72,7 @@ try {
 
                   <!--end of block .listing__sort-->
 				  <div class="listing__view">
-					<span class="control-label">View:</span>
+					<span class="control-label"><?php echo LISTING_VIEW ?>:</span>
 					<a onclick="changeListing('properties_listing_grid.php');" class="btn--white"><i class="fa fa-th-large"></i></a>
 					<a onclick="changeListing('properties_listing_list.php');" class="btn--white"><i class="fa fa-bars"></i></a>
 					<a onclick="changeListing('properties_listing_grid_small.php');" class="btn--white active"><i class="fa fa-table"></i></a>
@@ -107,7 +107,7 @@ try {
                               <div class="properties properties--grid">
                                 <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
                                     <figure class="item-photo__hover item-photo__hover--params">
-                                      <span class="properties__more">View details</span>
+                                      <span class="properties__more"><?php echo LISTING_CARD_VIEWDETAILS ?></span>
                                     </figure></a>
                                 </div>
                                 <div class="properties__details">
@@ -137,7 +137,7 @@ try {
                     </div>
                   </div>
 
-                  <div class="widget__footer"><a href="" class="widget__more" id="loadMore" onclick="loadMore(); return false;">More listings</a></div>
+                  <div class="widget__footer"><a href="" class="widget__more" id="loadMore" onclick="loadMore(); return false;"><?php echo LISTING_MORE ?></a></div>
 
                 </div>
 
@@ -169,8 +169,8 @@ try {
 
                 <div class="widget js-widget widget--sidebar">
                   <div class="widget__header">
-                    <h2 class="widget__title">Find</h2>
-                    <h5 class="widget__headline">Find your next home here</h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
+                    <h2 class="widget__title"><?php echo FORM_TITLE ?></h2>
+                    <h5 class="widget__headline"><?php echo FORM_SUBTITLE ?></h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
                   </div>
                   <div class="widget__content">
                     <!-- BEGIN SEARCH-->
@@ -178,8 +178,8 @@ try {
                       <div class="row">
                         <?php include('property_form.php'); ?>
                         <div class="form__buttons form__buttons--double">
-                          <button type="reset" id="reset" class="form__reset" onclick="reset();">Reset</button>
-                          <button type="submit" class="form__submit">Search</button>
+                          <button type="reset" id="reset" class="form__reset" onclick="reset();"><?php echo FORM_BTN1 ?></button>
+                          <button type="submit" class="form__submit"><?php echo FORM_BTN2 ?></button>
                         </div>
                       </div>
                     </form>
@@ -201,7 +201,7 @@ try {
 
                 <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">HOT SALES</h2>
+                    <h2 class="widget__title"><?php echo LISTING_HOTSALES ?></h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">
@@ -228,7 +228,7 @@ try {
                               <div class="properties properties--sidebar">
                                 <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo item-photo--static"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
                                     <figure class="item-photo__hover">
-                                      <span class="item-photo__more">View details</span>
+                                      <span class="item-photo__more"><?php echo LISTING_CARD_VIEWDETAILS ?></span>
                                     </figure></a>
                                 </div>
                                 <div class="properties__details">
@@ -254,7 +254,7 @@ try {
                 </div>
                 <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">Agents</h2>
+                    <h2 class="widget__title"><?php echo LISTING_AGENTS ?></h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">

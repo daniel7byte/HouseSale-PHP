@@ -282,7 +282,7 @@
                           <use xlink:href="#icon-area"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Area</dd>
+                      <dd class="property__plan-title"><?php echo DETAILS_AREA ?></dd>
                       <dd class="property__plan-value"><?=$result['dato9']?></dd>
                     </dl>
                     <dl class="property__plan-item">
@@ -291,7 +291,7 @@
                           <use xlink:href="#icon-window"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Bedrooms</dd>
+                      <dd class="property__plan-title"><?php echo DETAILS_BEDROOMS ?></dd>
                       <dd class="property__plan-value"><?=$result['dato12']?></dd>
                     </dl>
                     <dl class="property__plan-item">
@@ -300,7 +300,7 @@
                           <use xlink:href="#icon-bathrooms"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Bathrooms</dd>
+                      <dd class="property__plan-title"><?php echo DETAILS_BATHROOMS ?></dd>
                       <dd class="property__plan-value"><?=$result['dato13']?></dd>
                     </dl>
                     <dl class="property__plan-item">
@@ -309,7 +309,7 @@
                           <use xlink:href="#icon-bathrooms"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Half Baths</dd>
+                      <dd class="property__plan-title"><?php echo DETAILS_HALFBATHS ?></dd>
                       <dd class="property__plan-value"><?=$result['dato14']?></dd>
                     </dl>
                     <dl class="property__plan-item">
@@ -318,15 +318,15 @@
                           <use xlink:href="#icon-garage"></use>
                         </svg>
                       </dt>
-                      <dd class="property__plan-title">Year Built</dd>
+                      <dd class="property__plan-title"><?php echo DETAILS_YEARBUILT ?></dd>
                       <dd class="property__plan-value"><?=$result['dato15']?></dd>
                     </dl>
                   </div>
 
                   <div class="property__info">
-                    <div class="property__info-item">High School: <strong><?=$result['dato28']?></strong></div>
-                    <div class="property__info-item">Primary School: <strong><?=$result['dato27']?></strong></div>
-                    <div class="property__info-item">Basic School: <strong><?=$result['dato26']?></strong></div>
+                    <div class="property__info-item"><?php echo DETAILS_HIGHSCHOOL ?>: <strong><?=$result['dato28']?></strong></div>
+                    <div class="property__info-item"><?php echo DETAILS_PRIMARYSCHOOL ?>: <strong><?=$result['dato27']?></strong></div>
+                    <div class="property__info-item"><?php echo DETAILS_BASICSCHOOL ?>: <strong><?=$result['dato26']?></strong></div>
 
                   </div>
 
@@ -341,7 +341,7 @@
 					<div data-type="map" id="gmap" class="map__view js-map-canvas"></div>
                       <div class="map map--properties" style="display:none;" >
                         <div class="map__buttons">
-                          <button type="button" class="map__change-map js-map-btn active">Property Map</button>
+                          <button type="button" class="map__change-map js-map-btn active"><?php echo DETAILS_MAP ?></button>
                         </div>
                         <div class="map__wrap">
 
@@ -353,7 +353,7 @@
                     <div class="widget__content">
                       <div data-sr="enter bottom move 80px, scale(0), over 0s" data-animate-end="animate-end" class="worker js-unhide-block vcard worker--list worker--details">
                         <div class="worker__photo"><a href="agent_profile.html" class="item-photo item-photo--static"><img src="assets/media-demo/workers/worker-1.jpg" alt="Christopher Pakulla" class="photo"/>
-                            <figure class="item-photo__hover"><span class="item-photo__more">View Details</span></figure></a></div>
+                            <figure class="item-photo__hover"><span class="item-photo__more"><?php echo DETAILS_VIEWDETAILS ?></span></figure></a></div>
                         <div class="worker__intro">
                           <div class="worker__intro-head">
                             <div class="worker__intro-name">
@@ -401,32 +401,32 @@ Available 24/7.
 
 
                           <div class="form-group form-group--col-4 required">
-                            <label for="in-form-name" class="control-label">Name</label>
+                            <label for="in-form-name" class="control-label"><?php echo DETAILS_FORM_LABEL1 ?></label>
                             <input id="in-form-name" type="text" name="Name" required class="form-control">
                           </div>
 
                           <div class="form-group form-group--col-4 required">
-                            <label for="in-form-name" class="control-label">Last Name</label>
+                            <label for="in-form-name" class="control-label"><?php echo DETAILS_FORM_LABEL2 ?></label>
                             <input id="in-form-name-x" type="text" name="Last Name" required class="form-control">
                           </div>
 
 
 
                           <div class="form-group form-group--col-4">
-                            <label for="in-form-phone" class="control-label">Telephone</label>
+                            <label for="in-form-phone" class="control-label"><?php echo DETAILS_FORM_LABEL3 ?></label>
                             <input id="in-form-phone" type="text" name="Phone" class="form-control">
                           </div>
                           <div class="form-group form-group--col-4 required">
-                            <label for="in-form-email" class="control-label">E-mail</label>
+                            <label for="in-form-email" class="control-label"><?php echo DETAILS_FORM_LABEL4 ?></label>
                             <input id="in-form-email" type="email" name="Email" required data-parsley-trigger="change" class="form-control">
                           </div>
                           <div class="form-group required">
-                            <label for="in-form-message" class="control-label">Message : ID (<?=$result['dato2']?>)</label>
+                            <label for="in-form-message" class="control-label"><?php echo DETAILS_FORM_LABEL5 ?> : ID (<?=$result['dato2']?>)</label>
                             <textarea id="in-form-message" name="Message : ID (<?=$result['dato2']?>)" required data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-validation-threshold="10" data-parsley-minlength-message="You need to enter at least a 20 caracters long comment.." class="form-control"></textarea>
                           </div>
                         </div>
                         <div class="row">
-                          <button type="submit" class="form__submit">Submit</button>
+                          <button type="submit" class="form__submit"><?php echo DETAILS_FORM_BTN ?></button>
                         </div>
 
 <input type="hidden" value="405259" name="tfa_dbFormId" id="tfa_dbFormId">
@@ -457,8 +457,8 @@ Available 24/7.
 
                 <div class="widget js-widget widget--sidebar">
                   <div class="widget__header">
-                    <h2 class="widget__title">Find</h2>
-                    <h5 class="widget__headline">Find your next home here</h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
+                    <h2 class="widget__title"><?php echo FORM_TITLE ?></h2>
+                    <h5 class="widget__headline"><?php echo FORM_SUBTITLE ?></h5><a class="widget__btn js-widget-btn widget__btn--toggle">Show filter</a>
                   </div>
                   <div class="widget__content">
                     <!-- BEGIN SEARCH-->
@@ -466,8 +466,8 @@ Available 24/7.
                       <div class="row">
                         <?php include('property_form.php'); ?>
                         <div class="form__buttons form__buttons--double">
-                          <button type="reset" onclick="reset();" id="reset" class="form__reset">Reset</button>
-                          <button type="submit" class="form__submit">Search</button>
+                          <button type="reset" onclick="reset();" id="reset" class="form__reset"><?php echo FORM_BTN1 ?></button>
+                          <button type="submit" class="form__submit"><?php echo FORM_BTN2 ?></button>
                         </div>
                       </div>
                     </form>

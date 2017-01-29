@@ -49,8 +49,8 @@ try {
               <!-- BEGIN site-->
               <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title">About Us</h1>
-                  <h2 class="site__headline">Meet our company</h2>
+                  <h1 class="site__title"><?php echo ABOUT_TITLE ?></h1>
+                  <h2 class="site__headline"><?php echo ABOUT_SUBTITLE ?></h2>
                 </header>
                 <div class="site__main">
                   <div class="widget js-widget widget--main widget--no-margin">
@@ -58,21 +58,9 @@ try {
                       <article class="article article--list article--details">
                         <div class="article__body">
                         <h4> 
-						 <p style="text-align:justify;"><strong>JOYGLE</strong> 
+						 <p style="text-align:justify;"><strong><?php echo ABOUT_BRAND ?></strong> <?php echo ABOUT_TEXT1 ?></p>
 						 
-						 
- is an online platform that works with a group of specialists in the real estate market, who are highly trained to fulfill your dreams and improve your quality of life. 
- Joygle operates with the most popular applications suites of real estate in the USA. Who are very dedicated and highly trained						 
-						 
-						 
-						 
-						 </p>
-						 
-						 <p style="text-align:justify;">
-						 
-With joygle you can get all the comprehensive advice to purchase, sale, rent financing and much more.
-
-						 </p>						 
+						 <p style="text-align:justify;"><?php echo ABOUT_TEXT2 ?></p>						 
 						 
 						 
 						  <br>
@@ -80,36 +68,18 @@ With joygle you can get all the comprehensive advice to purchase, sale, rent fin
 						    <!-- <a href="http://www.freepik.com/free-photos-vectors/negocios">Negocios fotografía designed by Pressfoto - Freepik.com</a>e-->
                           <br>
 						  <br>
-						  <p>
-						  
-We have the must secure and reliable data base in the housing market today with more than 30 thousand homes in Georgia alone. 
-						  
-						  
-						  </p>
+						  <p><?php echo ABOUT_TEXT3 ?></p>
                           <br>
-						  <blockquote>
-						  
-						  “We are the best choice to provide you with excellent data and knowledge about the place of your dreams; 
-						  we make it possible to connect with the best local professionals that will help you make your life easier.”
-						  
-						  </blockquote>
+						  <blockquote>“<?php echo ABOUT_QUOTE ?>”</blockquote>
                           </br>
-						  <p>
-						  
-To obtained real estate information which you can access through us. Some of these partners are:
-						  
-						  </p>
+						  <p><?php echo ABOUT_TEXT4 ?></p>
                           <ul>
-                            <li>FMLS</li>
-                            <li>GAMLS</li>
-                            <li>HOMESTAR</li>
+                            <li><?php echo ABOUT_PARTNER1 ?></li>
+                            <li><?php echo ABOUT_PARTNER2 ?></li>
+                            <li><?php echo ABOUT_PARTNER3 ?></li>
                           </ul>
 						  <br>
-                          <p><i>
-						  
-We value your trust and provided timely and honest advice so you can adquiere the quality homes of your dreams.
-						  
-						  </i></p>
+                          <p><i><?php echo ABOUT_TEXT5 ?></i></p>
                         </h4>
 						
 						
@@ -146,7 +116,7 @@ We value your trust and provided timely and honest advice so you can adquiere th
 			  
 			  <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">HOT SALES</h2>
+                    <h2 class="widget__title"><?php echo LISTING_HOTSALES ?></h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">
@@ -175,7 +145,7 @@ We value your trust and provided timely and honest advice so you can adquiere th
 								<a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo item-photo--static">
 								<img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
                                     <figure class="item-photo__hover">
-                                      <span class="item-photo__more">View details</span>
+                                      <span class="item-photo__more"><?php echo DETAILS_VIEWDETAILS ?></span>
                                     </figure></a>
                                 </div>
                                 <div class="properties__details">
@@ -202,7 +172,7 @@ We value your trust and provided timely and honest advice so you can adquiere th
                 </div>
                 <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">Agents</h2>
+                    <h2 class="widget__title"><?php echo LISTING_AGENTS ?></h2>
                     <h5 class="widget__headline">Available 24/7.</h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">

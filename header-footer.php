@@ -13,19 +13,19 @@
             <div class="auth auth--header">
               <ul class="auth__nav">
                 <li class="dropdown auth__nav-item">
-				<a href="index.php" class="header__span-p1"><span class="header__span-p1">HOME</span></a>
+				<a href="index.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM1; ?></span></a>
                 </li>
 
                 <li class="dropdown auth__nav-item">
-				<a href="about-us.php" class="header__span-p1"><span class="header__span-p1">OUR COMPANY</span></a>
+				<a href="about-us.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM2; ?></span></a>
                 </li>				
 				
 				
                 <li class="dropdown auth__nav-item">
-				<a href="sell.php" class="header__span-p1"><span class="header__span-p1">SELL</span></a>
+				<a href="sell.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM3; ?></span></a>
                 </li>				
                 <li class="dropdown auth__nav-item">
-				<a href="contact.php" class="header__span-p1"><span class="header__span-p1">CONTACT US</span></a>
+				<a href="contact.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM4; ?></span></a>
                 </li>					
 				
 
@@ -89,10 +89,10 @@
 			  
 
 			  
-				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink">HOME</a></li>
-				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink">OUR COMPANY</a></li>	
-				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink">SELL</a></li>					
-				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink">CONTACT US</a></li>					
+				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM1; ?></a></li>
+				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM2; ?></a></li>
+				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM3; ?></a></li>
+				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM4; ?></a></li>
 				
 
 

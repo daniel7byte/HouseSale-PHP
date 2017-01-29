@@ -1,3 +1,12 @@
+<?php
+/* -----------------------------------------------------------------------
+*  langHandler
+*  -----------------------------------------------------------------------
+*  Aprovechando que este módulo está aplicado en todas las paginas del 
+*  sitio, se incluye el langHandler aquí
+*  -------------------------------------------------------------------- */
+include("lang/langHandler.php");
+?>
       <!-- BEGIN HEADER-->
       <header class="header header--brand">
         <div class="container-header">
@@ -13,19 +22,19 @@
             <div class="auth auth--header">
               <ul class="auth__nav">
                 <li class="dropdown auth__nav-item">
-				<a href="index.php" class="header__span-p1"><span class="header__span-p1">HOME</span></a>
+				<a href="index.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM1; ?></span></a>
                 </li>
 
                 <li class="dropdown auth__nav-item">
-				<a href="about-us.php" class="header__span-p1"><span class="header__span-p1">OUR COMPANY</span></a>
+				<a href="about-us.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM2; ?></span></a>
                 </li>				
 				
 				
                 <li class="dropdown auth__nav-item">
-				<a href="sell.php" class="header__span-p1"><span class="header__span-p1">SELL</span></a>
+				<a href="sell.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM3; ?></span></a>
                 </li>				
                 <li class="dropdown auth__nav-item">
-				<a href="contact.php" class="header__span-p1"><span class="header__span-p1">CONTACT US</span></a>
+				<a href="contact.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM4; ?></span></a>
                 </li>					
 				
 
@@ -38,12 +47,12 @@
             <div class="header__settings-column">
                 <div class="dropdown dropdown--header">
                   <button data-toggle="dropdown" type="button" class="dropdown-toggle dropdown__btn" style="font-weight:700; font-size:17px!important; ">
-                    Eng
+                    <?php echo MENU_ITEM5; ?>
                   </button>
                   <div class="dropdown__menu">
                     <ul>
-                      <li class="dropdown__item"><a href="http://www.joygle.com" class="dropdown__link">English</a></li>
-                      <li class="dropdown__item"><a href="http://www.joygle.com/es" class="dropdown__link">Español</a></li>
+                      <li class="dropdown__item"><a href="#" onclick="switchLanguage('en')" class="dropdown__link">English</a></li>
+                      <li class="dropdown__item"><a href="#" onclick="switchLanguage('es')" class="dropdown__link">Español</a></li>
                       
                     </ul>
                   </div>
@@ -121,8 +130,8 @@
                     </button>
                     <div class="navbar__submenu">
                       <ul class="navbar__subnav">
-                        <li class="navbar__subitem"><a href="http://www.joygle.com" class="navbar__sublink js-navbar-sublink">English</a></li>
-                        <li class="navbar__subitem"><a href="http://www.joygle.com/es" class="navbar__sublink js-navbar-sublink">Español</a></li>
+                        <li class="navbar__subitem"><a href="#" onclick="switchLanguage('en')" class="navbar__sublink js-navbar-sublink">English</a></li>
+                        <li class="navbar__subitem"><a href="#" onclick="switchLanguage('es')" class="navbar__sublink js-navbar-sublink">Español</a></li>
 
                       </ul>
                     </div>
@@ -130,10 +139,10 @@
                 </li>			  
 			  
 			  
-				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink">HOME</a></li>
-				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink">OUR COMPANY</a></li>	
-				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink">SELL</a></li>					
-				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink">CONTACT US</a></li>					
+				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM1; ?></a></li>
+				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM2; ?></a></li>
+				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM3; ?></a></li>
+				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM4; ?></a></li>
 				
 
 
@@ -149,4 +158,4 @@
         </div>
       </nav>
       <!-- END NAVBAR-->
-	  
+	  <script src="lang/script/lang.js"></script>

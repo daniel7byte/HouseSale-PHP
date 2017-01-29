@@ -12,7 +12,7 @@
                 </div>
                 <div class="widget js-widget widget--footer">
                   <div class="widget__header">
-                    <h2 class="widget__title">Broker</h2>
+                    <h2 class="widget__title"><?php echo FOOTER_BROKER ?></h2>
                   </div>
                   <div class="widget__content">
                     <aside class="widget_text">
@@ -34,7 +34,7 @@
               <div class="footer__col footer__col--second">
                 <div class="widget js-widget widget--footer">
                   <div class="widget__header">
-                    <h2 class="widget__title">OUR OFFICE</h2>
+                    <h2 class="widget__title"><?php echo FOOTER_OFFICE ?></h2>
                   </div>
                   <div class="widget__content" style=" color:#fff!important;">
 			  
@@ -68,7 +68,7 @@
 				
 				
                   <div class="widget__header">
-                    <h2 class="widget__title">Social</h2>
+                    <h2 class="widget__title"><?php echo FOOTER_SOCIAL ?></h2>
                   </div>
                   <div class="widget__content">
                     <div class="social social--footer">

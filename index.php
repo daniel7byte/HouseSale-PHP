@@ -45,7 +45,6 @@
     <script src="dinamic_filter/magic-grid.js"></script>
 	
 	
-	
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
     <script type="text/javascript" src="assets/js/vendor.js"></script>	
     <script type="text/javascript" src="assets/js/app.js"></script>
@@ -92,8 +91,9 @@
                 <div class="container">
                   <div class="row">
                     <div class="banner__caption">
-                      <h1 class="banner__title">FIND YOUR NEXT HOME HERE</h1>
-                      <h3 class="banner__subtitle">We have more than 30.000 homes available for you in the state of Georgia. Choose your best option at a price that is right for you and you will save 1.5% with us.</h3><span class="banner__btn" style="color:#fff;">Get started</span>
+                      <h1 class="banner__title"><?php echo HEADER_TITLE; ?></h1>
+                      <h3 class="banner__subtitle"><?php echo HEADER_CONTENT; ?></h3>
+                      <span class="banner__btn" style="color:#fff;"><?php echo HEADER_CTA; ?></span>
                       <div class="banner__arrow-circle">•</div>
                       <svg class="banner__arrow-end js-arrow-end">
                         <use xlink:href="#icon-arrow-end"></use>
@@ -108,14 +108,14 @@
                       </div>
                     </div>
                     <div class="banner__search">
-                      <h4 class="banner__sidebar-title">FIND YOUR NEXT HOME HERE</h4>
+                      <h4 class="banner__sidebar-title"><?php echo HEADER_TITLE; ?></h4>
                       <!-- BEGIN SEARCH-->
                       <form action="properties_listing_grid_small.php" method="post" class="formpc form form--flex form--search js-search-form form--banner-sidebar " style="">
                         <div class="row">
                           <?php include('property_form.php'); ?>
                           <div class="form__buttons form__buttons--double">
-                            <button type="reset" onclick="reset();" id="reset" class="form__reset">Reset</button>
-                            <button type="submit" class="form__submit">Search</button>
+                            <button type="reset" onclick="reset();" id="reset" class="form__reset"><?php echo FORM_BTN1; ?></button>
+                            <button type="submit" class="form__submit"><?php echo FORM_BTN2; ?></button>
                           </div>
                         </div>
                       </form>
@@ -132,8 +132,8 @@
 
         <div class="widget js-widget widget--landing widget--gray">
             <div class="widget__header">
-                <h2 class="widget__title">HOT SALES</h2>
-                <h5 class="widget__headline">We specialize in providing excellent advice for you to help you decide on the home you always dreamed of.</h5>
+                <h2 class="widget__title"><?php echo HOME_SUBTITLE1; ?></h2>
+                <h5 class="widget__headline"><?php echo HOME_TEXT1; ?></h5>
             </div>
             <div class="widget__content">
                 <div class="tab tab--properties">
@@ -200,8 +200,8 @@
               <div class="container">
                 <div class="feature__content">
                   <div class="feature__header">
-                    <h3 data-sr="enter right ease-in-out 150px" class="feature__title">WHY SHOULD YOU USE JOYGLE</h3>
-                    <h4 data-sr="enter right ease-in-out 250px" class="feature__headline">Our efficient platform provides all the necessary tools for you to buy/sell real estate the best and fastest way. with us you’ll get the following benefits:</h4>
+                    <h3 data-sr="enter right ease-in-out 150px" class="feature__title"><?php echo HOME_SUBTITLE2; ?></h3>
+                    <h4 data-sr="enter right ease-in-out 250px" class="feature__headline"><?php echo HOME_TEXT2; ?></h4>
                   </div>
                   <!-- end of block .feature__header-->
                   <div class="feature__list">
@@ -210,9 +210,9 @@
                         <use xlink:href="#icon-money-save"></use>
                       </svg>
                       <div class="feature__item-content">
-                        <h3 class="feature__item-title">BIG SAVINGS</h3>
+                        <h3 class="feature__item-title"><?php echo HOME_BENEFIT1_TITLE; ?></h3>
                         <div class="feature__text">
-                          <p>Our commission is one of the lowest in the market: 4.5%.</p>
+                          <p><?php echo HOME_BENEFIT1_DESCRIPTION; ?></p>
                         </div>
                       </div>
                     </div>
@@ -222,9 +222,9 @@
                         <use xlink:href="#icon-good-sales"></use>
                       </svg>
                       <div class="feature__item-content">
-                        <h3 class="feature__item-title">WE FACILITATE SALES</h3>
+                        <h3 class="feature__item-title"><?php echo HOME_BENEFIT2_TITLE; ?></h3>
                         <div class="feature__text">
-                          <p>We take care of your real estate in order for you to have a piece of mind.</p>
+                          <p><?php echo HOME_BENEFIT2_DESCRIPTION; ?></p>
                         </div>
                       </div>
                     </div>
@@ -234,9 +234,9 @@
                         <use xlink:href="#icon-comfort"></use>
                       </svg>
                       <div class="feature__item-content">
-                        <h3 class="feature__item-title">USER FRIENDLY</h3>
+                        <h3 class="feature__item-title"><?php echo HOME_BENEFIT3_TITLE; ?></h3>
                         <div class="feature__text">
-                          <p>We are transforming the way consumers make home-related decisions and connect with professionals.</p>
+                          <p><?php echo HOME_BENEFIT3_DESCRIPTION; ?></p>
                         </div>
                       </div>
                     </div>
@@ -246,9 +246,9 @@
                         <use xlink:href="#icon-easy"></use>
                       </svg>
                       <div class="feature__item-content">
-                        <h3 class="feature__item-title">VARIOUS OPTIONS</h3>
+                        <h3 class="feature__item-title"><?php echo HOME_BENEFIT4_TITLE; ?></h3>
                         <div class="feature__text">
-                          <p>It starts with our living database of more than 110 million U.S. homes – including homes for sale, homes for rent and homes not currently on the market.</p>
+                          <p><?php echo HOME_BENEFIT4_DESCRIPTION; ?></p>
                         </div>
                       </div>
                     </div>
@@ -286,13 +286,13 @@
             <div data-sr="flip 45deg over 0.5s" class="gosubmit">
               <div class="container">
                 <div class="gosubmit__title">
-                  <div class="gosubmit__title__row gosubmit__title__row--second"style="text-align: left!important;"><span class="gosubmit__title__option" style="text-align: left!important;">We </span>Buy and <span class="gosubmit__title__option"></span></div>					
+                  <div class="gosubmit__title__row gosubmit__title__row--second"style="text-align: left!important;"><span class="gosubmit__title__option" style="text-align: left!important;"><?php echo HOME_CONTACT_TITLE_PART1; ?> </span><?php echo HOME_CONTACT_TITLE_PART2; ?> <span class="gosubmit__title__option"></span></div>					
                   <div class="gosubmit__title__row gosubmit__title__row--first"> </div>
 			  
-                  <div class="gosubmit__title__row gosubmit__title__row--second"><span class="gosubmit__title__option">Sell </span>Your  Property<span class="gosubmit__title__option"></span></div>
+                  <div class="gosubmit__title__row gosubmit__title__row--second"><span class="gosubmit__title__option"><?php echo HOME_CONTACT_TITLE_PART3; ?> </span><?php echo HOME_CONTACT_TITLE_PART4; ?><span class="gosubmit__title__option"></span></div>
                   <div class="gosubmit__title__row gosubmit__title__row--third"></div>
                 </div>
-                <!-- end of block .gosubmit__title--><a href="contact.php" class="gosubmit__btn">Contact US</a>
+                <!-- end of block .gosubmit__title--><a href="contact.php" class="gosubmit__btn"><?php echo HOME_CONTACT_BTN; ?></a>
               </div>
             </div>
             <!-- END BLOCK GO SUBMIT-->
@@ -306,8 +306,8 @@
         <!-- BEGIN AFTER CENTER SECTION-->
         <div class="widget js-widget widget--landing">
           <div class="widget__header">
-            <h2 class="widget__title"><span class="title-thin">GET TO KNOW</span>  OUR STRATEGIC ALLIES</h2>
-            <h5 class="widget__headline">We work with you to provide you with a better experience.</h5>
+            <h2 class="widget__title"><span class="title-thin"><?php echo HOME_ALLIES_TITLE_SLIM; ?></span>  <?php echo HOME_ALLIES_TITLE_BOLD; ?></h2>
+            <h5 class="widget__headline"><?php echo HOME_ALLIES_DESCRIPTION; ?></h5>
           </div>
           <div class="widget__content">
             <!-- BEGIN PARTNERS-->
