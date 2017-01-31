@@ -2,7 +2,7 @@
 /* -----------------------------------------------------------------------
 *  langHandler
 *  -----------------------------------------------------------------------
-*  Aprovechando que este módulo está aplicado en todas las paginas del 
+*  Aprovechando que este módulo está aplicado en todas las paginas del
 *  sitio, se incluye el langHandler aquí
 *  -------------------------------------------------------------------- */
 include("lang/langHandler.php");
@@ -11,14 +11,14 @@ include("lang/langHandler.php");
       <header class="header header--brand">
         <div class="container-header">
           <div class="header__row">
-		  
-		  
+
+
 		  <a href="index.php" class="header__logo"><svg></svg></a>
-	  
-		  
-		  
+
+
+
             <div class="header__settings">
-			
+
             <div class="auth auth--header">
               <ul class="auth__nav">
                 <li class="dropdown auth__nav-item">
@@ -27,19 +27,19 @@ include("lang/langHandler.php");
 
                 <li class="dropdown auth__nav-item">
 				<a href="about-us.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM2; ?></span></a>
-                </li>				
-				
-				
+                </li>
+
+
                 <li class="dropdown auth__nav-item">
 				<a href="sell.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM3; ?></span></a>
-                </li>				
+                </li>
                 <li class="dropdown auth__nav-item">
 				<a href="contact.php" class="header__span-p1"><span class="header__span-p1"><?php echo MENU_ITEM4; ?></span></a>
-                </li>					
-				
+                </li>
 
-				
-				
+
+
+
               </ul>
               <!-- end of block .auth header-->
             </div>
@@ -57,37 +57,37 @@ include("lang/langHandler.php");
                     </ul>
                   </div>
                 </div>
-            </div>				  
-			  
+            </div>
+
 
             <div class="auth auth--header">
               <ul class="auth__nav">
 
                 <li class="dropdown auth__nav-item">
 				<a href="index.php" class="header__span-p2"><span class="header__span-p2">+1 404-9573940</span></a>
-                </li>	
-				
-				
+                </li>
+
+
               </ul>
               <!-- end of block .auth header-->
-            </div>				  
-			  
-			  
-			  
-			  
             </div>
-			
-			
 
 
-			
 
-			
-			
-			
-			
-			
-			
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
             <button type="button" class="header__navbar-toggle js-navbar-toggle">
               <svg class="header__navbar-show">
                 <use xlink:href="#icon-menu"></use>
@@ -101,23 +101,23 @@ include("lang/langHandler.php");
         </div>
       </header>
       <!-- END HEADER-->
-	  
-	  
+
+
       <!-- BEGIN NAVBAR-->
       <div id="header-nav-offset"></div>
       <nav id="header-nav" class="navbar navbar--header">
         <div class="container">
           <div class="navbar__row js-navbar-row">
-		  
 
-			  
-			  
+
+
+
             <div id="navbar-collapse-1" class="navbar__wrap">
-			
-			
-			
+
+
+
               <ul class="navbar__nav">
-			  
+
                 <li class="navbar__item js-dropdown"><a class="navbar__link" onmouseover="">LANGUAGE - IDIOMA
                     <svg class="navbar__arrow">
                       <use xlink:href="#icon-arrow-right"></use>
@@ -136,23 +136,23 @@ include("lang/langHandler.php");
                       </ul>
                     </div>
                   </div>
-                </li>			  
-			  
-			  
+                </li>
+
+
 				<li class="navbar__subitem"><a href="index.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM1; ?></a></li>
 				<li class="navbar__subitem"><a href="about-us.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM2; ?></a></li>
 				<li class="navbar__subitem"><a href="sell.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM3; ?></a></li>
 				<li class="navbar__subitem"><a href="contact.php" class="navbar__sublink js-navbar-sublink"><?php echo MENU_ITEM4; ?></a></li>
-				
+
 
 
 
  </ul>
               <!-- end of block  navbar__nav-->
-			  
-			  
-			  
-			  
+
+
+
+
             </div>
           </div>
         </div>
