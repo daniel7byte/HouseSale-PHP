@@ -22,7 +22,7 @@ define("MENU_ITEM1", "INICIO");
 define("MENU_ITEM2", "NUESTRA COMPAÑÍA");
 define("MENU_ITEM3", "VENTA");
 define("MENU_ITEM4", "CONTÁCTENOS");
-define("MENU_ITEM5", "ENG");
+define("MENU_ITEM5", "ESP");
 /* ----------------------------------------------------------------------
 *   HEADER
 *  ------------------------------------------------------------------- */
