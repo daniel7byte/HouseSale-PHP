@@ -1,5 +1,20 @@
 <?php
-
+/* ----------------------------------------------------------------------
+*   ASIDE
+*  ------------------------------------------------------------------- */
+define("ASIDE_HOSTSALES", "HOST SALES");
+define("ASIDE_VIEWDETAILS", "VIEW DETAILS");
+define("ASIDE_AGENTS", "AGENTS");
+define("ASIDE_POPULARESTATE", "POPULAR ESTATE");
+/* ----------------------------------------------------------------------
+*   CONTACT FORM
+*  ------------------------------------------------------------------- */
+define("CONTACTFORM_LABEL1", "NAME");
+define("CONTACTFORM_LABEL2", "LAST NAME");
+define("CONTACTFORM_LABEL3", "E-MAIL");
+define("CONTACTFORM_LABEL4", "TELEPHONE");
+define("CONTACTFORM_LABEL5", "MESSAGE");
+define("CONTACTFORM_BTN", "SEND");
 /* ----------------------------------------------------------------------
 *   MENU/NAVBAR
 *  ------------------------------------------------------------------- */
@@ -74,9 +89,9 @@ define("LISTING_CARD_VIEWDETAILS", "VIEW DETAILS");
 define("LISTING_MORE", "VIEW MORE");
 define("LISTING_FORM_TITLE", "FIND");
 define("LISTING_FORM_SUBTITLE", "Find your next home here");
-define("LISTING_HOTSALES", "HOT SALES");
-define("LISTING_POPULARESTATE", "POPULAR ESTATE");
-define("LISTING_AGENTS", "AGENTS");
+define("LISTING_HOTSALES", ASIDE_HOTSALES);
+define("LISTING_POPULARESTATE", ASIDE_POPULARESTATE);
+define("LISTING_AGENTS", ASIDE_AGENTS);
 /* ----------------------------------------------------------------------
 *   DETAILS SECTION
 *  ------------------------------------------------------------------- */
@@ -90,12 +105,42 @@ define("DETAILS_PRIMARYSCHOOL", "Primary School");
 define("DETAILS_BASICSCHOOL", "Basic School");
 define("DETAILS_MAP", "Property Map");
 define("DETAILS_VIEWDETALS", "VIEW DETAILS");
-define("DETAILS_FORM_LABEL1", "NAME");
-define("DETAILS_FORM_LABEL2", "LAST NAME");
-define("DETAILS_FORM_LABEL3", "TELEPHONE");
-define("DETAILS_FORM_LABEL4", "E-MAIL");
-define("DETAILS_FORM_LABEL5", "MESSAGE");
-define("DETAILS_FORM_BTN", "SUBMIT");
+define("DETAILS_FORM_LABEL1", CONTACTFORM_LABEL1);
+define("DETAILS_FORM_LABEL2", CONTACTFORM_LABEL2);
+define("DETAILS_FORM_LABEL3", CONTACTFORM_LABEL3);
+define("DETAILS_FORM_LABEL4", CONTACTFORM_LABEL4);
+define("DETAILS_FORM_LABEL5", CONTACTFORM_LABEL5);
+define("DETAILS_FORM_BTN", CONTACTFORM_BTN);
+/* ----------------------------------------------------------------------
+*   SELL SECTION
+*  ------------------------------------------------------------------- */
+define("SELL_TITLE", "SELL");
+define("SELL_SUBTITLE", "Meet the best way to sell your propierty");
+define("SELL_TEXT1", "Our platform is available for you to effectively buy /sale your real estate. We make sure you get the best advice for commercializing your real estate through our online web portal.");
+define("SELL_TEXT2", "We highlight every single detail of your home as added value for potential buyers/sellers to find in your option, exactly what they’re looking for.");
+define("SELL_TEXT3", "WE ARE JUST A CLICK AWAY: Just fill out the form you'll find below.");
+define("SELL_QUOTE", "WITH US YOU’LL SAVE 1.5% ON THE COMMISSION VALUE");
+define("SELL_LIST_TEXT", "Selling on our platform is very simple:");
+define("SELL_LIST_ITEM1", "1. You must fill in the main data of the property in the form on the right side of your screen. Please note that you should include information such as address, zip code, your full name, phone number and e-mail address.");
+define("SELL_LIST_ITEM2", "2. Upon receipt of this information, we will contact you as soon as possible to start the selling/ buying process.");
+define("SELL_LIST_ITEM3", "3. We will list your real property on our website for visitors to know your real estate and request information.");
+define("SELL_LIST_ITEM4", "4. Once we receive the request for information, we'll immediately manage the sales process.");
+define("SELL_FORM_LABEL1", CONTACTFORM_LABEL1);
+define("SELL_FORM_LABEL2", CONTACTFORM_LABEL2);
+define("SELL_FORM_LABEL3", CONTACTFORM_LABEL3);
+define("SELL_FORM_LABEL4", CONTACTFORM_LABEL4);
+define("SELL_FORM_LABEL4", CONTACTFORM_LABEL5);
+define("SELL_FORM_BTN", CONTACTFORM_BTN);
+/* ----------------------------------------------------------------------
+*   CONTACT SECTION
+*  ------------------------------------------------------------------- */
+define("CONTACT_TITLE", "Contact Us");
+define("CONTACT_SUBTITLE", "Please contact us or leave us a message in the contact form.");
+define("CONTACT_TEXT1", "We will get in touch");
+define("CONTACT_TEXT2", "All our service channels are available to take care of your needs and address your concerns. For personalized attention, we recommend filling out the form with your correct contact details and we will contact you as soon as possible. Our office hours are Monday through Friday from 8:00 am to 6:00 pm. ");
+define("CONTACT_SOCIALMEDIA","Our social profiles:");
+define("CONTACT_FORM_LABEL1","Address");
+define("CONTACT_FORM_LABEL2","Email");
 /* ----------------------------------------------------------------------
 *   FOOTER
 *  ------------------------------------------------------------------- */
