@@ -2,7 +2,7 @@
 /* ----------------------------------------------------------------------
 *   ASIDE
 *  ------------------------------------------------------------------- */
-define("ASIDE_HOSTSALES", "VENTAS RECIENTES");
+define("ASIDE_HOTSALES", "VENTAS RECIENTES");
 define("ASIDE_VIEWDETAILS", "VER DETALLES");
 define("ASIDE_AGENTS", "AGENTES");
 define("ASIDE_POPULARESTATE", "BIENES POPULARES");

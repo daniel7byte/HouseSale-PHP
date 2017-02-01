@@ -2,7 +2,7 @@
 /* ----------------------------------------------------------------------
 *   ASIDE
 *  ------------------------------------------------------------------- */
-define("ASIDE_HOSTSALES", "HOST SALES");
+define("ASIDE_HOTSALES", "HOT SALES");
 define("ASIDE_VIEWDETAILS", "VIEW DETAILS");
 define("ASIDE_AGENTS", "AGENTS");
 define("ASIDE_POPULARESTATE", "POPULAR ESTATE");
@@ -32,6 +32,8 @@ define("HEADER_CTA", "Get started");
 /* ----------------------------------------------------------------------
 *   FORM
 *  ------------------------------------------------------------------- */
+define("FORM_TITLE", "FIND");
+define("FORM_SUBTITLE", "Find your next home here");
 define("FORM_LABEL1", "State");
 define("FORM_LABEL2", "ZIP Code");
 define("FORM_LABEL3", "County");
@@ -87,8 +89,6 @@ define("LISTING_RESULT", "RESULTS");
 define("LISTING_VIEW", "VIEW");
 define("LISTING_CARD_VIEWDETAILS", "VIEW DETAILS");
 define("LISTING_MORE", "VIEW MORE");
-define("LISTING_FORM_TITLE", "FIND");
-define("LISTING_FORM_SUBTITLE", "Find your next home here");
 define("LISTING_HOTSALES", ASIDE_HOTSALES);
 define("LISTING_POPULARESTATE", ASIDE_POPULARESTATE);
 define("LISTING_AGENTS", ASIDE_AGENTS);

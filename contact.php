@@ -73,8 +73,8 @@ try {
           <div class="container">
             <div class="widget js-widget widget--landing">
               <div class="widget__header">
-                <h2 class="widget__title">Contact Us</h2>
-                <h5 class="widget__headline">Please contact us or leave us a message in the contact form.</h5>
+                <h2 class="widget__title"><?php echo CONTACT_TITLE ?></h2>
+                <h5 class="widget__headline"><?php echo CONTACT_SUBTITLE ?></h5>
               </div>
 			  
 			  
@@ -87,12 +87,12 @@ try {
                       <div class="contacts__address">
                         <address class="contacts__address-item"><span class="contacts__address-title">GA</span>
                           <dl class="contacts__address-column">
-                            <dt class="contacts__address-column__title">Address:</dt>
+                            <dt class="contacts__address-column__title"><?php echo CONTACT_FORM_LABEL1 ?>:</dt>
                             <dd>3750 venture drive suite<br> D-15 Duluth GA 30096</dd>
                           </dl>
 
                           <dl class="contacts__address-column">
-                            <dt class="contacts__address-column__title">Email:</dt>
+                            <dt class="contacts__address-column__title"><?php echo CONTACT_FORM_LABEL2 ?>:</dt>
                             <dd><a href="#">info@joygle.com</a><br><br></dd>
                           </dl>
                         </address>
@@ -193,13 +193,13 @@ try {
 <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="tfa_0">
 
 <div class="oneField field-container-D     " id="tfa_1-D">
-<label id="tfa_1-L" for="tfa_1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">NAME</span></label>
+<label id="tfa_1-L" for="tfa_1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL1 ?></span></label>
 <br><div class="inputWrapper"><input type="text" id="tfa_1" name="tfa_1" value="" placeholder="" title="NAME" class=""></div>
 </div>
 <br>
 
 <div class="oneField field-container-D     " id="tfa_1-D-1">
-<label id="tfa_1-L-1" for="tfa_1-1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">LAST NAME</span></label>
+<label id="tfa_1-L-1" for="tfa_1-1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL2 ?></span></label>
 <br><div class="inputWrapper"><input type="text" id="tfa_1-1" name="tfa_1" value="" placeholder="" title="LAST NAME" class=""></div>
 </div>
 
@@ -207,22 +207,22 @@ try {
 
 <div class="oneField field-container-D     " id="tfa_3-D">
 <label id="tfa_3-L" for="tfa_3" class="label-1 preField ">
-<span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">E-MAIL</span></label><br>
+<span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL3 ?></span></label><br>
 <div class="inputWrapper"><input type="text" id="tfa_3" name="tfa_3" value="" placeholder="" title="E-MAIL" class=""></div>
 </div>
 <br>
 
 <div class="oneField field-container-D     " id="tfa_2-D">
-<label id="tfa_2-L" for="tfa_2" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">TELEPHONE</span></label><br><div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" title="TELEPHONE" class=""></div>
+<label id="tfa_2-L" for="tfa_2" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL4 ?></span></label><br><div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" title="TELEPHONE" class=""></div>
 </div>
 
 <br>
 <div class="oneField field-container-D     " id="tfa_5-D">
-<label id="tfa_5-L" for="tfa_5" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">MESSAGE</span></label><br><div class="inputWrapper"><textarea id="tfa_5" name="tfa_5" title="MESSAGE" class=""></textarea></div>
+<label id="tfa_5-L" for="tfa_5" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL5 ?></span></label><br><div class="inputWrapper"><textarea id="tfa_5" name="tfa_5" title="MESSAGE" class=""></textarea></div>
 </div>
 <br>
 
-<div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" value="SEND"></div>
+<div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" value="<?php echo CONTACTFORM_BTN ?>"></div>
 <div style="clear:both"></div>
 <input type="hidden" value="455237" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="1237e026f2b1b993fa33eb6a547302f3" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="4" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
 </form>
@@ -241,13 +241,8 @@ try {
                     </div>
                     <div class="contacts__column">
                       <div class="contacts__body">
-                        <h4>We will get in touch</h4>
-                        <p>
-						
-All our service channels are available to take care of your needs and address your concerns. For personalized attention, we recommend filling out the 
-form with your correct contact details and we will contact you as soon as possible. Our office hours are Monday through Friday from 8:00 am to 6:00 pm. 
-						
-						</p>
+                        <h4><?php echo CONTACT_TEXT1 ?></h4>
+                        <p><?php echo CONTACT_TEXT2 ?></p>
 						
 
 						
@@ -257,7 +252,7 @@ form with your correct contact details and we will contact you as soon as possib
                       <div class="contacts__social">
 					  
 					  <img src="assets/media-demo/banner/contact_photo.jpg" alt="" style=" width:100%; height:100%;">
-                        <div class="social social--worker social--contacts"><span class="contacts__social-title">Our social profiles:</span>
+                        <div class="social social--worker social--contacts"><span class="contacts__social-title"><?php echo CONTACT_SOCIALMEDIA ?></span>
 						<a href="https://www.facebook.com/joygleusa/" class="social__item"><i class="fa fa-facebook"></i></a>
 						<a href="https://twitter.com/joygleusa" class="social__item"><i class="fa fa-twitter"></i></a>
 						<a href="#" class="social__item"><i class="fa fa-google-plus"></i></a></div>

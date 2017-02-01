@@ -50,57 +50,41 @@ try {
               <!-- BEGIN site-->
               <div class="site site--main" style="margin-top:20px;">
                 <header class="site__header">
-                  <h1 class="site__title">Sell</h1>
-                  <h2 class="site__headline">Meet the best way to sell your propierty</h2>
+                  <h1 class="site__title"><?php echo SELL_TITLE ?></h1>
+                  <h2 class="site__headline"><?php echo SELL_SUBTITLE ?></h2>
                 </header>
                 <div class="site__main">
                   <div class="widget js-widget widget--main widget--no-margin">
                     <div class="widget__content">
                       <article class="article article--list article--details">
                         <div class="article__body">
-                          <h4><p>
-						  
-						  Our platform is available for you to effectively buy /sale your real estate. We make 
-						  sure you get the best advice for commercializing your real estate through our online web portal.  
-						  
-						  </p>
-						  
-<p>
-						  
-We highlight every single detail of your home as added value for potential buyers/sellers to find in your option, exactly what they’re looking for. 
-						  
-						  </p>						  
-						  
-						  
-						  
-						  <br>
-						  <blockquote>WITH US YOU’LL SAVE 1.5%  ON THE COMMISSION VALUE  </blockquote>
-                          <br>
-                          <br>						  
-						   <!-- Photo by: <a href="http://www.freepik.com">Designed by Pressfoto / Freepik</a> --><img src="assets/media-demo/workers/buy_house.jpg" alt="">
-                          <br>
-						  <br>
-						  <p><strong>Selling  on our platform is very simple:</strong></p>
-                          <ul>
-                              1.	You must fill in the main data of the property in the form on the right side of 
-							  your screen. Please note that you should include information such as address, zip code, your full name, phone number and e-mail address.</li>
+                          <h4>
+                            <p><?php echo SELL_TEXT1 ?></p>
+						                <p><?php echo SELL_TEXT2 ?></p>						  
+						                <br>
+						                <blockquote><?php echo SELL_QUOTE ?></blockquote>
                             <br>
-						    <br>
-							2.	Upon receipt of this information, we will contact you as soon as possible to start the selling/ buying process.
-							
-							</br>
+                            <br>						  
+						                <!-- Photo by: <a href="http://www.freepik.com">Designed by Pressfoto / Freepik</a> -->
+                            <img src="assets/media-demo/workers/buy_house.jpg" alt="">
                             <br>
-							3.	We will list your real property on our website for visitors to know your real estate and request information.
-							
-							</br>
-							<br>
-							4.	Once we receive the request for information, we'll immediately manage the sales process.
-							
-							</br>
-                          </ul>
-                          <br>
-						  <p><i>WE ARE JUST A CLICK AWAY: Just fill out the form you'll find below.</i></p>
-						 </h4>
+						                <br>
+						                <p><strong><?php echo SELL_LIST_TEXT ?></strong></p>
+                            <ul style="list-style:none">
+                              <li><?php echo SELL_LIST_ITEM1 ?></li>
+                              <br>
+						                  <br>
+                              <li><?php echo SELL_LIST_ITEM2 ?></li>
+                              <br>
+						                  <br>
+                              <li><?php echo SELL_LIST_ITEM3 ?></li>
+                              <br>
+						                  <br>
+                              <li><?php echo SELL_LIST_ITEM4 ?></li>
+                            </ul>
+                            <br>
+						                <p><i><?php echo SELL_TEXT3 ?></i></p>
+						              </h4>
                         </div>
 
                       </article>
@@ -206,13 +190,13 @@ We highlight every single detail of your home as added value for potential buyer
 <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="tfa_0">
 
 <div class="oneField field-container-D     " id="tfa_1-D">
-<label id="tfa_1-L" for="tfa_1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">NAME</span></label>
+<label id="tfa_1-L" for="tfa_1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL1 ?></span></label>
 <br><div class="inputWrapper"><input type="text" id="tfa_1" name="tfa_1" value="" placeholder="" title="NAME" class=""></div>
 </div>
 <br>
 
 <div class="oneField field-container-D     " id="tfa_1-D-1">
-<label id="tfa_1-L-1" for="tfa_1-1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">LAST NAME</span></label>
+<label id="tfa_1-L-1" for="tfa_1-1" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL2 ?></span></label>
 <br><div class="inputWrapper"><input type="text" id="tfa_1-1" name="tfa_1" value="" placeholder="" title="LAST NAME" class=""></div>
 </div>
 
@@ -220,22 +204,22 @@ We highlight every single detail of your home as added value for potential buyer
 
 <div class="oneField field-container-D     " id="tfa_3-D">
 <label id="tfa_3-L" for="tfa_3" class="label-1 preField ">
-<span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">E-MAIL</span></label><br>
+<span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL3 ?></span></label><br>
 <div class="inputWrapper"><input type="text" id="tfa_3" name="tfa_3" value="" placeholder="" title="E-MAIL" class=""></div>
 </div>
 <br>
 
 <div class="oneField field-container-D     " id="tfa_2-D">
-<label id="tfa_2-L" for="tfa_2" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">TELEPHONE</span></label><br><div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" title="TELEPHONE" class=""></div>
+<label id="tfa_2-L" for="tfa_2" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL4 ?></span></label><br><div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" title="TELEPHONE" class=""></div>
 </div>
 
 <br>
 <div class="oneField field-container-D     " id="tfa_5-D">
-<label id="tfa_5-L" for="tfa_5" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;">MESSAGE</span></label><br><div class="inputWrapper"><textarea id="tfa_5" name="tfa_5" title="MESSAGE" class=""></textarea></div>
+<label id="tfa_5-L" for="tfa_5" class="label-1 preField "><span style="color: rgb(44, 62, 80); font-family: &quot;Source Sans Pro&quot;, sans-serif; font-size: 15px; font-weight: 600; text-transform: uppercase; background-color: #fff;"><?php echo CONTACTFORM_LABEL5 ?></span></label><br><div class="inputWrapper"><textarea id="tfa_5" name="tfa_5" title="MESSAGE" class=""></textarea></div>
 </div>
 <br>
 
-<div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" value="SEND"></div>
+<div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" value="<?php echo CONTACTFORM_BTN ?>"></div>
 <div style="clear:both"></div>
 <input type="hidden" value="455237" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="1237e026f2b1b993fa33eb6a547302f3" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="4" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
 </form>
@@ -269,7 +253,7 @@ We highlight every single detail of your home as added value for potential buyer
 			  
 			  <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">HOT SALES</h2>
+                    <h2 class="widget__title"><?php echo ASIDE_HOTSALES ?></h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">
@@ -296,7 +280,7 @@ We highlight every single detail of your home as added value for potential buyer
                               <div class="properties properties--sidebar">
                                 <div class="properties__thumb"><a href="property_details.php?id=<?=$row['dato2']?>" class="item-photo item-photo--static"><img src="dinamic_filter/getImages.php?id=<?=$row['dato2']?>&w=483&h=262" width="483" height="262" alt="" />
                                     <figure class="item-photo__hover">
-                                      <span class="item-photo__more">View details</span>
+                                      <span class="item-photo__more"><?php echo ASIDE_VIEWDETAILS ?></span>
                                     </figure></a>
                                 </div>
                                 <div class="properties__details">
@@ -322,7 +306,7 @@ We highlight every single detail of your home as added value for potential buyer
                 </div>
                 <div class="widget js-widget widget--sidebar widget--dark">
                   <div class="widget__header">
-                    <h2 class="widget__title">Agents</h2>
+                    <h2 class="widget__title"><?php echo ASIDE_AGENTS ?></h2>
                     <h5 class="widget__headline"></h5><a class="widget__btn js-widget-btn widget__btn--toggle"></a>
                   </div>
                   <div class="widget__content">
