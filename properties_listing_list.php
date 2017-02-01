@@ -387,6 +387,13 @@ plugin usage, with detailed comments about specific sections of the code.
       <!-- END analytics.google -->
 
 <!-- PRICE RANGE PLUGIN -->
+<script>
+    /* --------------------------------------------------------------------------
+    *   Soluciona la falla del slider de precio si se entra a una pagina de
+    *   listado directamente por la URL sin hacer ninguna consulta 
+    *  ------------------------------------------------------------------------ */
+    if(document.querySelector('#price-selector .ui-slider')) {} else {createPriceRange(150000, 750000);}
+  </script>
 
 </body>
 </html>

@@ -1,9 +1,42 @@
+/* --------------------------------------------------------------------------
+*   Cambia la vista de listado que se quiere mostrar 
+*  ------------------------------------------------------------------------ */
 function changeListing(page) {
   var searchForm = $('#searchForm');
   searchForm.attr("action", page);
   searchForm.submit();
 }
 
+/* --------------------------------------------------------------------------
+*   Crea un slider de rango para el filtro de precios en el formulario
+*  ------------------------------------------------------------------------ */
+function createPriceRange(min, max) {
+  $('#price-selector').slider({
+    min: 1,
+    max: 900000,
+    range: true,
+    steps: 75000,
+    values: [min,max],
+    create: function(event, ui) {
+        $('.price-from span').text(min);
+        $('.price-to span').text(max);
+        $('#price-min').val(min);
+        $('#price-max').val(max);
+    },
+    slide: function(event, ui) {
+        $('.price-from span').text(ui.values[0]);
+        $('.price-to span').text(ui.values[1]);
+        $('#price-min').val(ui.values[0]);
+        $('#price-max').val(ui.values[1]);
+    }
+  });
+}
+
+
+/* --------------------------------------------------------------------------
+*   Mantiene la información de busqueda del usuario en todas las paginas
+*   haciendo que el formulario sea inteligente.
+*  ------------------------------------------------------------------------ */
 function setForm(id, zipcode, county, city, priceMin, priceMax, systemFiltro){
   let searchForm = $("#searchForm")
   let form__county = $("select#county", searchForm)
@@ -76,25 +109,11 @@ function setForm(id, zipcode, county, city, priceMin, priceMax, systemFiltro){
   }
 
   // Setear valores de Price Range
-  $('#price-selector').slider({
-    min: 1,
-    max: 900000,
-    range: true,
-    steps: 75000,
-    values: [priceMin,priceMax],
-    create: function(event, ui) {
-        $('.price-from span').text(priceMin);
-        $('.price-to span').text(priceMax);
-        $('#price-min').val(priceMin);
-        $('#price-max').val(priceMax);
-    },
-    slide: function(event, ui) {
-        $('.price-from span').text(ui.values[0]);
-        $('.price-to span').text(ui.values[1]);
-        $('#price-min').val(ui.values[0]);
-        $('#price-max').val(ui.values[1]);
-    }
-  });
+  $('.price-from span').text(priceMin);
+  $('.price-to span').text(priceMax);
+  $('#price-min').val(priceMin);
+  $('#price-max').val(priceMax);
+  createPriceRange(priceMin, priceMax);
 
   // Recorrer cada systemFiltro del formulario.
   for(i=0; i < $("option", form__systemFiltro).length; i++) {
@@ -105,6 +124,10 @@ function setForm(id, zipcode, county, city, priceMin, priceMax, systemFiltro){
   }
 }
 
+/* --------------------------------------------------------------------------
+*   Crea una cadena de texto con todos los parámetros de busqueda del
+*   usuario para ser utilizado en property_details.php
+*  ------------------------------------------------------------------------ */
 function concatenarLinks(tipoListing) {
   // EN ESTA PARTE SE REGORRERÁN CADA UNO DE LOS <a href=""> DE LA ESTRUCTURA (GRID & GRID_SMALL)
   // Y SE LES CONCATENARÁ LA INFORMACION DEL FORMULARIO (CON SUFIJO form xD).
