@@ -102,10 +102,10 @@ becomes
           <!-- BEGIN site-->
           <div class="site site--main">
                 <header class="site__header">
-                  <h1 class="site__title" style="font-size: 28px!important;"><?php echo LISTING_RESULT ?> : <strong id="numRecords"><?=( isset($_POST['city']) ? '' : $limiteRegistros )?></strong> </h1>
+                  <h1 class="site__title" style="font-size: 28px!important;"><?php echo LISTING_RESULT ?> : <strong id="numRecords"><?=( isset($_GET['city']) ? '' : $limiteRegistros )?></strong> </h1>
                   <p id="search-string">
-                    <?php if (isset($_POST['city'])): ?>
-                    <?=$_POST['zipcode']?> + <?=$_POST['county']?> + <?=$_POST['city']?> + <?=$_POST['price-min']?> - <?=$_POST['price-max']?> + <?=($_POST['systemFiltro'] == "1" ? "FMLS" : ($_POST['systemFiltro'] == "0" ? "GAMLS" : $_POST['systemFiltro'] ) )?>
+                    <?php if (isset($_GET['city'])): ?>
+                    <?=$_GET['zipcode']?> + <?=$_GET['county']?> + <?=$_GET['city']?> + <?=$_GET['price-min']?> - <?=$_GET['price-max']?> + <?=($_GET['systemFiltro'] == "1" ? "FMLS" : ($_GET['systemFiltro'] == "0" ? "GAMLS" : $_GET['systemFiltro'] ) )?>
                     <?php endif;?>
                   </p>
                 </header>
@@ -147,7 +147,7 @@ becomes
                 <div class="widget__content">
                   <div class="listing listing--list js-properties-list" id="articles">
 
-                    <?php if (!isset($_POST['city'])): ?>
+                    <?php if (!isset($_GET['city'])): ?>
 
                     <?php
                       $query = $mysql->prepare("SELECT * FROM datoscasas ORDER BY rand() LIMIT $limiteRegistros");
@@ -201,12 +201,12 @@ becomes
 
             <?php
 
-            if (isset($_POST['city'])){
+            if (isset($_GET['city'])){
 
                 ?>
                 <script>
                     $( document ).ready(function() {
-                        search("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price-min'] != '-' ? $_POST['price-min'] : '')?>", "<?=($_POST['price-max'] != '-' ? $_POST['price-max'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                        search("<?=($_GET['id'] != '-' ? $_GET['id'] : '')?>", "<?=($_GET['zipcode'] != '-' ? $_GET['zipcode'] : '')?>", "<?=($_GET['county'] != '-' ? $_GET['county'] : '')?>", "<?=($_GET['city'] != '-' ? $_GET['city'] : '')?>", "<?=($_GET['price-min'] != '-' ? $_GET['price-min'] : '')?>", "<?=($_GET['price-max'] != '-' ? $_GET['price-max'] : '')?>", "<?=$_GET['systemFiltro']?>");
                         resetPagination();
                         concatenarLinks('list');
                     });
@@ -231,7 +231,7 @@ becomes
               </div>
               <div class="widget__content">
                 <!-- BEGIN SEARCH-->
-                <form method="post" action="properties_listing_list.php" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
+                <form method="get" action="properties_listing_list.php" id="searchForm" class="form form--flex form--search js-search-form form--sidebar">
                   <div class="row">
                     <?php include('property_form.php'); ?>
                     <div class="form__buttons form__buttons--double">
@@ -240,10 +240,10 @@ becomes
                     </div>
                   </div>
                 </form>
-                <?php if (isset($_POST['city'])): ?>
+                <?php if (isset($_GET['city'])): ?>
                   <script>
                   $( document ).ready(function() {
-                    setForm("<?=($_POST['id'] != '-' ? $_POST['id'] : '')?>", "<?=($_POST['zipcode'] != '-' ? $_POST['zipcode'] : '')?>", "<?=($_POST['county'] != '-' ? $_POST['county'] : '')?>", "<?=($_POST['city'] != '-' ? $_POST['city'] : '')?>", "<?=($_POST['price-min'] != '-' ? $_POST['price-min'] : '')?>", "<?=($_POST['price-max'] != '-' ? $_POST['price-max'] : '')?>", "<?=$_POST['systemFiltro']?>");
+                    setForm("<?=($_GET['id'] != '-' ? $_GET['id'] : '')?>", "<?=($_GET['zipcode'] != '-' ? $_GET['zipcode'] : '')?>", "<?=($_GET['county'] != '-' ? $_GET['county'] : '')?>", "<?=($_GET['city'] != '-' ? $_GET['city'] : '')?>", "<?=($_GET['price-min'] != '-' ? $_GET['price-min'] : '')?>", "<?=($_GET['price-max'] != '-' ? $_GET['price-max'] : '')?>", "<?=$_GET['systemFiltro']?>");
                   });
                   </script>
                 <?php endif; ?>
@@ -390,7 +390,7 @@ plugin usage, with detailed comments about specific sections of the code.
 <script>
     /* --------------------------------------------------------------------------
     *   Soluciona la falla del slider de precio si se entra a una pagina de
-    *   listado directamente por la URL sin hacer ninguna consulta 
+    *   listado directamente por la URL sin hacer ninguna consulta
     *  ------------------------------------------------------------------------ */
     if(document.querySelector('#price-selector .ui-slider')) {} else {createPriceRange(150000, 750000);}
   </script>

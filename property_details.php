@@ -462,7 +462,7 @@ Available 24/7.
                   </div>
                   <div class="widget__content">
                     <!-- BEGIN SEARCH-->
-                    <form action="properties_listing_grid_small.php" id="searchForm" method="post" class="form form--flex form--search js-search-form form--sidebar">
+                    <form action="properties_listing_grid_small.php" id="searchForm" method="get" class="form form--flex form--search js-search-form form--sidebar">
                       <div class="row">
                         <?php include('property_form.php'); ?>
                         <div class="form__buttons form__buttons--double">
@@ -616,7 +616,7 @@ Available 24/7.
       <script>
     /* --------------------------------------------------------------------------
     *   Soluciona la falla del slider de precio si se entra a una pagina de
-    *   listado directamente por la URL sin hacer ninguna consulta 
+    *   listado directamente por la URL sin hacer ninguna consulta
     *  ------------------------------------------------------------------------ */
     if(document.querySelector('#price-selector .ui-slider')) {} else {createPriceRange(150000, 750000);}
   </script>

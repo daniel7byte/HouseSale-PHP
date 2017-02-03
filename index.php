@@ -110,7 +110,7 @@
                     <div class="banner__search">
                       <h4 class="banner__sidebar-title"><?php echo HEADER_TITLE; ?></h4>
                       <!-- BEGIN SEARCH-->
-                      <form action="properties_listing_grid_small.php" method="post" class="formpc form form--flex form--search js-search-form form--banner-sidebar " style="">
+                      <form action="properties_listing_grid_small.php" method="get" class="formpc form form--flex form--search js-search-form form--banner-sidebar " style="">
                         <div class="row">
                           <?php include('property_form.php'); ?>
                           <div class="form__buttons form__buttons--double">
