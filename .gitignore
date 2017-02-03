@@ -2,6 +2,7 @@
 datosiniciales.php
 *.rar
 debug.log
+web.config
 
 # Windows image file caches
 Thumbs.db
