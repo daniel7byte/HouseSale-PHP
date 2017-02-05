@@ -52,7 +52,7 @@
     <div id="price-selector"></div>
 </div>
 
-<div class="form-group" style="display:none;">
+<div class="form-group" style="display:block;">
     <label for="id" class="control-label">ID</label>
     <input class="form-control" type='text' name="id" id="id" value="">
 </div>

@@ -35,7 +35,7 @@
     <meta name="twitter:description" content="Center of the Meatpacking district. Spacious room with queen Sized bed, Large desk and lots of windows and light. In a large apt with huge private outdoor patio!">
     <meta name="twitter:image" content="assets/media-demo/properties/554x360/01.jpg">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="dinamic_filter/jquery-3.1.1.min.js"></script>
 	
 	
 
