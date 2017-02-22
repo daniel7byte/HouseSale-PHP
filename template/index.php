@@ -1,3 +1,16 @@
+<?php
+
+  include("../datosiniciales.php");
+  include("../lang/langHandler.php");
+
+  try {
+      $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  } catch (Exception $e) {
+      echo "Error: " . $e->getMessage();
+      exit;
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,31 +80,47 @@
                                     <h2 class="text-center">Find the right home and neighborhood for you</h2>
                                     <form>
                                         <div class="form-group">
-                                            <label class="uppercase" for="state">State</label>
+                                            <label for="county" class="control-label uppercase"><?php echo FORM_LABEL1; ?></label>
                                             <select name="state" id="state" class="form-control">
                                                 <option value="georgia">Georgia</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="uppercase" for="zipcode">Zip Code</label>
+                                            <label for="county" class="control-label uppercase"><?php echo FORM_LABEL2; ?></label>
                                             <input type="text" name="zipcode" id="zipcode" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label class="uppercase" for="county">County</label>
-                                            <select name="county" id="county" class="form-control">
-                                                <option value="-">All</option>
+                                            <label for="county" class="control-label uppercase"><?php echo FORM_LABEL3; ?></label>
+                                            <select class="form-control" name="county" id="county">
+                                                <option value="-"><?php echo FORM_SELECT_ALL; ?></option>
+                                                <?php
+                                                $queryCounty = $mysql->prepare("SELECT DISTINCT dato11 FROM datoscasas ORDER BY dato11 ASC;");
+                                                $queryCounty->execute();
+                                                $rowsCounty = $queryCounty->fetchAll();
+                                                foreach ($rowsCounty as $row):
+                                                    ?>
+                                                    <option value="<?=$row['dato11']?>"><?=$row['dato11']?></option>
+                                                <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="uppercase" for="city">City</label>
-                                            <select name="city" id="city" class="form-control">
-                                                <option value="-">All</option>
+                                            <label for="city" class="control-label uppercase"><?php echo FORM_LABEL4; ?></label>
+                                            <select id="city" name="city" class="form-control">
+                                                <option value="-"><?php echo FORM_SELECT_ALL; ?></option>
+                                                <?php
+                                                $queryCounty = $mysql->prepare("SELECT DISTINCT dato10 FROM datoscasas ORDER BY dato10 ASC;");
+                                                $queryCounty->execute();
+                                                $rowsCounty = $queryCounty->fetchAll();
+                                                foreach ($rowsCounty as $row):
+                                                    ?>
+                                                    <option value="<?=$row['dato10']?>"><?=$row['dato10']?></option>
+                                                <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="uppercase" for="price">Price Range</label>
-                                            <inupt type="hidden" name="price-min" id="price-min">
-                                            <inupt type="hidden" name="price-max" id="price-max">
+                                            <label for="price" class="control-label uppercase"><?php echo FORM_LABEL6; ?></label>
+                                            <input type="hidden" value="150000" name="price-min" id="price-min" style="width:100%" class="form-control">
+                                            <input type="hidden" value="750000" name="price-max" id="price-max" style="width:100%" class="form-control">
                                             <div class="range-prices">
                                                 <div class="price-from">$<span>150000</span></div>
                                                 <div class="divisor">-</div>
@@ -104,9 +133,11 @@
                                             <input type="text" name="id" id="id" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label class="uppercase" for="system">System</label>
-                                            <select name="system" id="system" class="form-control">
-                                                <option value="-">All</option>
+                                            <label for="systemFiltro" class="control-label"><?php echo FORM_LABEL7; ?></label>
+                                            <select class="form-control" name="systemFiltro" id="systemFiltro">
+                                                <option value="" selected><?php echo FORM_SELECT_ALL; ?></option>
+                                                <option value="1">FMLS</option>
+                                                <option value="0">GAMLS</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -132,6 +163,7 @@
             </section>
         </section>
     </main>
+    <script src="system/filter/magiclist.js"></script>
     <script>
     // Fixing height of main tag
     ((d)=>{

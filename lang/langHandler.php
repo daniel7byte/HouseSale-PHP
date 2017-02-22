@@ -13,10 +13,18 @@ if($_SESSION) {
 
 switch($lang) {
 case "es":
-    include("lang/es.php");
+    if(is_file(include("lang/es.php"))) {
+        include("lang/es.php");
+    } else {
+        include("../lang/es.php");
+    }
     break;
 default:
-    include("lang/en.php");
+    if(is_file(include("lang/en.php"))) {
+        include("lang/en.php");
+    } else {
+        include("../lang/en.php");
+    }
 }
 
 ?>
