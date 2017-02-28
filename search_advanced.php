@@ -135,15 +135,6 @@ try {
 
                         <?php
 
-                        function humanDateToUnix($date) {
-                            $month = explode("/", $date)[0];
-                            $day   = explode("/", $date)[1];
-                            $year  = explode("/", $date)[2];
-                            $date = $month . "-" . $day . "-" . $year;
-                            $phpdate = strtotime(date($date));
-                            return ($phpdate == false ? '0' : $phpdate);
-                        }
-
                         $fecha = $_GET['in-datetime'];
 
                         $cadena = explode(' ', $fecha);
@@ -173,7 +164,7 @@ try {
 
                         }else{
 
-                            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato5 <= :priceMax  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
+                            $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE (dato18 BETWEEN :fechaDesde AND :fechaHasta) AND dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato5 <= :priceMax  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
 
                             $queryOne->execute([
                                 ':zipcode' => "%$zipcode%",
@@ -181,16 +172,16 @@ try {
                                 ':system' => "%$system%",
                                 ':city' => "%$city%",
                                 ':priceMin' => $priceMin,
-                                ':priceMax' => $priceMax
+                                ':priceMax' => $priceMax,
+                                ':fechaDesde' => $fechaFrom,
+                                ':fechaHasta' => $fechaTo
                             ]);
 
                             $rowsOne = $queryOne->fetchAll();
 
                             foreach ($rowsOne as $row):
 
-                              if(humanDateToUnix($fechaFrom) >= humanDateToUnix($row['dato18']) AND humanDateToUnix($row['dato18']) <= humanDateToUnix($fechaTo)) {
-                                  include('dinamic_filter/tpl-property-grid.php');
-                              }
+                                include('dinamic_filter/tpl-property-grid.php');
 
                             endforeach;
 
