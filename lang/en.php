@@ -111,6 +111,7 @@ define("DETAILS_FORM_LABEL3", CONTACTFORM_LABEL3);
 define("DETAILS_FORM_LABEL4", CONTACTFORM_LABEL4);
 define("DETAILS_FORM_LABEL5", CONTACTFORM_LABEL5);
 define("DETAILS_FORM_BTN", CONTACTFORM_BTN);
+define("DETAILS_DESCRIPTION", "Description");
 /* ----------------------------------------------------------------------
 *   SELL SECTION
 *  ------------------------------------------------------------------- */

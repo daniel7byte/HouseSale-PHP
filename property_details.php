@@ -323,6 +323,9 @@
                     </dl>
                   </div>
 
+                  <h3><?=DETAILS_DESCRIPTION?>: </h3>
+                  <p><?=$result['description']?></p>
+
                   <div class="property__info">
                     <div class="property__info-item"><?php echo DETAILS_HIGHSCHOOL ?>: <strong><?=$result['dato28']?></strong></div>
                     <div class="property__info-item"><?php echo DETAILS_PRIMARYSCHOOL ?>: <strong><?=$result['dato27']?></strong></div>
