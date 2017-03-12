@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['id'];
+$id = $_GET['id'] ? $_GET['id'] ;
 $zipcode = $_GET['zipcode'];
 $county = $_GET['county'];
 $city = $_GET['city'];
@@ -8,7 +8,7 @@ $priceMin = $_GET['priceMin'];
 $priceMax = $_GET['priceMax'];
 $system = $_GET['systemFiltro'];
 
-include("../../../datosiniciales.php");
+include("../datosiniciales.php");
 
 try {
     $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -25,28 +25,66 @@ if($id != ''){
 
     foreach ($rows as $row):
 
-        include('tpl-property-grid.php');
+        $price = "$" . number_format($row["dato5"]);
+
+        echo "
+        <div class=\"col-xs-6\">
+            <div class=\"card\">
+                <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
+                <div class=\"card__content\">
+                    <div class=\"card__content__price\">{$price}</div>
+                    <div class=\"card__content__details\">N/A</div>
+                    <div class=\"card__content__street\">{$row["dato7"]}</div>
+                    <div class=\"card_content__city\">{$row["dato10"]}, {$row["dato11"]}, GA {$row["dato24"]}, US</div>
+                </div>
+            </div>
+        </div>";
 
     endforeach;
 
 }else{
 
-    $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato5 <= :priceMax  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
-
-    $queryOne->execute([
-        ':zipcode' => "%$zipcode%",
-        ':county' => "%$county%",
-        ':system' => "%$system%",
-        ':city' => "%$city%",
-        ':priceMin' => $priceMin,
-        ':priceMax' => $priceMax
-    ]);
+    if($priceMax < 900000) {
+        $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato5 <= :priceMax  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
+       
+        $queryOne->execute([
+            ':zipcode' => "%$zipcode%",
+            ':county' => "%$county%",
+            ':system' => "%$system%",
+            ':city' => "%$city%",
+            ':priceMin' => $priceMin,
+            ':priceMax' => $priceMax
+        ]);
+    } else {
+        $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
+       
+        $queryOne->execute([
+            ':zipcode' => "%$zipcode%",
+            ':county' => "%$county%",
+            ':system' => "%$system%",
+            ':city' => "%$city%",
+            ':priceMin' => $priceMin
+        ]);
+    }
 
     $rowsOne = $queryOne->fetchAll();
 
     foreach ($rowsOne as $row):
 
-        include('tpl-property-grid.php');
+        $price = "$" . number_format($row["dato5"]);
+
+        echo "
+        <div class=\"col-xs-6\">
+            <div class=\"card\">
+                <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
+                <div class=\"card__content\">
+                    <div class=\"card__content__price\">{$price}</div>
+                    <div class=\"card__content__details\">N/A</div>
+                    <div class=\"card__content__street\">{$row["dato7"]}</div>
+                    <div class=\"card_content__city\">{$row["dato10"]}, {$row["dato11"]}, GA {$row["dato24"]}, US</div>
+                </div>
+            </div>
+        </div>";
 
     endforeach;
 

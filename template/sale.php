@@ -1,3 +1,14 @@
+<?php
+
+    /* ------------------------------------------------------------------------------------------------
+     * Filtro: Si el usuario no viene através del formulario. Se expulsa.
+     * ------------------------------------------------------------------------------------------------
+     */
+     if(empty($_GET) OR $_GET["key"] !== "j.%0a2ede56f6523e16b6a2794c26921580%") {
+         header("Location:./");
+     }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"><img src="http://demo.joygle.com/img/logo-joygle-big.png"></a>
+                <a href="./" class="navbar-brand"><img src="http://demo.joygle.com/img/logo-joygle-big.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="nav navbar-nav">
@@ -106,116 +117,7 @@
             <section class="section card-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="card">
-                                <div class="card__thumbnail" style="background-image:url(./assets/images/thumbnail.jpg)"></div>
-                                <div class="card__content">
-                                    <div class="card__content__price">$1,000,0000</div>
-                                    <div class="card__content__details">N/A</div>
-                                    <div class="card__content__street">155 W 18th St</div>
-                                    <div class="card_content__city">Henry, Georgia</div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php require_once("system/filter/search-grid.php"); ?>
                     </div>
                 </div>
             </section>

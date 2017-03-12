@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"><img src="http://demo.joygle.com/img/logo-joygle-big.png"></a>
+                <a href="./" class="navbar-brand"><img src="http://demo.joygle.com/img/logo-joygle-big.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="nav navbar-nav">
@@ -119,8 +119,8 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="price" class="control-label uppercase"><?php echo FORM_LABEL6; ?></label>
-                                            <input type="hidden" value="150000" name="price-min" id="price-min" style="width:100%" class="form-control">
-                                            <input type="hidden" value="750000" name="price-max" id="price-max" style="width:100%" class="form-control">
+                                            <input type="hidden" value="150000" name="priceMin" id="priceMin" style="width:100%" class="form-control">
+                                            <input type="hidden" value="750000" name="priceMax" id="priceMax" style="width:100%" class="form-control">
                                             <div class="range-prices">
                                                 <div class="price-from">$<span>150000</span></div>
                                                 <div class="divisor">-</div>
@@ -146,6 +146,7 @@
                                                     <button class="btn btn-ghost btn-block uppercase">Reset</button>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6">
+                                                    <input type="hidden" name="key" value="j.%0a2ede56f6523e16b6a2794c26921580%">
                                                     <button type="submit" class="btn btn-joygle btn-block uppercase">Search</button>
                                                 </div>
                                             </div>
@@ -182,14 +183,14 @@
             create: function(event, ui) {
                 $('.price-from span').text(ui.values[0]);
                 $('.price-to span').text(ui.values[1]);
-                $('#price-min').val(ui.values[0]);
-                $('#price-max').val(ui.values[1]);
+                $('#priceMin').val(ui.values[0]);
+                $('#priceMax').val(ui.values[1]);
             },
             slide: function(event, ui) {
                 $('.price-from span').text(ui.values[0]);
                 $('.price-to span').text(ui.values[1]);
-                $('#price-min').val(ui.values[0]);
-                $('#price-max').val(ui.values[1]);
+                $('#priceMin').val(ui.values[0]);
+                $('#priceMax').val(ui.values[1]);
             }
         });
     });
