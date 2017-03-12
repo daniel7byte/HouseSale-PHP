@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['id'] ? $_GET['id'] ;
+$id = $_GET['id'];
 $zipcode = $_GET['zipcode'];
 $county = $_GET['county'];
 $city = $_GET['city'];
