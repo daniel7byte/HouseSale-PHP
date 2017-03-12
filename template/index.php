@@ -78,7 +78,7 @@
                                 <div class="col-md-2 col-xs-2 hide-xs"></div>
                                 <div class="col-xs-8 col-md-8">
                                     <h2 class="text-center">Find the right home and neighborhood for you</h2>
-                                    <form>
+                                    <form method="GET" action="sale.php" id="joygle-form">
                                         <div class="form-group">
                                             <label for="county" class="control-label uppercase"><?php echo FORM_LABEL1; ?></label>
                                             <select name="state" id="state" class="form-control">
@@ -146,7 +146,7 @@
                                                     <button class="btn btn-ghost btn-block uppercase">Reset</button>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-6">
-                                                    <button class="btn btn-joygle btn-block uppercase">Search</button>
+                                                    <button type="submit" class="btn btn-joygle btn-block uppercase">Search</button>
                                                 </div>
                                             </div>
                                         </div>
