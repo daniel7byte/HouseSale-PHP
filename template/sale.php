@@ -8,13 +8,22 @@
          header("Location:./");
      }
 
+    include("../datosiniciales.php");
+
+    try {
+        $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+        exit;
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta charset="UTF-8">
-    <title>Sales | Joygle</title>
+    <title>Property Mapping | Joygle</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Styles -->
@@ -34,6 +43,30 @@
                 lng: -84.390278,
                 zoom: 7
             });
+
+
+            //Ejemplos Geocoding
+            load("Calle 11 # 13 - 31, La Union, Valle del Cauca, Colombia");
+            load("Calle 2A # 42 - 51 El Lido, Cali, Valle del Cauca, Colombia");
+            load("Caracas, Venezuela");
+            // Fin de Ejemplos Geocoding
+
+            function load(str){
+                GMaps.geocode({
+                    address: str.trim(),
+                    callback: function(results, status){
+                        if(status=='OK'){
+                            var latlng = results[0].geometry.location;
+                            // map.setCenter(latlng.lat(), latlng.lng());
+                            map.addMarker({
+                                lat: latlng.lat(),
+                                lng: latlng.lng()
+                            });
+                        }
+                    }
+                });
+            }
+
         });
     </script>
 </head>

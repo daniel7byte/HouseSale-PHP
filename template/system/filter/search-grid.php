@@ -8,15 +8,6 @@ $priceMin = $_GET['priceMin'];
 $priceMax = $_GET['priceMax'];
 $system = $_GET['systemFiltro'];
 
-include("../datosiniciales.php");
-
-try {
-    $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-} catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
-    exit;
-}
-
 if($id != ''){
 
     $query = $mysql->prepare("SELECT * FROM datoscasas WHERE dato2 LIKE :id AND dato6 = 'A'");

@@ -16,7 +16,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Property Mapping | Joygle</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Styles -->
