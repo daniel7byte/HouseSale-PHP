@@ -4,11 +4,13 @@
      * Filtro: Si el usuario no viene através del formulario. Se expulsa.
      * ------------------------------------------------------------------------------------------------
      */
+    /*
      if(empty($_GET) OR $_GET["key"] !== "j.%0a2ede56f6523e16b6a2794c26921580%") {
          header("Location:./");
      }
+     */
 
-    include("../datosiniciales.php");
+    require_once("../datosiniciales.php");
 
     try {
         $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -16,6 +18,9 @@
         echo "Error: " . $e->getMessage();
         exit;
     }
+
+
+    require_once("system/filter/search-grid.php");
 
 ?>
 <!DOCTYPE html>
@@ -34,24 +39,35 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
     <script src="assets/js/gmaps.min.js"></script>
+    <script type="text/javascript" src="../bower_components/markerclustererplus/dist/markerclusterer.min.js"></script>
     <script type="text/javascript">
         var map;
+        
+        var styleArray = [{"featureType":"administrative.country","elementType":"labels.icon","stylers":[{"visibility":"on"}]}];
+
         $(document).ready(function(){
             map = new GMaps({
                 div: '#map',
                 lat: 33.756944,
                 lng: -84.390278,
-                zoom: 7
+                zoom: 8,
+                styles: styleArray,
             });
 
 
             //Ejemplos Geocoding
-            load("Calle 11 # 13 - 31, La Union, Valle del Cauca, Colombia");
-            load("Calle 2A # 42 - 51 El Lido, Cali, Valle del Cauca, Colombia");
-            load("Caracas, Venezuela");
+            <?php
+                foreach ($rows as $row):
+                        $geostr = trim($row['dato7'] . ', ' . $row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US');
+                        $geohtml = trim('
+                            <h1>Hola Mundo</h1>
+                        ');
+                        echo trim('load("'. $geostr.'", "'. $geohtml .'");');
+                endforeach;
+            ?>
             // Fin de Ejemplos Geocoding
 
-            function load(str){
+            function load(str, html){
                 GMaps.geocode({
                     address: str.trim(),
                     callback: function(results, status){
@@ -60,7 +76,10 @@
                             // map.setCenter(latlng.lat(), latlng.lng());
                             map.addMarker({
                                 lat: latlng.lat(),
-                                lng: latlng.lng()
+                                lng: latlng.lng(),
+                                infoWindow: {
+                                  content: html
+                                }
                             });
                         }
                     }
@@ -150,7 +169,26 @@
             <section class="section card-section">
                 <div class="container">
                     <div class="row">
-                        <?php require_once("system/filter/search-grid.php"); ?>
+                        <?php
+                            foreach ($rows as $row):
+
+                                $price = "$" . number_format($row["dato5"]);
+
+                                echo "
+                                <div class=\"col-xs-6\">
+                                    <div class=\"card\">
+                                        <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
+                                        <div class=\"card__content\">
+                                            <div class=\"card__content__price\">{$price}</div>
+                                            <div class=\"card__content__details\">N/A</div>
+                                            <div class=\"card__content__street\">{$row["dato7"]}</div>
+                                            <div class=\"card_content__city\">{$row["dato10"]}, {$row["dato11"]}, GA {$row["dato24"]}, US</div>
+                                        </div>
+                                    </div>
+                                </div>";
+
+                            endforeach;
+                        ?>
                     </div>
                 </div>
             </section>

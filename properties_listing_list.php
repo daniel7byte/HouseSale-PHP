@@ -133,7 +133,7 @@ becomes
         <a onclick="changeListing('properties_listing_grid.php');" class="btn--white"><i class="fa fa-th-large"></i></a>
         <a onclick="changeListing('properties_listing_list.php');" class="btn--white active"><i class="fa fa-bars"></i></a>
         <a onclick="changeListing('properties_listing_grid_small.php');" class="btn--white"><i class="fa fa-table"></i></a>
-				<a href="#" class="btn--white"><i class="fa fa-map"></i></a>
+				<a onclick="changeListing('template/sale.php');" class="btn--white"><i class="fa fa-map"></i></a>
 			  </div>
               <!--end of block .listing__view-->
             </div>

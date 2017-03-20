@@ -1,37 +1,18 @@
 <?php
 
-$id = $_GET['id'];
-$zipcode = $_GET['zipcode'];
-$county = $_GET['county'];
-$city = $_GET['city'];
-$priceMin = $_GET['priceMin'];
-$priceMax = $_GET['priceMax'];
-$system = $_GET['systemFiltro'];
+$id = ($_GET['id'] == '-' ? '' : $_GET['id']);
+$zipcode = ($_GET['zipcode'] == '-' ? '' : $_GET['zipcode']);
+$county = ($_GET['county'] == '-' ? '' : $_GET['county']);
+$city = ($_GET['city'] == '-' ? '' : $_GET['city']);
+$priceMin = ($_GET['price-min'] == '-' ? '' : $_GET['price-min']);
+$priceMax = ($_GET['price-max'] == '-' ? '' : $_GET['price-max']);
+$system = ($_GET['systemFiltro'] == '-' ? '' : $_GET['systemFiltro']);
 
 if($id != ''){
 
     $query = $mysql->prepare("SELECT * FROM datoscasas WHERE dato2 LIKE :id AND dato6 = 'A'");
     $query->execute([':id' => "%$id%"]);
     $rows = $query->fetchAll();
-
-    foreach ($rows as $row):
-
-        $price = "$" . number_format($row["dato5"]);
-
-        echo "
-        <div class=\"col-xs-6\">
-            <div class=\"card\">
-                <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
-                <div class=\"card__content\">
-                    <div class=\"card__content__price\">{$price}</div>
-                    <div class=\"card__content__details\">N/A</div>
-                    <div class=\"card__content__street\">{$row["dato7"]}</div>
-                    <div class=\"card_content__city\">{$row["dato10"]}, {$row["dato11"]}, GA {$row["dato24"]}, US</div>
-                </div>
-            </div>
-        </div>";
-
-    endforeach;
 
 }else{
 
@@ -58,25 +39,6 @@ if($id != ''){
         ]);
     }
 
-    $rowsOne = $queryOne->fetchAll();
-
-    foreach ($rowsOne as $row):
-
-        $price = "$" . number_format($row["dato5"]);
-
-        echo "
-        <div class=\"col-xs-6\">
-            <div class=\"card\">
-                <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
-                <div class=\"card__content\">
-                    <div class=\"card__content__price\">{$price}</div>
-                    <div class=\"card__content__details\">N/A</div>
-                    <div class=\"card__content__street\">{$row["dato7"]}</div>
-                    <div class=\"card_content__city\">{$row["dato10"]}, {$row["dato11"]}, GA {$row["dato24"]}, US</div>
-                </div>
-            </div>
-        </div>";
-
-    endforeach;
+    $rows = $queryOne->fetchAll();
 
 }
