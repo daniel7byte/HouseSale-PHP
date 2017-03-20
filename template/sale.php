@@ -51,11 +51,11 @@
                 lat: 33.756944,
                 lng: -84.390278,
                 zoom: 8,
-                styles: styleArray,
+                styles: styleArray
             });
 
 
-            //Ejemplos Geocoding
+            //Geocoding
             <?php
                 foreach ($rows as $row):
                         $geostr = trim($row['dato7'] . ', ' . $row['dato10'] . ', '. $row['dato11'] . ', GA ' . $row['dato24'] . ', US');
@@ -65,7 +65,7 @@
                         echo trim('load("'. $geostr.'", "'. $geohtml .'");');
                 endforeach;
             ?>
-            // Fin de Ejemplos Geocoding
+            // Fin de Geocoding
 
             function load(str, html){
                 GMaps.geocode({
@@ -174,10 +174,11 @@
 
                                 $price = "$" . number_format($row["dato5"]);
 
+
                                 echo "
                                 <div class=\"col-xs-6\">
                                     <div class=\"card\">
-                                        <div class=\"card__thumbnail\" style=\"background-image:url(./assets/images/thumbnail.jpg)\"></div>
+                                        <div class=\"card__thumbnail\" style=\"background-image:url(../dinamic_filter/getImages.php?id={$row['dato2']}&w=640&h=436)\"></div>
                                         <div class=\"card__content\">
                                             <div class=\"card__content__price\">{$price}</div>
                                             <div class=\"card__content__details\">N/A</div>
