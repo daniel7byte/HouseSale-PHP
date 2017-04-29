@@ -206,6 +206,17 @@ nav.navbar .navbar-collapse .navbar-nav li:hover {
     border-radius: 200px;
     outline: none;
 }
+#price-regulator {
+    padding: 0 1.2rem;
+    min-width: 142px;
+}
+#price-regulator .range-prices {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.price-to .plus {
+    display: none;
+}
 /* //// BUTTONS \\\\ */
 .flex .section:first-child form .btn {
     border-radius: 0;

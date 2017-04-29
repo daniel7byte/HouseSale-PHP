@@ -13,9 +13,9 @@ function changeListing(page) {
 function createPriceRange(min, max) {
   $('#price-selector').slider({
     min: 1,
-    max: 900000,
+    max: 9999999,
     range: true,
-    steps: 75000,
+    steps: 100000,
     values: [min,max],
     create: function(event, ui) {
         $('.price-from span').text(min);

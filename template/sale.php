@@ -10,7 +10,8 @@
      }
      */
 
-    require_once("../datosiniciales.php");
+    include("../datosiniciales.php");
+    include("../lang/langHandler.php");
 
     try {
         $mysql = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -32,6 +33,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <script src="https://use.fontawesome.com/9e7d1bdf6f.js"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -40,6 +42,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1LHwSTnFdkSm9dA8CrIpicTLLCUJ7i7w" ></script>
     <script src="assets/js/gmaps.min.js"></script>
     <script type="text/javascript" src="../bower_components/markerclustererplus/dist/markerclusterer.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript">
         var map;
         
@@ -118,38 +121,12 @@
         </div>
     </nav>
     <main class="main relative">
-        <section class="filter-section">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <form action="#" class="form-inline">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <div class="input-button">
-                                            <input type="text" name="search">
-                                            <button type="button"><span class="fa fa-search"></span></button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button" class="btn btn-default">Any Price <span class="caret"></span></button>
-                                        <button type="button" class="btn btn-default">All Beds <span class="caret"></span></button>
-                                        <button type="button" class="btn btn-default">All Home types <span class="caret"></span></button>
-                                        <button type="button" class="btn btn-default">More <span class="caret"></span></button>
-                                        <button type="button" class="btn btn-joygle">Save Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php include("blocks/filter-section.php"); ?>
         <section class="pre-search">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <h3>New York, NY Homes For Sale & Real Estate</h3>
+                        <h3>Georgia, GA Homes For Sale & Real Estate</h3>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <div class="allies">
@@ -204,6 +181,35 @@
         let   clientWindow = d.querySelector('.flex')
         clientWindow.style.maxHeight = 'calc(100% - '+ clientWindow.offsetTop +'px)'
     })(document)
+    </script>
+    <script>
+    $(document).ready(function(){
+        $('#price-selector').slider({
+            min: 1,
+            max: 900000,
+            range: true,
+            steps: 75000,
+            values: [150000,750000],
+            create: function(event, ui) {
+                $('.price-from span').text(ui.values[0]);
+                $('.price-to span').text(ui.values[1]);
+                $('#priceMin').val(ui.values[0]);
+                $('#priceMax').val(ui.values[1]);
+            },
+            slide: function(event, ui) {
+                $('.price-from span').text(ui.values[0]);
+                $('.price-to span').text(ui.values[1]);
+                $('#priceMin').val(ui.values[0]);
+                $('#priceMax').val(ui.values[1]);
+
+                if(ui.values[1] == 900000) {
+                    $(".price-to .plus").css({ display: 'inline-block' });
+                } else {
+                    $(".price-to .plus").css({ display: 'none' });
+                }
+            }
+        });
+    });
     </script>
 </body>
 </html>

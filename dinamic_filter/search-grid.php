@@ -31,7 +31,7 @@ if($id != ''){
 
 }else{
 
-    if($priceMax < 900000) {
+    if($priceMax < 9999999) {
         $queryOne = $mysql->prepare("SELECT * FROM datoscasas WHERE dato11 LIKE :county AND dato10 LIKE :city AND dato5 >= :priceMin AND dato5 <= :priceMax  AND dato6 = 'A' AND dato24 LIKE :zipcode AND id LIKE :system");
 
         $queryOne->execute([
