@@ -354,9 +354,47 @@
                   </div>
                   <div class="widget js-widget widget--details">
                     <div class="widget__content">
+
+                    <h2 style="font-size:18px; font-weight: bold;">LISTING AGENT</h2>
+
+
                       <div data-sr="enter bottom move 80px, scale(0), over 0s" data-animate-end="animate-end" class="worker js-unhide-block vcard worker--list worker--details">
-                        <div class="worker__photo"><a href="agent_profile.html" class="item-photo item-photo--static"><img src="assets/media-demo/workers/worker-1.jpg" alt="Christopher Pakulla" class="photo"/>
-                            <figure class="item-photo__hover"><span class="item-photo__more"><?php echo DETAILS_VIEWDETAILS ?></span></figure></a></div>
+                        <div class="worker__photo"><img src="assets/media-demo/workers/worker-0.jpg" alt=""     width="50%!important;" height="50%!important;" ;  />
+                            </div>
+                        <div class="worker__intro">
+                          <div class="worker__intro-head">
+                            <div class="worker__intro-name">
+                              <h3 class="worker__name fn"><?=$result['dato29']?></h3>
+                              <div class="worker__post">Listing Agent</div>
+                            </div>
+
+                            <!-- end of block .worker__listings-->
+                          </div>
+                          <button type="button" class="worker__show js-unhide">Contact agent</button>
+                          <div class="worker__intro-row">
+                            <div class="worker__intro-col">
+                              <div class="worker__contacts">
+                                <div class="tel"><span class="type">Tel.</span><a href="#" class="uri value">+1 <?=$result['dato30']?></a></div>
+                                
+                              
+                                
+                              </div>
+                              <!-- end of block .worker__contacts-->
+                            </div>
+
+                          </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+
+                    
+                    <h2 style="font-size:18px; font-weight: bold;">JOYGLE AGENT</h2>
+
+
+                      <div data-sr="enter bottom move 80px, scale(0), over 0s" data-animate-end="animate-end" class="worker js-unhide-block vcard worker--list worker--details">
+                        <div class="worker__photo"><a href="#" class="item-photo item-photo--static"><img src="assets/media-demo/workers/worker-1.jpg" alt="Christopher Pakulla" class="photo"/>
+                            <figure class="item-photo__hover"></figure></a></div>
                         <div class="worker__intro">
                           <div class="worker__intro-head">
                             <div class="worker__intro-name">
@@ -371,31 +409,27 @@
                             <div class="worker__intro-col">
                               <div class="worker__contacts">
                                 <div class="tel"><span class="type">Tel.</span><a href="#" class="uri value">+1 404-9573940</a></div>
-
+                                
                                 <div class="email"><span class="type">Email</span><a href="#" class="uri value">p.cardona@joygle.com</a></div>
-
+                                
                               </div>
                               <!-- end of block .worker__contacts-->
                             </div>
                             <div class="worker__intro-col">
-                              <div class="social social--worker">
-							  <a href="#" class="social__item"><i class="fa fa-facebook"></i></a>
 
-							  <a href="#" class="social__item"><i class="fa fa-twitter"></i></a>
-							  <a href="#" class="social__item"><i class="fa fa-google-plus"></i></a>
-							  </div>
                             </div>
                           </div>
                           <div class="worker__intro-row">
                             <div class="worker__descr">
                               <p>
 Available 24/7.
-							 </p>
+                             </p>
                             </div>
                           </div>
                         </div>
                         <div class="clearfix"></div>
                       </div>
+                      
                       <!-- end of block .worker-->
                       <form action="https://www.tfaforms.com/responses/processor" method="POST" class="form form--flex form--property-agent js-contact-form form--properties">
                         <div class="row">
